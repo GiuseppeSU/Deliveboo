@@ -1,0 +1,20 @@
+nome,indirizzo,vat,slug,immagine
+Ristorante delizioso,Via Roma 123,IT12345678901,ristorante-delizioso,https://example.com/immagine-ristorante-delizioso.jpg
+Pizzeria Buonissima,Viale Italia 456,IT98765432109,pizzeria-buonissima,https://example.com/immagine-pizzeria-buonissima.jpg
+Osteria Tradizione,Corso Garibaldi 789,IT65432109876,osteria-tradizione,https://example.com/immagine-osteria-tradizione.jpg
+Trattoria Gustosa,Via Dante 321,IT01234567890,trattoria-gustosa,https://example.com/immagine-trattoria-gustosa.jpg
+Ristorante Elegante,Piazza Verdi 567,IT09876543210,ristorante-elegante,https://example.com/immagine-ristorante-elegante.jpg
+Ristorante di Mare,Via del Mare 789,IT45678901234,ristorante-di-mare,https://example.com/immagine-ristorante-di-mare.jpg
+Caffe Italiano,Viale Espresso 567,IT54321098765,caffe-italiano,https://example.com/immagine-caffe-italiano.jpg
+Ristorante Romantico,Via dell'Amore 123,IT56789012345,ristorante-romantico,https://example.com/immagine-ristorante-romantico.jpg
+Pasticceria Dolcezza,Via dei Sogni 456,IT09876543212,pasticceria-dolcezza,https://example.com/immagine-pasticceria-dolcezza.jpg
+Trattoria Rustica,Via della Campagna 789,IT34567890123,trattoria-rustica,https://example.com/immagine-trattoria-rustica.jpg
+Pizzeria Napoletana,Via Margherita 321,IT56789012345,pizzeria-napoletana,https://example.com/immagine-pizzeria-napoletana.jpg
+Ristorante Esotico,Viale delle Spezie 567,IT12345098765,ristorante-esotico,https://example.com/immagine-ristorante-esotico.jpg
+Osteria Accogliente,Corso Buonarroti 789,IT09876543213,osteria-accogliente,https://example.com/immagine-osteria-accogliente.jpg
+Ristorante Moderno,Piazza Nuova 123,IT56789012346,ristorante-moderno,https://example.com/immagine-ristorante-moderno.jpg
+Trattoria Familiare,Via delle Tradizioni 456,IT34567890124,trattoria-familiare,https://example.com/immagine-trattoria-familiare.jpg
+Pizzeria Gustosa,Viale dei Sapori 789,IT56789012347,pizzeria-gustosa,https://example.com/immagine-pizzeria-gustosa.jpg
+Ristorante di Montagna,Via Alpina 321,IT54321098766,ristorante-di-montagna,https://example.com/immagine-ristorante-di-montagna.jpg
+Caffe del Centro,Piazza Principale 567,IT23456789012,caffe-del-centro,https://example.com/immagine-caffe-del-centro.jpg
+Osteria Tradizionale,Corso Italia 789,IT56789012348,osteria-tradizionale,https://example.com/immagine-osteria-tradizionale.jpg
