@@ -39,6 +39,8 @@
                             </div>
                         </div>
 
+                        <!--Immagine-->
+
                         <div class="mb-4 row">
                             <label for="Address" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
                             <div class="col-md-6">
@@ -51,6 +53,38 @@
                             </div>
                         </div>
 
+                        <!--Indirizzo-->
+
+                        <div class="mb-4 row">
+                            <label for="Address" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
+                            <div class="col-md-6">
+                                <input id="Address" type="text" class="form-control @error('Address') is-invalid @enderror" name="Address" value="{{ old('Address') }}" required autocomplete="Address" autofocus>
+                                @error('Address')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <!--Partita IVA-->
+
+                        <div class="mb-4 row">
+                            <label for="vat" class="col-md-4 col-form-label text-md-right">{{ __('Partita IVA') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="vat" type="vat" class="form-control @error('vat') is-invalid @enderror" name="vat" >
+
+                                @error('vat')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <!--Password-->
+                        
                         <div class="mb-4 row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
