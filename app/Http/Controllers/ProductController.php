@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Restaurant;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 
@@ -13,9 +14,16 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($payload)
     {
-        //
+        // Trova il ristorante corrente
+        $restaurant = Restaurant::where('id', $payload)->firstOrFail();
+
+        // Ottieni solo i piatti relativi al ristorante corrente
+        $products = $restaurant->products;
+
+        // Restituisci i piatti alla vista
+        return view('admin.products.index', compact('products'));
     }
 
     /**
@@ -25,7 +33,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.products.create');
     }
 
     /**
