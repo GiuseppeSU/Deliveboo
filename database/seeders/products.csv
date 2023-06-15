@@ -1,0 +1,97 @@
+id_ristorante,nome,prezzo,descrizione,immagine
+1,Pizza Margherita,8.50,"Una classica pizza italiana con pomodoro, mozzarella e basilico.",https://example.com/immagine-pizza-margherita.jpg
+1,Lasagna Bolognese,12.50,"Strati di pasta, ragù di carne, besciamella e formaggio gratinato al forno.",https://example.com/immagine-lasagna-bolognese.jpg
+1,Spaghetti Carbonara,10.00,"Spaghetti conditi con uova, guanciale, pecorino romano e pepe nero.",https://example.com/immagine-spaghetti-carbonara.jpg
+1,Tiramisù,6.00,"Un classico dessert italiano con savoiardi, caffè, mascarpone e cacao.",https://example.com/immagine-tiramisu.jpg
+1,Bruschetta al Pomodoro,5.00,"Pane tostato con pomodoro fresco, aglio, basilico e olio d'oliva.",https://example.com/immagine-bruschetta-pomodoro.jpg
+1,Risotto ai Funghi,11.50,"Risotto cremoso con funghi porcini, brodo di carne e parmigiano.",https://example.com/immagine-risotto-funghi.jpg
+1,Gelato alla Vaniglia,4.50,Gelato artigianale alla vaniglia con panna montata e scaglie di cioccolato.,https://example.com/immagine-gelato-vaniglia.jpg
+1,Penne all'Arrabbiata,9.00,"Penne condite con pomodoro piccante, aglio, peperoncino e prezzemolo.",https://example.com/immagine-penne-arrabbiata.jpg
+1,Pesce Spada alla Griglia,15.00,"Filetto di pesce spada grigliato con olio d'oliva, limone e prezzemolo.",https://example.com/immagine-pesce-spada-griglia.jpg
+1,Panna Cotta,6.50,"Un dolce italiano con panna, zucchero e aroma di vaniglia, servito con salsa ai frutti di bosco.",https://example.com/immagine-panna-cotta.jpg
+2,Ravioli al Tartufo,14.00,"Ravioli ripieni di formaggio e tartufo, conditi con burro e salvia.",https://example.com/immagine-ravioli-tartufo.jpg
+2,Pizza Quattro Formaggi,10.50,"Una pizza ricoperta di mozzarella, gorgonzola, fontina e parmigiano.",https://example.com/immagine-pizza-quattro-formaggi.jpg
+2,Tagliatelle al Ragù,12.00,Tagliatelle fatte in casa con salsa di carne aromatica.,https://example.com/immagine-tagliatelle-ragu.jpg
+2,Panna Cotta al Cioccolato,7.00,Panna cotta al cioccolato con salsa al caramello e granella di nocciole.,https://example.com/immagine-panna-cotta-cioccolato.jpg
+2,Insalata Caprese,9.00,"Insalata con mozzarella di bufala, pomodoro, basilico e olio d'oliva.",https://example.com/immagine-insalata-caprese.jpg
+2,Cotoletta alla Milanese,16.50,Cotoletta di vitello impanata e fritta servita con patate al forno.,https://example.com/immagine-cotoletta-milanese.jpg
+2,Tortellini in Brodo,10.00,Tortellini ripieni di carne serviti in un brodo di carne.,https://example.com/immagine-tortellini-brodo.jpg
+2,Torta al Cioccolato,6.50,Una torta al cioccolato ricoperta di ganache al cioccolato fondente.,https://example.com/immagine-torta-cioccolato.jpg
+2,Gnocchi alla Sorrentina,11.50,"Gnocchi di patate con salsa di pomodoro, mozzarella e basilico.",https://example.com/immagine-gnocchi-sorrentina.jpg
+2,Caffè Espresso,2.50,Un caffè italiano forte e aromatico.,https://example.com/immagine-caffe-espresso.jpg
+3,Pappardelle al Cinghiale,13.50,Pappardelle fatte in casa con ragù di cinghiale.,https://example.com/immagine-pappardelle-cinghiale.jpg
+3,Pizza Prosciutto e Funghi,9.50,"Una pizza con pomodoro, mozzarella, prosciutto cotto e funghi.",https://example.com/immagine-pizza-prosciutto-funghi.jpg
+3,Risotto alla Milanese,11.00,"Risotto giallo con zafferano, brodo di carne e parmigiano.",https://example.com/immagine-risotto-milanese.jpg
+3,Tortelloni Ricotta e Spinaci,12.00,"Tortelloni ripieni di ricotta e spinaci, conditi con burro e salvia.",https://example.com/immagine-tortelloni-ricotta-spinaci.jpg
+3,Torta di Mele,6.50,Una torta classica con mele fresche e cannella.,https://example.com/immagine-torta-mele.jpg
+3,Tagliata di Manzo,17.00,"Tagliata di manzo alla griglia con rucola, scaglie di parmigiano e aceto balsamico.",https://example.com/immagine-tagliata-manzo.jpg
+3,Crostini Misti,8.00,Una selezione di crostini con diversi condimenti e gusti.,https://example.com/immagine-crostini-misti.jpg
+3,Cannoli Siciliani,5.50,Cannoli siciliani croccanti ripieni di crema di ricotta dolce.,https://example.com/immagine-cannoli-siciliani.jpg
+3,Insalata di Mare,13.00,Insalata mista di frutti di mare con limone e olio d'oliva.,https://example.com/immagine-insalata-mare.jpg
+3,Caffè Shakerato,3.50,Un caffè freddo agitato con ghiaccio.,https://example.com/immagine-caffe-shakerato.jpg
+4,Pizza Capricciosa,9.50,"Una pizza con pomodoro, mozzarella, prosciutto cotto, funghi, carciofi e olive.",https://example.com/immagine-pizza-capricciosa.jpg
+4,Tagliolini al Tartufo,14.50,"Tagliolini freschi conditi con burro, tartufo e parmigiano.",https://example.com/immagine-tagliolini-tartufo.jpg
+4,Pesce del Giorno,15.00,Pesce fresco del giorno cucinato secondo la stagione e servito con contorno di verdure.,https://example.com/immagine-pesce-giorno.jpg
+4,Tortino al Cioccolato,7.50,Un tortino al cioccolato fondente con cuore morbido e gelato alla vaniglia.,https://example.com/immagine-tortino-cioccolato.jpg
+4,Gnocchi alla Bolognese,11.50,Gnocchi di patate con salsa di carne alla bolognese e formaggio grattugiato.,https://example.com/immagine-gnocchi-bolognese.jpg
+4,Insalata Mista,6.00,"Insalata mista con lattuga, pomodori, cetrioli e condimento a scelta.",https://example.com/immagine-insalata-mista.jpg
+4,Tiramisù al Limone,6.50,Una variante fresca del classico tiramisù con aggiunta di crema al limone.,https://example.com/immagine-tiramisu-limone.jpg
+4,Risotto ai Frutti di Mare,16.00,Risotto cremoso con una selezione di frutti di mare freschi.,https://example.com/immagine-risotto-frutti-mare.jpg
+4,Panna Cotta ai Frutti di Bosco,7.00,Panna cotta con salsa ai frutti di bosco e decorazione di frutti freschi.,https://example.com/immagine-panna-cotta-frutti-bosco.jpg
+4,Caffè Freddo,3.50,Un caffè freddo servito con ghiaccio e sciroppo di vaniglia.,https://example.com/immagine-caffe-freddo.jpg
+5,Filetto di Manzo,20.00,Filetto di manzo alla griglia con patate al forno e verdure saltate.,https://example.com/immagine-filetto-manzo.jpg
+5,Bruschetta con Pomodorini,5.50,"Pane tostato con pomodorini freschi, aglio, basilico e olio extravergine di oliva.",https://example.com/immagine-bruschetta-pomodorini.jpg
+5,Ravioli ai Funghi Porcini,13.00,"Ravioli ripieni di funghi porcini, serviti con burro e salvia.",https://example.com/immagine-ravioli-funghi-porcini.jpg
+5,Pesce alla Griglia,17.50,Pesce fresco alla griglia con contorno di verdure di stagione.,https://example.com/immagine-pesce-griglia.jpg
+5,Mousse al Cioccolato,6.50,Una mousse al cioccolato cremosa e vellutata.,https://example.com/immagine-mousse-cioccolato.jpg
+5,Spaghetti alle Vongole,12.00,"Spaghetti con vongole fresche, aglio, peperoncino e prezzemolo.",https://example.com/immagine-spaghetti-vongole.jpg
+5,Insalata di Rucola e Parmigiano,8.00,"Insalata di rucola con scaglie di parmigiano, pomodorini e aceto balsamico.",https://example.com/immagine-insalata-rucola-parmigiano.jpg
+5,Tortino al Limone,7.00,Un dolce al limone con base di pasta frolla e crema di limone.,https://example.com/immagine-tortino-limone.jpg
+5,Caffè Mocha,4.00,Un espresso arricchito con cioccolato fondente e panna montata.,https://example.com/immagine-caffe-mocha.jpg
+4,Pizza Capricciosa,9.50,"Una pizza con pomodoro, mozzarella, prosciutto cotto, funghi, carciofi e olive.",https://example.com/immagine-pizza-capricciosa.jpg
+4,Tagliolini al Tartufo,14.50,"Tagliolini freschi conditi con burro, tartufo e parmigiano.",https://example.com/immagine-tagliolini-tartufo.jpg
+4,Pesce del Giorno,15.00,Pesce fresco del giorno cucinato secondo la stagione e servito con contorno di verdure.,https://example.com/immagine-pesce-giorno.jpg
+4,Tortino al Cioccolato,7.50,Un tortino al cioccolato fondente con cuore morbido e gelato alla vaniglia.,https://example.com/immagine-tortino-cioccolato.jpg
+4,Gnocchi alla Bolognese,11.50,Gnocchi di patate con salsa di carne alla bolognese e formaggio grattugiato.,https://example.com/immagine-gnocchi-bolognese.jpg
+4,Insalata Mista,6.00,"Insalata mista con lattuga, pomodori, cetrioli e condimento a scelta.",https://example.com/immagine-insalata-mista.jpg
+4,Tiramisù al Limone,6.50,Una variante fresca del classico tiramisù con aggiunta di crema al limone.,https://example.com/immagine-tiramisu-limone.jpg
+4,Risotto ai Frutti di Mare,16.00,Risotto cremoso con una selezione di frutti di mare freschi.,https://example.com/immagine-risotto-frutti-mare.jpg
+4,Panna Cotta ai Frutti di Bosco,7.00,Panna cotta con salsa ai frutti di bosco e decorazione di frutti freschi.,https://example.com/immagine-panna-cotta-frutti-bosco.jpg
+4,Caffè Freddo,3.50,Un caffè freddo servito con ghiaccio e sciroppo di vaniglia.,https://example.com/immagine-caffe-freddo.jpg
+5,Filetto di Manzo,20.00,Filetto di manzo alla griglia con patate al forno e verdure saltate.,https://example.com/immagine-filetto-manzo.jpg
+5,Bruschetta con Pomodorini,5.50,"Pane tostato con pomodorini freschi, aglio, basilico e olio extravergine di oliva.",https://example.com/immagine-bruschetta-pomodorini.jpg
+5,Ravioli ai Funghi Porcini,13.00,"Ravioli ripieni di funghi porcini, serviti con burro e salvia.",https://example.com/immagine-ravioli-funghi-porcini.jpg
+5,Pesce alla Griglia,17.50,Pesce fresco alla griglia con contorno di verdure di stagione.,https://example.com/immagine-pesce-griglia.jpg
+5,Mousse al Cioccolato,6.50,Una mousse al cioccolato cremosa e vellutata.,https://example.com/immagine-mousse-cioccolato.jpg
+5,Spaghetti alle Vongole,12.00,"Spaghetti con vongole fresche, aglio, peperoncino e prezzemolo.",https://example.com/immagine-spaghetti-vongole.jpg
+5,Insalata di Rucola e Parmigiano,8.00,"Insalata di rucola con scaglie di parmigiano, pomodorini e aceto balsamico.",https://example.com/immagine-insalata-rucola-parmigiano.jpg
+5,Tortino al Limone,7.00,Un dolce al limone con base di pasta frolla e crema di limone.,https://example.com/immagine-tortino-limone.jpg
+5,Caffè Mocha,4.00,Un espresso arricchito con cioccolato fondente e panna montata.,https://example.com/immagine-caffe-mocha.jpg
+6,Pizza Diavola,9.00,"Una pizza piccante con pomodoro, mozzarella, salame piccante e peperoncino.",https://example.com/immagine-pizza-diavola.jpg
+6,Tagliatelle al Pesto,11.50,Tagliatelle fatte in casa con salsa al pesto di basilico e pinoli.,https://example.com/immagine-tagliatelle-pesto.jpg
+6,Grigliata Mista di Pesce,18.00,"Una selezione di pesce alla griglia, tra cui gamberi, calamari e spiedini di pesce.",https://example.com/immagine-grigliata-pesce.jpg
+6,Sformato di Cioccolato,7.50,Un sformato di cioccolato fondente con salsa al caramello e panna montata.,https://example.com/immagine-sformato-cioccolato.jpg
+6,Pasta al Pomodoro,8.00,"Pasta corta con salsa di pomodoro, basilico e parmigiano.",https://example.com/immagine-pasta-pomodoro.jpg
+6,Insalata di Pollo,9.00,"Insalata mista con petto di pollo grigliato, pomodorini e salsa allo yogurt.",https://example.com/immagine-insalata-pollo.jpg
+6,Cannolo alla Siciliana,5.50,Un classico cannolo siciliano con crema di ricotta e scorza d'arancia candita.,https://example.com/immagine-cannolo-siciliano.jpg
+6,Risotto al Funghi,13.50,"Risotto cremoso con funghi misti, brodo di verdure e parmigiano.",https://example.com/immagine-risotto-funghi.jpg
+6,Torta al Limone,6.50,Una torta soffice al limone con glassa al limone e zucchero a velo.,https://example.com/immagine-torta-limone.jpg
+6,Caffè Latte,3.00,Un caffè espresso con latte caldo e schiuma di latte.,https://example.com/immagine-caffe-latte.jpg
+7,Bruschetta con Avocado,6.50,"Pane tostato con avocado, pomodorini, cipolla rossa e olio d'oliva.",https://example.com/immagine-bruschetta-avocado.jpg
+7,Linguine ai Frutti di Mare,14.00,Linguine con una varietà di frutti di mare freschi in salsa di pomodoro.,https://example.com/immagine-linguine-frutti-mare.jpg
+7,Bistecca alla Fiorentina,25.00,Bistecca di manzo alla griglia servita al sangue con contorno di patate arrosto.,https://example.com/immagine-bistecca-fiorentina.jpg
+7,Torta alla Nutella,7.50,Una torta al cioccolato farcita con crema di Nutella e decorata con cioccolato fondente.,https://example.com/immagine-torta-nutella.jpg
+7,Tagliatelle al Ragu,12.50,"Tagliatelle fatte in casa con ragù di carne, salsa di pomodoro e formaggio grattugiato.",https://example.com/immagine-tagliatelle-ragu.jpg
+7,Insalata di Quinoa,9.50,"Insalata di quinoa con verdure miste, avocado, mandorle e dressing al limone.",https://example.com/immagine-insalata-quinoa.jpg
+7,Panna Cotta al Caramello,6.50,Panna cotta con salsa al caramello e decorazione di caramello croccante.,https://example.com/immagine-panna-cotta-caramello.jpg
+7,Spaghetti alla Carbonara,11.00,"Spaghetti con pancetta croccante, uova, pecorino romano e pepe nero.",https://example.com/immagine-spaghetti-carbonara.jpg
+7,Crostata di Frutta,6.50,Una crostata di pasta frolla con crema pasticcera e frutta fresca.,https://example.com/immagine-crostata-frutta.jpg
+7,Caffè Americano,2.50,Un caffè lungo e leggero con acqua calda.,https://example.com/immagine-caffe-americano.jpg
+8,Fiorentina alla Brace,28.00,Fiorentina di manzo alla griglia servita con patate arrosto e verdure grigliate.,https://example.com/immagine-fiorentina-brace.jpg
+8,Carpaccio di Manzo,12.00,"Fettine di manzo crudo marinato con rucola, scaglie di parmigiano e olio d'oliva.",https://example.com/immagine-carpaccio-manzo.jpg
+8,Lasagna al Forno,13.50,"Una lasagna classica al forno con ragù di carne, besciamella e formaggio.",https://example.com/immagine-lasagna-forno.jpg
+8,Torta al Cioccolato e Nocciole,7.50,Una torta al cioccolato con nocciole tritate e ganache al cioccolato.,https://example.com/immagine-torta-cioccolato-nocciole.jpg
+8,Pasta all'Arrabbiata,10.50,"Pasta corta con salsa di pomodoro piccante, aglio e peperoncino.",https://example.com/immagine-pasta-arrabbiata.jpg
+8,Insalata Caprese,8.00,"Insalata con mozzarella di bufala, pomodoro, basilico e olio d'oliva.",https://example.com/immagine-insalata-caprese.jpg
+8,Tiramisù Classico,6.50,"Il classico dolce italiano con savoiardi, caffè, mascarpone e cacao.",https://example.com/immagine-tiramisu-classico.jpg
+8,Caffè Lungo,2.50,Un caffè espresso con una maggiore quantità di acqua.,https://example.com/immagine-caffe-lungo.jpg
