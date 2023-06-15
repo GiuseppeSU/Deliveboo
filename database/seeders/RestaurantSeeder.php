@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Restaurant;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Functions\Helpers;
 
 class RestaurantSeeder extends Seeder
 {
@@ -16,10 +17,10 @@ class RestaurantSeeder extends Seeder
     public function run()
     {
 
-        $data = self::getInfoCsv(__DIR__ . '/restaurants.csv');
+        $csvContent = Helpers::getCsvContent(__DIR__ . '/restaurants.csv');
 
-        foreach ($data as $key => $row) {
-            if ($key > 0) {
+        foreach ($csvContent as $index => $row) {
+            if ($index > 0) {
                 $restaurant = new Restaurant();
                 $restaurant->name = $row[0];
                 $restaurant->address = $row[1];
