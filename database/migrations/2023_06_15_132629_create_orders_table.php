@@ -12,12 +12,15 @@ return new class extends Migration {
      */
     public function up()
     {
-        Schema::create('types', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 50);
-            $table->string('image', 255)->nullable();
-            $table->string('icon', 255)->nullable();
-            $table->string('slug', 50);
+            $table->string('order_number', 32);
+            $table->decimal('total', 6, 2);
+            $table->string('email', 50);
+            $table->string('address', 100);
+            $table->string('name', 100);
+            $table->string('phone_number', 10);
+            $table->string('status', 25)->default('pending');
             $table->timestamps();
         });
     }
@@ -29,6 +32,6 @@ return new class extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('types');
+        Schema::dropIfExists('orders');
     }
 };
