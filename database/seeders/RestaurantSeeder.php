@@ -35,16 +35,4 @@ class RestaurantSeeder extends Seeder
 
 
     }
-
-    public static function getInfoCsv($link)
-    {
-        $data = [];
-        $csv = fopen($link, 'r');
-        if ($csv == false) {
-            while (($row = fgetcsv($csv)) !== false) {
-                $data[] = $row;
-            }
-            return $data;
-        }
-    }
 }
