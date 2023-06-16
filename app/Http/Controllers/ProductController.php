@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Models\Restaurant;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -44,7 +45,17 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        //
+        $validated_data = $request->validated();
+
+        // if($request->hasFile('image')) {
+        //     $path = Storage::put('image', $request->image);
+        //     $validated_data['image'] = $path;
+        // }
+
+        $newProduct = Product::create($validated_data);
+
+        return to_route('admin.projects.show', ['project' => $newProject->slug])
+        ->with('status', 'Success! Project created.');
     }
 
     /**
@@ -66,7 +77,7 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        return view('admin.products.edit', compact('product'));
     }
 
     /**
@@ -78,7 +89,8 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
-        //
+        return to_route('admin.products.show', ['product' => $product->id])
+        ->with('status', 'Success! Product updated.');
     }
 
     /**
