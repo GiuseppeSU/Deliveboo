@@ -39,13 +39,17 @@
                             )
 
                             <div class="mb-4 row">
-                                <label for="password"
+                                <label for="password" 
                                     class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                                 <div class="mb-3">
                                     <input id="password" type="password"
                                         class="form-control @error('password') is-invalid @enderror" name="password"
-                                        required autocomplete="new-password">
+                                        required autocomplete="new-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                                        
+                                        <div id="message">
+                                            <small id="length" class="invalid">La password deve contenere almeno 8 caratteri</small>
+                                        </div>
 
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
