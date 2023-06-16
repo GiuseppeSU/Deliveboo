@@ -10,7 +10,6 @@ class DashboardController extends Controller
     public function index()
     {
         $products = Product::where('restaurant_id', 1)->get();
-
         return view('admin.dashboard', compact('products'));
     }
 }

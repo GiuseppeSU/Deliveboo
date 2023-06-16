@@ -32,7 +32,7 @@
                         <td>{{$product->category}}</td>
                         <td>
                             <a href=""><i class="mx-2 fa-solid fa-trash-can"></i></a>
-                            <a href=""><i class="mx-2 fa-solid fa-info"></i></a>
+                            <a href="{{ route('admin.products.show', $product) }}"><i class="mx-2 fa-solid fa-info"></i></a>
                             <a href=""><i class="mx-2 fa-solid fa-pen-to-square"></i></a>
                         </td>
                     </tr>

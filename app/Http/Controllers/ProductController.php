@@ -56,7 +56,7 @@ class ProductController extends Controller
         $newProduct = Product::create($validated_data);
 
         return to_route('admin.projects.show', ['project' => $newProject->slug])
-        ->with('status', 'Success! Project created.');
+            ->with('status', 'Success! Project created.');
     }
 
     /**
@@ -67,7 +67,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        return view('admin.products.show', compact('product'));
     }
 
     /**
@@ -91,7 +91,7 @@ class ProductController extends Controller
     public function update(UpdateProductRequest $request, Product $product)
     {
         return to_route('admin.products.show', ['product' => $product->id])
-        ->with('status', 'Success! Product updated.');
+            ->with('status', 'Success! Product updated.');
     }
 
     /**
