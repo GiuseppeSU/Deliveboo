@@ -32,7 +32,7 @@
                         <td>{{$product->category}}</td>
                         <td>
                             <a href="" class='btn btn-outline-warning p-1'><i class="mx-1 fa-solid fa-pen-to-square"></i></a>
-                            <a href="" class='btn btn-outline-primary p-1 px-2'><i class="mx-1 fa-solid fa-info"></i></a>
+                            <a href="{{ route('admin.products.show', $product) }}"class='btn btn-outline-primary p-1 px-2'><i class="mx-1 fa-solid fa-info"></i></a>
                             <form class="form_delete_product d-inline-block" action="{{route('admin.products.destroy', ['product' => $product->id])}}" method="POST">
                                 @csrf
                                 @method('DELETE')
