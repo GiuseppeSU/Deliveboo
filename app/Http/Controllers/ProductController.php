@@ -66,7 +66,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        return view('admin.products.show', compact('product'));
     }
 
     /**
@@ -106,7 +106,7 @@ class ProductController extends Controller
         $product->update($validated_data);
 
         return to_route('admin.products.show', ['product' => $product->id])
-        ->with('status', 'Success! Product updated.');
+            ->with('status', 'Success! Product updated.');
     }
 
     /**
