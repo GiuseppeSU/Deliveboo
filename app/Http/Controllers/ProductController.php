@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use App\Models\Product;
 use App\Models\Restaurant;
 use App\Http\Requests\StoreProductRequest;
@@ -19,8 +19,8 @@ class ProductController extends Controller
     {
         // Trova il ristorante corrente
         //$products = Product::all();
-        $products = Product::where('restaurant_id', 1)->get();
-
+        //$products = Product::where('restaurant_id', 1)->get();
+        $products = Product::where('restaurant_id', Auth::id())->get();
         // Ottieni solo i piatti relativi al ristorante corrente
         // $products = $restaurant->products;
 
@@ -117,8 +117,10 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        //
+        $product = Product::findOrFail($id);
+        $product->delete();
+        return redirect()->route('admin.products.index');
     }
 }
