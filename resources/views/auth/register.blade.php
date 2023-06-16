@@ -61,7 +61,7 @@
 
                                 <div class="mb-3">
                                     <input id="password-confirm" type="password" class="form-control"
-                                        name="password_confirmation" required>
+                                        name="password_confirmation">
                                 </div>
                             </div>
 
