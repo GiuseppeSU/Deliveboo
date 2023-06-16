@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Restaurant;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
@@ -12,7 +13,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
-use App\Models\Restaurant;
+use Illuminate\Support\Facades\Storage;
+
 
 class RegisteredUserController extends Controller
 {
@@ -31,7 +33,7 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        //$data= $request->all();
+        $data= $request->all();
 
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
@@ -39,16 +41,18 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'vat'=> ['required','min:11','max:11'],
             'address'=>['required','string','max:100'],
-            'image'=>['image']
+            'image'=>['nullable','image']
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+
         ]);
-         dd($user);
-         die();
+
+
+
         $restaurant = Restaurant::create([
             'name' => $request->name,
             'vat' => $request->vat,
@@ -57,14 +61,19 @@ class RegisteredUserController extends Controller
             'slug' =>$request->name,
             'user_id'=> $user->id,
 
+
         ]);
 
-        if ($request->hasFile('image')){
-            $imagePath = $request->file('image')->store('public/img');
-        }
+
+        if ($request->hasFile('image')) {
+            $img_path = Storage::put('public/img', $request->image);
+            $request['image'] = $img_path;
+        };
         event(new Registered($user));
 
+
         Auth::login($user);
+
 
         return redirect(RouteServiceProvider::HOME);
     }

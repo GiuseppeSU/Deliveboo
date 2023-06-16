@@ -81,13 +81,13 @@
                             </div>
 
                             <div class="mb-4 row">
-                                <label for="Address"
-                                    class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
+                                <label for="address"
+                                    class="col-md-4 col-form-label text-md-right">{{ __('address') }}</label>
                                 <div class="col-md-6">
-                                    <input id="Address" type="text"
-                                        class="form-control @error('Address') is-invalid @enderror" name="Address"
-                                        value="{{ old('Address') }}" required>
-                                    @error('Address')
+                                    <input id="address" type="text"
+                                        class="form-control @error('address') is-invalid @enderror" name="address"
+                                        value="{{ old('address') }}" required>
+                                    @error('address')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
