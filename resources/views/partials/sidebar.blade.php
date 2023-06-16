@@ -6,14 +6,14 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-            <a href="{{ route('admin.dashboard') }}" class="nav-link active" aria-current="page">
+            <a href="{{ route('admin.dashboard') }}" class="nav-link link-body-emphasis @if(Route::currentRouteName() == 'admin.dashboard') active text-white @endif" aria-current="page">
             <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
             Dashboard
             </a>
         </li>
 
         <li>
-            <a href="{{ route('admin.products.index') }}" class="nav-link link-body-emphasis">
+            <a href="{{ route('admin.products.index') }}" class="nav-link link-body-emphasis @if(Route::currentRouteName() == 'admin.products.index') active  text-white @endif">
             <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
             Lista dei piatti
             </a>
