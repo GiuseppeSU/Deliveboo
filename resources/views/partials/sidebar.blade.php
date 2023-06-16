@@ -19,6 +19,15 @@
             </a>
         </li>
 
+        @if(Route::currentRouteName() == 'admin.products.index')
+        <li>
+            <a href="{{ route('admin.products.create') }}" class="nav-link link-body-emphasis @if(Route::currentRouteName() == 'admin.products.create') active text-white @endif">
+            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+            + Aggiungi piatto
+            </a>
+        </li>
+        @endif
+
         <li>
             <a href="#" class="nav-link link-body-emphasis">
             <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
