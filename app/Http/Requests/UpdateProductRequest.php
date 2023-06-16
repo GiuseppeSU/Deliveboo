@@ -16,6 +16,14 @@ class UpdateProductRequest extends FormRequest
         return true;
     }
 
+    // Funzione che prepara i dati per la validazione
+    protected function prepareForValidation(): void
+    {
+        // $this->merge([
+        //     'slug' => Helpers::generateSlug($this->name),
+        // ]);
+    }
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -24,7 +32,13 @@ class UpdateProductRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'restaurant_id' => 'exists:restaurants,id',
+            'name' => 'required|max:100',
+            'price' => 'required|decimal:0,2',
+            'description' => 'nullable',
+            'image' => 'nullable|max:255',
+            'visibility' => 'nullable',
+            'category' => 'nullable|max:50'
         ];
     }
 }

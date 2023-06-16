@@ -53,9 +53,10 @@ class ProductController extends Controller
         //     $validated_data['image'] = $path;
         // }
 
+        $validated_data['restaurant_id'] = Auth::id();
         $newProduct = Product::create($validated_data);
 
-        return to_route('admin.projects.show', ['project' => $newProject->slug])
+        return to_route('admin.products.show', ['product' => $newProduct->id])
         ->with('status', 'Success! Project created.');
     }
 
@@ -90,6 +91,22 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
+        $validated_data = $request->validated();
+
+        // if ($request->hasFile('image')) {
+
+        //     if ($product->cover_image) {
+        //         Storage::delete($product->cover_image);
+        //     }
+
+        //     $path = Storage::put('cover', $request->cover_image);
+        //     $validated_data['cover_image'] = $path;
+
+        // }
+
+
+        $product->update($validated_data);
+
         return to_route('admin.products.show', ['product' => $product->id])
         ->with('status', 'Success! Product updated.');
     }

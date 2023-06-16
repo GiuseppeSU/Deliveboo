@@ -23,7 +23,7 @@
                 'partials.forms.edit_form_element',
                 $data = [
                     'default' => $product->price,
-                    'type' => 'number',
+                    'type' => 'text',
                     'field' => 'price',
                     'label' => 'Prezzo',
                 ]

@@ -8,11 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'price',
+        'description',
+        'image',
+        'category',
+        'restaurant_id',
+    ];
+
     public function restaurant()
     {
         return $this->belongsTo(Restaurant::class);
-
-
     }
 
     public function orders()
