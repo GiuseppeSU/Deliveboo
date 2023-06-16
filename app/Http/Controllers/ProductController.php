@@ -6,8 +6,6 @@ use App\Models\Product;
 use App\Models\Restaurant;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
-use Illuminate\Support\Facades\Auth;
-
 class ProductController extends Controller
 {
     /**
