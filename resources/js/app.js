@@ -4,6 +4,7 @@ import * as bootstrap from 'bootstrap';
 import.meta.glob([
     '../img/**'
 ])
+import { validateRestaurantRegister } from './form_validation';
 
 
 const deleteButtons = document.querySelectorAll('.form_delete_product button[type="submit"]');
@@ -25,3 +26,6 @@ deleteButtons.forEach(button => {
         });
     })
 });
+
+// *** form di registrazione ristorante ***
+validateRestaurantRegister();
