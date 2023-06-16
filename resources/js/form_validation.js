@@ -10,15 +10,19 @@ export function validateRestaurantRegister() {
         // console.log(name);
 
         // controllo password
-        let password = document.getElementById('password').value;
-        if (password.length < 8 || !password.match(/[$&?@#-*%!]/g) || password.match(/[+,:;=|'<>.^()]/g)) {
-            console.log('password errore');
+        let password = document.getElementById('password');
+
+        if (password.value.length < 8) {
+            console.log('password non valida');
+            return
         }
+
 
         // controllo vat
         let vat = document.getElementById('vat').value;
         if (vat.length != 11 || vat.match(/[^0-9]/g)) {
             console.log('vat errore');
+            return
         }
 
         // controllo address
@@ -29,55 +33,81 @@ export function validateRestaurantRegister() {
     })
 
 
-    var myInput = document.getElementById("password");
-    var length = document.getElementById("length");
-    
-    myInput.onfocus = function () {
-        document.getElementById("message").style.display = "block";
-    }
-    myInput.onblur = function () {
-        document.getElementById("message").style.display = "none";
-    }
-    myInput.onkeyup = function () {
-        // Validate lowercase letters
-        // var lowerCaseLetters = /[a-z]/g;
-        // if (myInput.value.match(lowerCaseLetters)) {
-        //     letter.classList.remove("invalid");
-        //     letter.classList.add("valid");
-        // } else {
-        //     letter.classList.remove("valid");
-        //     letter.classList.add("invalid");
-        // }
+    addAlerts('password');
+    addAlerts('vat');
 
-        // Validate capital letters
-        // var upperCaseLetters = /[A-Z]/g;
-        // if (myInput.value.match(upperCaseLetters)) {
-        //     capital.classList.remove("invalid");
-        //     capital.classList.add("valid");
-        // } else {
-        //     capital.classList.remove("valid");
-        //     capital.classList.add("invalid");
-        // }
+    function addAlerts(inputId) {
+        const myInput = document.getElementById(inputId);
+        const alert = myInput.closest('div').querySelector(".input-alert");
+        const message = myInput.closest('div').querySelector(".input-message");
+        console.log(message);
 
-        /*Validate numbers
-        var numbers = /[0-9]/g;
-        if (myInput.value.match(numbers)) {
-            number.classList.remove("invalid");
-            number.classList.add("valid");
-        } else {
-            number.classList.remove("valid");
-            number.classList.add("invalid");
-        }*/
+        myInput.onfocus = function () {
+            message.style.display = "block";
+        }
+        myInput.onblur = function () {
+            message.style.display = "none";
+        }
+        myInput.onkeyup = function () {
+            let trigger;
+            switch (inputId){
+                case 'password':
+                    trigger = (myInput.value.length >= 8);
+                    break
+                case 'vat':
+                    console.log(myInput.value.length);
+                    trigger = (myInput.value.length <= 11 && !myInput.value.match(/[^0-9]/g))
+                    break;
+                default :
+                    console.log('alert-switch: input non riconosciuto');
+            }
+            // Validate length
+            console.log(trigger);
+            if (trigger) {
+                alert.classList.remove("invalid", "text-danger");
+                alert.classList.add("valid");
+                message.style.display = "none";
+            } else {
+                console.log( inputId+' errore');
+                alert.classList.remove("valid");
+                alert.classList.add("invalid", "text-danger");
+                message.style.display = "block";
+            }
 
-        // Validate length
-        if (myInput.value.length >= 8) {
-            length.classList.remove("invalid");
-            length.classList.add("valid");
-        } else {
-            length.classList.remove("valid");
-            length.classList.add("invalid");
+            // Validate lowercase letters
+            // var lowerCaseLetters = /[a-z]/g;
+            // if (myInput.value.match(lowerCaseLetters)) {
+            //     letter.classList.remove("invalid");
+            //     letter.classList.add("valid");
+            // } else {
+            //     letter.classList.remove("valid");
+            //     letter.classList.add("invalid");
+            // }
+
+            // Validate capital letters
+            // var upperCaseLetters = /[A-Z]/g;
+            // if (myInput.value.match(upperCaseLetters)) {
+            //     capital.classList.remove("invalid");
+            //     capital.classList.add("valid");
+            // } else {
+            //     capital.classList.remove("valid");
+            //     capital.classList.add("invalid");
+            // }
+
+            /*Validate numbers
+            var numbers = /[0-9]/g;
+            if (myInput.value.match(numbers)) {
+                number.classList.remove("invalid");
+                number.classList.add("valid");
+            } else {
+                number.classList.remove("valid");
+                number.classList.add("invalid");
+            }*/
+
+
         }
     }
+
 
 
 };
