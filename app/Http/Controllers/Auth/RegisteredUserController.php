@@ -39,10 +39,32 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'vat'=> ['required','min:11','max:11','unique:restaurants'],
+            'vat'=> ['required','numeric','min_digits:11','max_digits:11','unique:restaurants'],
             'address'=>['required','string','max:100'],
             'image'=>['nullable','image']
-        ]);
+        ],
+        //personalized message
+        [
+            'name.required' => 'Il campo Nome è obbligatorio',
+            'name.max' => 'Il campo nome deve avere al massimo :max caratteri',
+            'name.string'=>'Il campo nome deve contenere caratteri alfabetici',
+            'email.required' => 'Il campo E-mail è obbligatorio',
+            'email.email' => 'Il campo E-mail deve contenere un indirizzo e-mail valido',
+            'email.max' => 'Il campo E-mail deve avere al massimo :max caratteri',
+            'email.unique' => 'L\'E-mail inserita è già presente',
+            'password.required' => 'Il campo Password è obbligatorio',
+            'password.confirmed' => 'Le due password non corrispondono',
+            'vat.required' => 'Il campo Partita IVA è obbligatorio',
+            'vat.numeric' => 'Il campo Partita IVA deve essere un numero',
+            'vat.min_digits' => 'Il campo Partita IVA deve essere di :min caratteri',
+            'vat.max_digits' => 'Il campo Partita IVA deve essere di :max caratteri',
+            'vat.unique' => 'La Partita IVA inserita è già presente',
+            'address.required' => 'Il campo Indirizzo è obbligatorio',
+            'address.max' => 'Il campo Indirizzo deve avere al massimo :max caratteri',
+            'image.image' => 'Il tipo di file non corrisponde ad un Immagine'
+
+        ]
+    );
 
         $user = User::create([
             'name' => $request->name,
