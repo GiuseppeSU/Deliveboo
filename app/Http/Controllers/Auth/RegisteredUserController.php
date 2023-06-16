@@ -39,7 +39,7 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'vat'=> ['required','min:11','max:11'],
+            'vat'=> ['required','min:11','max:11','unique:restaurants'],
             'address'=>['required','string','max:100'],
             'image'=>['nullable','image']
         ]);
