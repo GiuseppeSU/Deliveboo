@@ -17,7 +17,8 @@ class ProductController extends Controller
     public function index()
     {
         // Trova il ristorante corrente
-        $products = Product::all();
+        //$products = Product::all();
+        $products = Product::where('restaurant_id', 1)->get();
 
         // Ottieni solo i piatti relativi al ristorante corrente
         // $products = $restaurant->products;

@@ -23,6 +23,15 @@
                     {{ __('You are logged in!') }}
                 </div>
             </div>
+            <br>
+            <div class="card w-25">
+                <h6 class="card-header text-center">Numero di piatti</h6>
+                <h1 class="text-center">
+                <a href="{{ route('admin.products.index') }}" class="nav-link link-body-emphasis">
+                    {{$products->count()}}
+</a>
+                </h1>
+            </div>
         </div>
     </div>
 </div>
