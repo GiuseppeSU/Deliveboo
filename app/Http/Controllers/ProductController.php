@@ -14,16 +14,16 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($payload)
+    public function index()
     {
         // Trova il ristorante corrente
-        $restaurant = Restaurant::where('id', $payload)->firstOrFail();
+        $product = Product::where('id', 1)->where('restaurant_id',1)->get();
 
         // Ottieni solo i piatti relativi al ristorante corrente
-        $products = $restaurant->products;
+        // $products = $restaurant->products;
 
         // Restituisci i piatti alla vista
-        return view('admin.products.index', compact('products'));
+        return view('admin.products.index', compact('product'));
     }
 
     /**
