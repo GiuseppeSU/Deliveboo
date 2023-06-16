@@ -24,4 +24,13 @@ class Restaurant extends Model
         return $this->hasMany(Product::class);
     }
 
+    protected $fillable =[
+        'name',
+        'address',
+        'vat',
+        'image',
+        'slug',
+        'user_id'
+    ];
+
 }

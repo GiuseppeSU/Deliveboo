@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use App\Models\Restaurant;
 
 class RegisteredUserController extends Controller
 {
@@ -30,10 +31,15 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        //$data= $request->all();
+
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'vat'=> ['required','min:11','max:11'],
+            'address'=>['required','string','max:100'],
+            'image'=>['image']
         ]);
 
         $user = User::create([
@@ -41,7 +47,21 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
+         dd($user);
+         die();
+        $restaurant = Restaurant::create([
+            'name' => $request->name,
+            'vat' => $request->vat,
+            'address' => $request->address,
+            'image' => $request->image,
+            'slug' =>$request->name,
+            'user_id'=> $user->id,
 
+        ]);
+
+        if ($request->hasFile('image')){
+            $imagePath = $request->file('image')->store('public/img');
+        }
         event(new Registered($user));
 
         Auth::login($user);
