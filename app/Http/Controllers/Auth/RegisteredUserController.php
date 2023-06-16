@@ -38,7 +38,7 @@ class RegisteredUserController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'password' => ['required', 'confirmed', 'min:8', Rules\Password::defaults()],
             'vat'=> ['required','numeric','min_digits:11','max_digits:11','unique:restaurants'],
             'address'=>['required','string','max:100'],
             'image'=>['nullable','image']
@@ -54,6 +54,7 @@ class RegisteredUserController extends Controller
             'email.unique' => 'L\'E-mail inserita è già presente',
             'password.required' => 'Il campo Password è obbligatorio',
             'password.confirmed' => 'Le due password non corrispondono',
+            'password.min' => 'La password deve contenere almeno 8 caratteri',
             'vat.required' => 'Il campo Partita IVA è obbligatorio',
             'vat.numeric' => 'Il campo Partita IVA deve essere un numero',
             'vat.min_digits' => 'Il campo Partita IVA deve essere di :min caratteri',
