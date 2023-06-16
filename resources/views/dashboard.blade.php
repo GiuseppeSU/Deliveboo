@@ -6,10 +6,7 @@
         {{ __('Dashboard') }}
     </h2>
     <div class="row justify-content-center">
-        <div class="col-3">
-            @include('partials.sidebar')
-        </div>
-        <div class="col-9">
+        <div class="col">
             <div class="card">
                 <div class="card-header">{{ __('User Dashboard') }}</div>
 

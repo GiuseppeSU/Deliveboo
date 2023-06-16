@@ -17,13 +17,13 @@ class ProductController extends Controller
     public function index()
     {
         // Trova il ristorante corrente
-        $product = Product::where('id', 1)->where('restaurant_id',1)->get();
+        $products = Product::all();
 
         // Ottieni solo i piatti relativi al ristorante corrente
         // $products = $restaurant->products;
 
         // Restituisci i piatti alla vista
-        return view('admin.products.index', compact('product'));
+        return view('admin.products.index', compact('products'));
     }
 
     /**
