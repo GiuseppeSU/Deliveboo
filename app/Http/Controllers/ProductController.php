@@ -55,7 +55,7 @@ class ProductController extends Controller
         $newProduct = Product::create($validated_data);
 
         return to_route('admin.products.show', ['product' => $newProduct->id])
-        ->with('status', 'Success! Project created.');
+        ->with('status', 'Success! Product created.');
     }
 
     /**
