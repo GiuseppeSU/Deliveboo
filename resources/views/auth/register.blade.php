@@ -23,8 +23,9 @@
                             )
                             <div class="vat-input-alert">
                                 <span class="vat-input-message invalid">
-                                    <small>La p. Iva deve essere di 11 cifre.</small>
-                                    <small> Sono ammessi solo numeri.</small>
+                                    <small class="input-empty d-none">Il campo è richiesto.</small>
+                                    <small class="input-length">La p. Iva deve essere di 11 cifre.</small>
+                                    <small class="input-char"> Sono ammessi solo numeri.</small>
                                 </span>
                             </div>
                             <!-- IMG-->
@@ -55,10 +56,12 @@
                                         title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                                         required>
 
-                                    <div class="password-input-alert">
-                                        <small class="input-message invalid">La password deve contenere almeno 8
-                                            caratteri</small>
-                                    </div>
+                                        <div class="password-input-alert">
+                                            <span class="password-input-message invalid">
+                                                <small class="input-empty d-none">Il campo è richiesto</small>
+                                                <small class="input-length">La password deve essere lunga almeno 8 caratteri.</small>
+                                            </span>
+                                        </div>
 
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -75,6 +78,13 @@
                                 <div class="mb-3">
                                     <input id="password-confirm" type="password" class="form-control"
                                         name="password_confirmation">
+                                    
+                                        <div class="password-confirm-input-alert">
+                                            <span class="password-confirm-input-message invalid">
+                                                <small class="input-empty d-none">Il campo è richiesto</small>
+                                                <small class="input-value">Il valore non coincide con quello del campo password</small>
+                                            </span>
+                                        </div>
                                 </div>
                             </div>
 
