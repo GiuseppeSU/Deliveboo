@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container ">
     <h2 class="fs-4 text-secondary my-4">
         {{ __('Dashboard') }}
     </h2>
@@ -10,7 +10,7 @@
             @include('partials.sidebar')
         </div>
         <div class="col-9">
-            <div class="card">
+            <div class="card ">
                 <div class="card-header">{{ __('User Dashboard') }}</div>
 
                 <div class="card-body">
