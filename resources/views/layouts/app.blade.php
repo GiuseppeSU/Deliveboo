@@ -25,7 +25,7 @@
     <div id="app">
 
 
-        <nav class="navbar navbar-expand-md navbar-light bg-info shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light my_bg shadow-sm">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                     <div class="logo_laravel">
@@ -84,7 +84,7 @@
             </div>
         </nav>
 
-        <main class="bg-warning">
+        <main class="my_bg">
             @yield('content')
         </main>
     </div>
