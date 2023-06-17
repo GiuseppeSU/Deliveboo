@@ -5,18 +5,19 @@ export function validateRestaurantRegister() {
     submitBtn.addEventListener('click', event => {
         event.preventDefault();
 
-        // controllo name (restaurant)
-        // let name = document.getElementById('name').value;
-        // console.log(name);
-
         // controllo password
         let password = document.getElementById('password');
-
         if (password.value.length < 8) {
-            console.log('password non valida');
+            console.log('Password errore');
             return
         }
 
+        // controllo password
+        let passwordConfirm = document.getElementById('password-confirm');
+        if (password.value != passwordConfirm.value) {
+            console.log('pwdConfirm errore');
+            return
+        }
 
         // controllo vat
         let vat = document.getElementById('vat').value;
@@ -25,8 +26,6 @@ export function validateRestaurantRegister() {
             return
         }
 
-        // controllo address
-        // let address = document.getElementById('address').value;
         const form = document.querySelector('form');
         form.submit();
 
@@ -44,10 +43,10 @@ export function validateRestaurantRegister() {
         const message = document.querySelector(`.${inputId}-input-message`);
 
         myInput.onfocus = function () {
-            alert.style.display = "block";
+            alert.classList.remove('d-none');
         }
         myInput.onblur = function () {
-            alert.style.display = "none";
+            alert.classList.add('d-none');
         }
         myInput.onkeyup = function () {
             let isInputInvalid;
@@ -73,7 +72,6 @@ export function validateRestaurantRegister() {
                     }
                     break
                 case 'password-confirm':
-                    console.log('sono qui')
                     isInputInvalid = false;
                     //il valore della conferma password deve coincidere con quello della password
                     let pwdValue =  message.querySelector('.input-value');

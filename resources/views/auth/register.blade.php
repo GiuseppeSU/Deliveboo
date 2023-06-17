@@ -21,7 +21,7 @@
                                 'partials.forms.create_form_element',
                                 $data = ['type' => 'text', 'field' => 'vat', 'label' => 'P.Iva']
                             )
-                            <div class="vat-input-alert">
+                            <div class="vat-input-alert d-none d-none">
                                 <span class="vat-input-message invalid">
                                     <small class="input-empty d-none">Il campo è richiesto.</small>
                                     <small class="input-length">La p. Iva deve essere di 11 cifre.</small>
@@ -56,7 +56,7 @@
                                         title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
                                         required>
 
-                                        <div class="password-input-alert">
+                                        <div class="password-input-alert d-none">
                                             <span class="password-input-message invalid">
                                                 <small class="input-empty d-none">Il campo è richiesto</small>
                                                 <small class="input-length">La password deve essere lunga almeno 8 caratteri.</small>
@@ -79,7 +79,7 @@
                                     <input id="password-confirm" type="password" class="form-control"
                                         name="password_confirmation">
                                     
-                                        <div class="password-confirm-input-alert">
+                                        <div class="password-confirm-input-alert d-none">
                                             <span class="password-confirm-input-message invalid">
                                                 <small class="input-empty d-none">Il campo è richiesto</small>
                                                 <small class="input-value">Il valore non coincide con quello del campo password</small>
