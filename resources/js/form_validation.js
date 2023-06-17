@@ -10,15 +10,19 @@ export function validateRestaurantRegister() {
         // console.log(name);
 
         // controllo password
-        let password = document.getElementById('password').value;
-        if (password.length < 8 || !password.match(/[$&?@#-*%!]/g) || password.match(/[+,:;=|'<>.^()]/g)) {
-            console.log('password errore');
+        let password = document.getElementById('password');
+
+        if (password.value.length < 8) {
+            console.log('password non valida');
+            return
         }
+
 
         // controllo vat
         let vat = document.getElementById('vat').value;
         if (vat.length != 11 || vat.match(/[^0-9]/g)) {
             console.log('vat errore');
+            return
         }
 
         // controllo address
@@ -29,58 +33,56 @@ export function validateRestaurantRegister() {
     })
 
 
-    var myInput = document.getElementById("password");
-    var length = document.getElementById("length");
-    
-    myInput.onfocus = function () {
-        document.getElementById("message").style.display = "block";
-    }
-    myInput.onblur = function () {
-        document.getElementById("message").style.display = "none";
-    }
-    myInput.onkeyup = function () {
-        // Validate lowercase letters
-        // var lowerCaseLetters = /[a-z]/g;
-        // if (myInput.value.match(lowerCaseLetters)) {
-        //     letter.classList.remove("invalid");
-        //     letter.classList.add("valid");
-        // } else {
-        //     letter.classList.remove("valid");
-        //     letter.classList.add("invalid");
-        // }
+    addAlerts('password');
+    addAlerts('vat');
 
-        // Validate capital letters
-        // var upperCaseLetters = /[A-Z]/g;
-        // if (myInput.value.match(upperCaseLetters)) {
-        //     capital.classList.remove("invalid");
-        //     capital.classList.add("valid");
-        // } else {
-        //     capital.classList.remove("valid");
-        //     capital.classList.add("invalid");
-        // }
+    // funzione che aggiunge dei controlli sugli input richiedendo l'id dell'input da controllare.
+    function addAlerts(inputId) {
+        const myInput = document.getElementById(inputId);
+        const alert = document.querySelector(`.${inputId}-input-alert`);
+        const message = document.querySelector(`.${inputId}-input-message`);
 
-        /*Validate numbers
-        var numbers = /[0-9]/g;
-        if (myInput.value.match(numbers)) {
-            number.classList.remove("invalid");
-            number.classList.add("valid");
-        } else {
-            number.classList.remove("valid");
-            number.classList.add("invalid");
-        }*/
+        myInput.onfocus = function () {
+            alert.style.display = "block";
+        }
+        myInput.onblur = function () {
+            alert.style.display = "none";
+        }
+        myInput.onkeyup = function () {
+            let isInputInvalid;
+            let messages = {};
 
-        // Validate length
-        if (myInput.value.length >= 8) {
-            length.classList.remove("invalid");
-            length.classList.add("valid");
-        } else {
-            length.classList.remove("valid");
-            length.classList.add("invalid");
+            switch (inputId){
+                case 'password':
+                    isInputInvalid = (myInput.value.length < 8);
+                    break
+                case 'vat':
+                    isInputInvalid = false;
+                    //la p.iva deve avere 11 cifre
+                    if(myInput.value.length != 11){
+                        isInputInvalid = true;
+
+                    }
+                    //la p.iva deve contenere solo numeri
+                    if(myInput.value.match(/[^0-9]/g)){
+                        isInputInvalid = true;
+                    }
+                    break;
+                default :
+                    console.log('alert-switch: input non riconosciuto');
+            }
+            
+            //
+            if (isInputInvalid) {
+                console.log( inputId+' errore');
+                myInput.classList.remove('is-valid');
+                myInput.classList.add('is-invalid');
+                alert.classList.add("is-invalid", "text-danger");
+            } else {
+                myInput.classList.remove('is-invalid');
+                myInput.classList.add('is-valid');
+                alert.classList.remove("is-invalid", "text-danger");
+            }
         }
     }
-
-
 };
-
-
-
