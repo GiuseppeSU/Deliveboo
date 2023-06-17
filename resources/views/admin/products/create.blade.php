@@ -28,7 +28,7 @@
 
             @include(
                 'partials.forms.create_form_element',
-                $data = ['type' => 'text', 'field' => 'name', 'label' => 'Categoria']
+                $data = ['type' => 'text', 'field' => 'category', 'label' => 'Categoria']
             )
 
             @include(

@@ -1,20 +1,14 @@
-nome,indirizzo,vat,slug,immagine
-Ristorante delizioso,Via Roma 123,12345678901,ristorante-delizioso,https://example.com/immagine-ristorante-delizioso.jpg
-Pizzeria Buonissima,Viale Italia 456,98765432109,pizzeria-buonissima,https://example.com/immagine-pizzeria-buonissima.jpg
-Osteria Tradizione,Corso Garibaldi 789,65432109876,osteria-tradizione,https://example.com/immagine-osteria-tradizione.jpg
-Trattoria Gustosa,Via Dante 321,01234567890,trattoria-gustosa,https://example.com/immagine-trattoria-gustosa.jpg
-Ristorante Elegante,Piazza Verdi 567,09876543210,ristorante-elegante,https://example.com/immagine-ristorante-elegante.jpg
-Ristorante di Mare,Via del Mare 789,45678901234,ristorante-di-mare,https://example.com/immagine-ristorante-di-mare.jpg
-Caffe Italiano,Viale Espresso 567,54321098765,caffe-italiano,https://example.com/immagine-caffe-italiano.jpg
-Ristorante Romantico,Via dell'Amore 123,56789012345,ristorante-romantico,https://example.com/immagine-ristorante-romantico.jpg
-Pasticceria Dolcezza,Via dei Sogni 456,09876543212,pasticceria-dolcezza,https://example.com/immagine-pasticceria-dolcezza.jpg
-Trattoria Rustica,Via della Campagna 789,34567890123,trattoria-rustica,https://example.com/immagine-trattoria-rustica.jpg
-Pizzeria Napoletana,Via Margherita 321,56789012345,pizzeria-napoletana,https://example.com/immagine-pizzeria-napoletana.jpg
-Ristorante Esotico,Viale delle Spezie 567,12345098765,ristorante-esotico,https://example.com/immagine-ristorante-esotico.jpg
-Osteria Accogliente,Corso Buonarroti 789,09876543213,osteria-accogliente,https://example.com/immagine-osteria-accogliente.jpg
-Ristorante Moderno,Piazza Nuova 123,56789012346,ristorante-moderno,https://example.com/immagine-ristorante-moderno.jpg
-Trattoria Familiare,Via delle Tradizioni 456,34567890124,trattoria-familiare,https://example.com/immagine-trattoria-familiare.jpg
-Pizzeria Gustosa,Viale dei Sapori 789,56789012347,pizzeria-gustosa,https://example.com/immagine-pizzeria-gustosa.jpg
-Ristorante di Montagna,Via Alpina 321,54321098766,ristorante-di-montagna,https://example.com/immagine-ristorante-di-montagna.jpg
-Caffe del Centro,Piazza Principale 567,23456789012,caffe-del-centro,https://example.com/immagine-caffe-del-centro.jpg
-Osteria Tradizionale,Corso Italia 789,56789012348,osteria-tradizionale,https://example.com/immagine-osteria-tradizionale.jpg
+name,address,vat,image
+Ristorante Italiano Bella Napoli,Via Roma 123,01234567890,https://example.com/immagine-bella-napoli.jpg
+Trattoria da Giuseppe,Viale Dante 456,09876543210,https://example.com/immagine-trattoria-giuseppe.jpg
+La Pizzeria del Sole,Corso Italia 789,11223344556,https://example.com/immagine-pizzeria-sole.jpg
+Taquería El Mariachi,Via Milano 321,12345678901,https://example.com/immagine-taqueria-mariachi.jpg
+La Casa del Burrito,Via Venezia 654,23456789012,https://example.com/immagine-casa-burrito.jpg
+Sushi Express,Viale Firenze 1,34567890123,https://example.com/immagine-sushi-express.jpg
+Riso e Verdure,Via Napoli 456,45678901234,https://example.com/immagine-riso-verdure.jpg
+Palazzo Mediterraneo,Via Roma 789,56789012345,https://example.com/immagine-palazzo-mediterraneo.jpg
+Vegetariano Naturale,Viale Milano 321,67890123456,https://example.com/immagine-vegetariano-naturale.jpg
+Burger House,Via Firenze 123,78901234567,https://example.com/immagine-burger-house.jpg
+Curry House,Viale Venezia 456,89012345678,https://example.com/immagine-curry-house.jpg
+Taverna Greca,Via Napoli 789,90123456789,https://example.com/immagine-taverna-greca.jpg
+Pad Thai Street,Viale Firenze 321,01234567890,https://example.com/immagine-pad-thai-street.jpg

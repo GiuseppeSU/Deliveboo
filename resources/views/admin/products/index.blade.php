@@ -31,9 +31,9 @@
                         <td>€ {{$product->price}}</td>
                         <td>{{$product->category}}</td>
                         <td>
-                            <a href="{{ route('admin.products.edit', ['product' => $product->id])}}" class='btn btn-outline-warning p-1'><i class="mx-1 fa-solid fa-pen-to-square"></i></a>
+                            <a href="{{ route('admin.products.edit', ['product' => $product->slug])}}" class='btn btn-outline-warning p-1'><i class="mx-1 fa-solid fa-pen-to-square"></i></a>
                             <a href="{{ route('admin.products.show', $product) }}"class='btn btn-outline-primary p-1 px-2'><i class="mx-1 fa-solid fa-info"></i></a>
-                            <form class="form_delete_product d-inline-block" action="{{route('admin.products.destroy', ['product' => $product->id])}}" method="POST">
+                            <form class="form_delete_product d-inline-block" action="{{route('admin.products.destroy', ['product' => $product->slug])}}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class='btn btn-outline-danger p-1'><i class="mx-1 fa-solid fa-trash-can"></i></button>

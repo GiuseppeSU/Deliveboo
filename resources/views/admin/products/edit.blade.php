@@ -7,7 +7,7 @@
 
         @include('partials.forms.validation.errors_alert')
 
-        <form method="POST" action=" {{ route('admin.products.update', ['product' => $product->id]) }}"
+        <form method="POST" action=" {{ route('admin.products.update', ['product' => $product->slug]) }}"
             enctype="multipart/form-data">
 
             @csrf

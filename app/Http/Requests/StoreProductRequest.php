@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use App\Functions\Helpers;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
 class StoreProductRequest extends FormRequest
 {
@@ -20,9 +21,9 @@ class StoreProductRequest extends FormRequest
     // Funzione che prepara i dati per la validazione
     protected function prepareForValidation(): void
     {
-        // $this->merge([
-        //     'slug' => Helpers::generateSlug($this->name),
-        // ]);
+        $this->merge([
+            'slug' => Helpers::generateSlug($this->name."-".Auth::id()),
+        ]);
     }
     
     /**
@@ -35,11 +36,19 @@ class StoreProductRequest extends FormRequest
         return [
             'restaurant_id' => 'exists:restaurants,id',
             'name' => 'required|max:100',
+            'slug' => 'required|max:110|unique:products',
             'price' => 'required|decimal:0,2',
             'description' => 'nullable',
             'image' => 'nullable|max:255',
             'visibility' => 'nullable',
             'category' => 'nullable|max:50'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'slug.unique' => 'Il piatto è già presente nel menù.',
         ];
     }
 }

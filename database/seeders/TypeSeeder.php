@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Functions\Helpers;
 use App\Models\Type;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -16,12 +17,18 @@ class TypeSeeder extends Seeder
      */
     public function run()
     {
-        $types = ['italiano', 'Cinese', 'Messicano', 'Francese', 'Giapponese', 'Americano'];
-        foreach ($types as $type) {
-            $newtype = new Type();
-            $newtype->name = $type;
-            $newtype->slug = Str::slug($type);
-            $newtype->save();
+        $csvContent = Helpers::getCsvContent(__DIR__ . '/types.csv');
+
+        foreach ($csvContent as $index => $row) {
+            if ($index > 0) {
+                $type = new Type();
+                $type->name = $row[0];
+                $type->image = $row[1];
+                $type->icon = $row[2];
+                $type->slug = Helpers::generateSlug($type->name);
+                $type->save();
+
+            }
         }
     }
 }

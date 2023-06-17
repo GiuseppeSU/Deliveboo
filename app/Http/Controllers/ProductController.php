@@ -54,7 +54,7 @@ class ProductController extends Controller
         $validated_data['restaurant_id'] = Auth::id();
         $newProduct = Product::create($validated_data);
 
-        return to_route('admin.products.show', ['product' => $newProduct->id])
+        return to_route('admin.products.show', ['product' => $newProduct->slug])
         ->with('status', 'Success! Product created.');
     }
 
@@ -90,7 +90,6 @@ class ProductController extends Controller
     public function update(UpdateProductRequest $request, Product $product)
     {
         $validated_data = $request->validated();
-
         // if ($request->hasFile('image')) {
 
         //     if ($product->cover_image) {
@@ -104,8 +103,9 @@ class ProductController extends Controller
 
 
         $product->update($validated_data);
+        
 
-        return to_route('admin.products.show', ['product' => $product->id])
+        return to_route('admin.products.show', ['product' => $product->slug])
             ->with('status', 'Success! Product updated.');
     }
 
@@ -115,9 +115,8 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        $product = Product::findOrFail($id);
         $product->delete();
         return redirect()->route('admin.products.index');
     }

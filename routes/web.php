@@ -32,7 +32,7 @@ Route::middleware(['auth', 'verified'])
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
         Route::resource('/products', ProductController::class)->parameters([
-            'products' => 'product:id'
+            'products' => 'product:slug'
         ]);
 
         // Route::delete('products/{product}/deleteImg', [ProductController::class, 'deleteImg'])->name('products.deleteImg');
