@@ -44,6 +44,11 @@
                                 $data = ['type' => 'text', 'field' => 'address', 'label' => 'Indirizzo']
                             )
 
+                            @include(
+                                'partials.forms.create_form_element',
+                                $data = ['type' => 'checkboxes', 'field' => 'types',  'options' => $types, 'label' => 'Tipo di Cucina']
+                            )
+
                             <div class="mb-4 row">
                                 <label for="password"
                                     class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
@@ -78,12 +83,12 @@
                                 </div>
                             </div>
 
-                            <div class="mb-4 row mb-0">
-                                <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary" id="submit-register-restaurant">
-                                        {{ __('Registrati') }}
-                                    </button>
-                                </div>
+                            <div class="mb-4 d-flex mb-0 justify-content-center">
+                                
+                                <button type="submit" class="btn btn-primary" id="submit-register-restaurant">
+                                    {{ __('Registrati') }}
+                                </button>
+                                
                             </div>
                         </form>
                     </div>

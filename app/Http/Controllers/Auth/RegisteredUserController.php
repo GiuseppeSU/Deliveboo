@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\Restaurant;
+use App\Models\Type;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
@@ -23,7 +24,8 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-        return view('auth.register');
+        $types = Type::all();
+        return view('auth.register', compact('types'));
     }
 
     /**
@@ -33,13 +35,14 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $data= $request->all();
+        $data = $request->all();
 
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', 'min:8', Rules\Password::defaults()],
             'vat'=> ['required','numeric','min_digits:11','max_digits:11','unique:restaurants'],
+            'types' => ['required'],
             'address'=>['required','string','max:100'],
             'image'=>['nullable','image']
         ],
@@ -60,6 +63,7 @@ class RegisteredUserController extends Controller
             'vat.min_digits' => 'Il campo Partita IVA deve essere di :min caratteri',
             'vat.max_digits' => 'Il campo Partita IVA deve essere di :max caratteri',
             'vat.unique' => 'La Partita IVA inserita è già presente',
+            'types.required' => 'Il tipo di cucina è obbligatorio',
             'address.required' => 'Il campo Indirizzo è obbligatorio',
             'address.max' => 'Il campo Indirizzo deve avere al massimo :max caratteri',
             'image.image' => 'Il tipo di file non corrisponde ad un Immagine'
@@ -83,15 +87,18 @@ class RegisteredUserController extends Controller
             'image' => $request->image,
             'slug' =>$request->name,
             'user_id'=> $user->id,
-
-
         ]);
+
+        if ($request->has('types')) {
+            $restaurant->types()->attach($request->types);
+        }
 
 
         if ($request->hasFile('image')) {
             $img_path = Storage::put('public/img', $request->image);
             $request['image'] = $img_path;
-        };
+        }
+
         event(new Registered($user));
 
 
