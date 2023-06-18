@@ -63,14 +63,9 @@
         border-radius: 10px;
         margin-right: 10px;
         border: 1px solid linear-gradient(to top, rgba(255, 255, 255, 1), rgba(223, 133, 51, 0.5));
-        /*background-color: rgba(0, 0, 0, 0.5)*/
-        /* background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(223, 133, 51, 0.5));*/
-        /*  background-color: rgba(0, 0, 0, 0.2)*/
+
     }
 
-    .general_container {
-        /* background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(239, 45, 107));*/
-    }
 
     .container_info {}
 

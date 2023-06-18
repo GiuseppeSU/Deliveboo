@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-md">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-            <div class="logo_laravel">
-                <img class="w-25" src="img/deliveboo.png" alt="">
-            </div>
-        </a>
+        <div class="logo-header">
+            <a class="w-25" href="{{ url('/') }}">
+                <img class="img-fluid" src="img/deliveboo.png" alt="">
+            </a>
+        </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
