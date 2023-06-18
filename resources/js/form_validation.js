@@ -116,6 +116,7 @@ export function validateRestaurantRegister() {
             field.classList.add('is-invalid');
             fieldAlert.classList.add("text-danger");
             fieldAlert.classList.remove("d-none");
+            field.focus();
         }
 
         return validField;
