@@ -69,7 +69,7 @@
     }
 
     .general_container {
-        background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(239, 45, 107));
+        /* background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(239, 45, 107));*/
     }
 
     .container_info {}
