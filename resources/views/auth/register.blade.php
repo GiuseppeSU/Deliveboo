@@ -9,85 +9,92 @@
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+
                             @csrf
+
                             @include('partials.forms.validation.errors_alert')
+
+                            {{-- Campo Nome --}}
                             @include(
                                 'partials.forms.create_form_element',
                                 $data = ['type' => 'text', 'field' => 'name', 'label' => 'Nome']
                             )
+                            @include(
+                                'partials.forms.validation.front_error_alert',
+                                $data = ['field' => 'name']
+                            )
 
-                            <!-- p.iva -vat-->
+                            {{-- Campo P. Iva --}}
                             @include(
                                 'partials.forms.create_form_element',
                                 $data = ['type' => 'text', 'field' => 'vat', 'label' => 'P.Iva']
                             )
-                            <div class="vat-input-alert d-none d-none">
-                                <span class="vat-input-message invalid">
-                                    <small class="input-empty d-none">Il campo è richiesto.</small>
-                                    <small class="input-length">La p. Iva deve essere di 11 cifre.</small>
-                                    <small class="input-char"> Sono ammessi solo numeri.</small>
-                                </span>
-                            </div>
-                            <!-- IMG-->
+                            @include(
+                                'partials.forms.validation.front_error_alert',
+                                $data = ['field' => 'vat']
+                            )
+
+                            {{-- Campo Immagine --}}
 
                             @include(
                                 'partials.forms.create_form_element',
                                 $data = ['type' => 'file', 'field' => 'image', 'label' => 'Immagine']
                             )
-                            <!-- email-->
+
+                            {{-- Campo Email --}}
                             @include(
                                 'partials.forms.create_form_element',
                                 $data = ['type' => 'email', 'field' => 'email', 'label' => 'E-mail']
                             )
+                            @include(
+                                'partials.forms.validation.front_error_alert',
+                                $data = ['field' => 'email']
+                            )
 
+                            {{-- Campo Indirizzo --}}
                             @include(
                                 'partials.forms.create_form_element',
                                 $data = ['type' => 'text', 'field' => 'address', 'label' => 'Indirizzo']
                             )
+                            @include(
+                                'partials.forms.validation.front_error_alert',
+                                $data = ['field' => 'address']
+                            )
 
-                            <div class="mb-4 row">
+                            {{-- Campo Password --}}
+                            <div class="mb-3">
                                 <label for="password"
                                     class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                                <input id="password" type="password"
+                                    class="form-control @error('password') is-invalid @enderror" name="password"
+                                    autocomplete="new-password">
 
-                                <div class="mb-3">
-                                    <input id="password" type="password"
-                                        class="form-control @error('password') is-invalid @enderror" name="password"
-                                        required autocomplete="new-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                                        required>
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 
-                                        <div class="password-input-alert d-none">
-                                            <span class="password-input-message invalid">
-                                                <small class="input-empty d-none">Il campo è richiesto</small>
-                                                <small class="input-length">La password deve essere lunga almeno 8 caratteri.</small>
-                                            </span>
-                                        </div>
-
-                                    @error('password')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
                             </div>
+                            @include(
+                                'partials.forms.validation.front_error_alert',
+                                $data = ['field' => 'password']
+                            )
 
-                            <div class="mb-4 row">
+                            {{-- Campo Conferma Password --}}
+                            <div class="mb-3">
                                 <label for="password-confirm"
                                     class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                                <input id="password-confirm" type="password" class="form-control"
+                                    name="password_confirmation">
 
-                                <div class="mb-3">
-                                    <input id="password-confirm" type="password" class="form-control"
-                                        name="password_confirmation">
-                                    
-                                        <div class="password-confirm-input-alert d-none">
-                                            <span class="password-confirm-input-message invalid">
-                                                <small class="input-empty d-none">Il campo è richiesto</small>
-                                                <small class="input-value">Il valore non coincide con quello del campo password</small>
-                                            </span>
-                                        </div>
-                                </div>
                             </div>
+                            @include(
+                                'partials.forms.validation.front_error_alert',
+                                $data = ['field' => 'password-confirm']
+                            )
 
+                            {{-- Pulsante Submit --}}
                             <div class="mb-4 row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary" id="submit-register-restaurant">
