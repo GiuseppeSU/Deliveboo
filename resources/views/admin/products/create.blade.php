@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.nav')
 
 {{-- @section('page-title', 'New Project') --}}
 

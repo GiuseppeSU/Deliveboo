@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.nav')
 
 {{-- @section('page-title', 'Edit Project') --}}
 
@@ -41,7 +41,12 @@
 
             @include(
                 'partials.forms.edit_form_element',
-                $data = ['default' => $product->category, 'type' => 'text', 'field' => 'category', 'label' => 'Categoria']
+                $data = [
+                    'default' => $product->category,
+                    'type' => 'text',
+                    'field' => 'category',
+                    'label' => 'Categoria',
+                ]
             )
 
             @include(
