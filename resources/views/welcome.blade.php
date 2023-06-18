@@ -3,7 +3,7 @@
     <div class="mt-5">
         <div class="row d-flex justify-content-center container_info ">
             <div class="card_container col-sm-6 col-md-3 mb-3 p-5">
-                <img class="w-50" src="img/onlytext.svg" alt="Registrati">
+                <img class="w-50" src="img/delivepublic.svg" alt="Registrati">
                 <h3>DeliveBoo</h3>
                 <p>è il punto di incontro tra te e i tuoi potenziali clienti, affezionati alla nostra piattaforma.</p>
             </div>
