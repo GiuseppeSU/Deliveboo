@@ -22,10 +22,11 @@ class RestaurantSeeder extends Seeder
         foreach ($csvContent as $index => $row) {
             if ($index > 0) {
                 $restaurant = new Restaurant();
-                $restaurant->name = $row[0];
-                $restaurant->address = $row[1];
-                $restaurant->vat = $row[2];
-                $restaurant->image = $row[3];
+                $restaurant->user_id = $row[0];
+                $restaurant->name = $row[1];
+                $restaurant->address = $row[2];
+                $restaurant->vat = $row[3];
+                $restaurant->image = $row[4];
                 $restaurant->slug = Helpers::generateSlug($restaurant->name);
                 $restaurant->save();
             }

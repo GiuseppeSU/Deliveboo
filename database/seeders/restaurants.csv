@@ -1,14 +1,14 @@
-name,address,vat,image
-Ristorante Italiano Bella Napoli,Via Roma 123,01234567890,https://example.com/immagine-bella-napoli.jpg
-Trattoria da Giuseppe,Viale Dante 456,09876543210,https://example.com/immagine-trattoria-giuseppe.jpg
-La Pizzeria del Sole,Corso Italia 789,11223344556,https://example.com/immagine-pizzeria-sole.jpg
-Taquería El Mariachi,Via Milano 321,12345678901,https://example.com/immagine-taqueria-mariachi.jpg
-La Casa del Burrito,Via Venezia 654,23456789012,https://example.com/immagine-casa-burrito.jpg
-Sushi Express,Viale Firenze 1,34567890123,https://example.com/immagine-sushi-express.jpg
-Riso e Verdure,Via Napoli 456,45678901234,https://example.com/immagine-riso-verdure.jpg
-Palazzo Mediterraneo,Via Roma 789,56789012345,https://example.com/immagine-palazzo-mediterraneo.jpg
-Vegetariano Naturale,Viale Milano 321,67890123456,https://example.com/immagine-vegetariano-naturale.jpg
-Burger House,Via Firenze 123,78901234567,https://example.com/immagine-burger-house.jpg
-Curry House,Viale Venezia 456,89012345678,https://example.com/immagine-curry-house.jpg
-Taverna Greca,Via Napoli 789,90123456789,https://example.com/immagine-taverna-greca.jpg
-Pad Thai Street,Viale Firenze 321,01234567890,https://example.com/immagine-pad-thai-street.jpg
+restaurant_id,name,address,vat,image
+1,Ristorante Italiano Bella Napoli,Via Roma 123,01234567890,https://example.com/immagine-bella-napoli.jpg
+2,Trattoria da Giuseppe,Viale Dante 456,09876543210,https://example.com/immagine-trattoria-giuseppe.jpg
+3,La Pizzeria del Sole,Corso Italia 789,11223344556,https://example.com/immagine-pizzeria-sole.jpg
+4,Taquería El Mariachi,Via Milano 321,12345678901,https://example.com/immagine-taqueria-mariachi.jpg
+5,La Casa del Burrito,Via Venezia 654,23456789012,https://example.com/immagine-casa-burrito.jpg
+6,Sushi Express,Viale Firenze 1,34567890123,https://example.com/immagine-sushi-express.jpg
+7,Riso e Verdure,Via Napoli 456,45678901234,https://example.com/immagine-riso-verdure.jpg
+8,Palazzo Mediterraneo,Via Roma 789,56789012345,https://example.com/immagine-palazzo-mediterraneo.jpg
+9,Vegetariano Naturale,Viale Milano 321,67890123456,https://example.com/immagine-vegetariano-naturale.jpg
+10,Burger House,Via Firenze 123,78901234567,https://example.com/immagine-burger-house.jpg
+11,Curry House,Viale Venezia 456,89012345678,https://example.com/immagine-curry-house.jpg
+12,Taverna Greca,Via Napoli 789,90123456789,https://example.com/immagine-taverna-greca.jpg
+13,Pad Thai Street,Viale Firenze 321,01234567890,https://example.com/immagine-pad-thai-street.jpg
