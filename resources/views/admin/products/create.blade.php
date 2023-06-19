@@ -18,7 +18,7 @@
 
             @include(
                 'partials.forms.create_form_element',
-                $data = ['type' => 'text', 'field' => 'price', 'label' => 'Prezzo']
+                $data = ['type' => 'number', 'field' => 'price', 'label' => 'Prezzo']
             )
 
             @include(
