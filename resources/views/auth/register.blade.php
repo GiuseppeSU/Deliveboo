@@ -38,7 +38,11 @@
 
                             @include(
                                 'partials.forms.create_form_element',
-                                $data = ['type' => 'file', 'field' => 'image', 'label' => 'Immagine']
+                                $data = ['type' => 'file', 'field' => 'image', 'label' => 'Immagine', 'accepted' => 'image/*']
+                            )
+                             @include(
+                                'partials.forms.validation.front_error_alert',
+                                $data = ['field' => 'image']
                             )
 
                             {{-- Campo Email --}}
@@ -64,6 +68,10 @@
                             @include(
                                 'partials.forms.create_form_element',
                                 $data = ['type' => 'checkboxes', 'field' => 'types',  'options' => $types, 'label' => 'Tipo di Cucina']
+                            )
+                            @include(
+                                'partials.forms.validation.front_error_alert',
+                                $data = ['field' => 'types']
                             )
 
                             {{-- Campo Password --}}

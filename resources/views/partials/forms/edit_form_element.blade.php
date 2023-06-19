@@ -41,7 +41,7 @@
     <div class="mb-3 d-flex align-items-center">
         <div class="flex-grow-1">
             <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>
-            <input type="{{ $data['type'] }}"
+            <input type="{{ $data['type'] }}" accept="{{ $data['accepted']}}"
                 class="form-control @error($data['field']) is-invalid border-2 border-danger border @enderror"
                 id="{{ $data['field'] }}" name="{{ $data['field'] }}">
             @include('partials.forms.validation.error_alert', ['field' => $data['field']])

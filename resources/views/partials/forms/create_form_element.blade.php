@@ -36,7 +36,7 @@
 @elseif ($data['type'] == 'file')
     <div class="mb-3">
         <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>
-        <input type="{{ $data['type'] }}"
+        <input type="{{ $data['type'] }}" accept="{{ $data['accepted']}}"
             class="form-control @error($data['field']) is-invalid border-2 border-danger border @enderror"
             id="{{ $data['field'] }}" name="{{ $data['field'] }}">
 

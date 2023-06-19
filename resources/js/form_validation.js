@@ -8,6 +8,30 @@ export function validateRestaurantRegister() {
     const submitBtn = document.getElementById(submitBtnId);
 
     if (submitBtn) {
+        //controllo file
+        const imageFile = document.getElementById('image');
+        if (imageFile) {
+            const imageAlert = document.querySelector(`.image-input-alert`);
+            const imageMessage = imageAlert.querySelector('.alert-message');
+            imageFile.onchange = (() => {
+                let ext = imageFile.value.match(/\.([^\.]+)$/)[1];
+                let acceptedExts = ['jpg', 'gif', 'png', 'svg'];
+                if (acceptedExts.includes(ext)) {
+                    imageFile.classList.add('is-valid')
+                    imageFile.classList.remove('is-invalid');
+                    imageAlert.classList.add('d-none')
+                    imageAlert.classList.remove('text-danger')
+                } else {
+                    imageFile.classList.remove('is-valid');
+                    imageFile.classList.add('is-invalid');
+                    imageAlert.classList.remove('d-none')
+                    imageAlert.classList.add('text-danger')
+                    imageMessage.innerHTML = 'Sono ammessi solo file immagine';
+                }
+            });
+        }
+
+
         //TYPING CHECK
         fieldsId.forEach(id => {
             const field = document.getElementById(id);
@@ -49,6 +73,20 @@ export function validateRestaurantRegister() {
                     isFormValid = false;
                 };
             })
+
+            //controllo checkboxes
+            const checkboxes = document.querySelectorAll(`input[name='types[]']:checked`);
+            const fieldAlert = document.querySelector(`.types-input-alert`);
+                const alertMessage = fieldAlert.querySelector('.alert-message');
+            if (checkboxes.length) {
+                fieldAlert.classList.add('d-none')
+                fieldAlert.classList.remove('text-danger')
+            } else {
+                fieldAlert.classList.remove('d-none')
+                fieldAlert.classList.add('text-danger')
+                alertMessage.innerHTML = 'Selezionare almeno un tipo.';
+            }
+
             // esito controllo form completo
             if (isFormValid) {
                 const form = document.querySelector('form');
@@ -85,7 +123,7 @@ export function validateRestaurantRegister() {
                         }
                         break;
                     case 'email':
-                        if (!field.value.match(/@{1}[a-z]+.com|it/gm)) {
+                        if (!field.value.match(/@{1}[a-z]+.[com|it]/gm)) {
                             alertMessage.innerHTML += 'Inserisci una mail valida. ';
                             validField = false;
                         }
