@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Auth;
 use App\Models\Product;
 use App\Models\Restaurant;
@@ -48,7 +49,7 @@ class ProductController extends Controller
     {
         $validated_data = $request->validated();
 
-        if($request->hasFile('image')) {
+        if ($request->hasFile('image')) {
             $path = Storage::put('image', $request->image);
             $validated_data['image'] = $path;
         }
@@ -57,7 +58,7 @@ class ProductController extends Controller
         $newProduct = Product::create($validated_data);
 
         return to_route('admin.products.show', ['product' => $newProduct->slug])
-        ->with('status', 'Success! Product created.');
+            ->with('status', 'Success! Product created.');
     }
 
     /**
@@ -68,7 +69,11 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('admin.products.show', compact('product'));
+        if ($product->restaurant_id == Auth::id()) {
+            return view('admin.products.show', compact('product'));
+        } else {
+            abort(404);
+        }
     }
 
     /**
@@ -79,7 +84,11 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('admin.products.edit', compact('product'));
+        if ($product->restaurant_id == Auth::id()) {
+            return view('admin.products.edit', compact('product'));
+        } else {
+            abort(404);
+        }
     }
 
     /**
@@ -91,24 +100,25 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
-        $validated_data = $request->validated();
-        if ($request->hasFile('image')) {
+        if ($product->restaurant_id == Auth::id()) {
+            $validated_data = $request->validated();
+            if ($request->hasFile('image')) {
 
-            if ($product->cover_image) {
-                Storage::delete($product->cover_image);
+                if ($product->cover_image) {
+                    Storage::delete($product->cover_image);
+                }
+
+                $path = Storage::put('cover', $request->cover_image);
+                $validated_data['cover_image'] = $path;
             }
 
-            $path = Storage::put('cover', $request->cover_image);
-            $validated_data['cover_image'] = $path;
+            $product->update($validated_data);
 
+            return to_route('admin.products.show', ['product' => $product->slug])
+                ->with('status', 'Success! Product updated.');
+        } else {
+            abort(404);
         }
-
-
-        $product->update($validated_data);
-        
-
-        return to_route('admin.products.show', ['product' => $product->slug])
-            ->with('status', 'Success! Product updated.');
     }
 
     /**
@@ -119,7 +129,11 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        $product->delete();
-        return redirect()->route('admin.products.index');
+        if ($product->restaurant_id == Auth::id()) {
+            $product->delete();
+            return redirect()->route('admin.products.index');
+        } else {
+            abort(404);
+        }
     }
 }
