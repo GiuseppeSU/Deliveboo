@@ -38,9 +38,9 @@ class UpdateProductRequest extends FormRequest
             'restaurant_id' => 'exists:restaurants,id',
             'name' => 'required|max:100',
             'slug' => ['required', 'max:110', Rule::unique('products')->ignore($this->product)],
-            'price' => 'required|decimal:0,2',
+            'price' => 'required|numeric|decimal:0,2',
             'description' => 'nullable',
-            'image' => 'nullable|max:255',
+            'image' => 'image|nullable|max:255',
             'visibility' => 'nullable',
             'category' => 'nullable|max:50'
         ];
@@ -50,6 +50,12 @@ class UpdateProductRequest extends FormRequest
     {
         return [
             'slug.unique' => 'Il nome del piatto è già presente nel menù.',
+            'name.required' => 'Il nome del piatto è richiesto',
+            'name.max' => 'Il nome del piatto non può contenere più di :max caratteri',
+            'price.required' =>'Il prezzo è richiesto',
+            'price.decimal' => 'Impossibile inserire il prezzo richiesto',
+            'price.numeric' => 'Il prezzo non può contenere lettere',
+            'image.image' => 'Il formato del file non è un immagine'
         ];
     }
 }

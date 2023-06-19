@@ -36,6 +36,7 @@
                     'type' => 'file',
                     'field' => 'image',
                     'label' => 'Immagine',
+                    'accepted' => 'image/*'
                 ]
             )
 

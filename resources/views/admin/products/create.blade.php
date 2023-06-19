@@ -23,7 +23,7 @@
 
             @include(
                 'partials.forms.create_form_element',
-                $data = ['type' => 'file', 'field' => 'image', 'label' => 'Immagine']
+                $data = ['type' => 'file', 'field' => 'image', 'label' => 'Immagine','accepted' => 'image/*']
             )
 
             @include(

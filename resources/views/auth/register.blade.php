@@ -40,7 +40,7 @@
                                 'partials.forms.create_form_element',
                                 $data = ['type' => 'file', 'field' => 'image', 'label' => 'Immagine', 'accepted' => 'image/*']
                             )
-                             @include(
+                            @include(
                                 'partials.forms.validation.front_error_alert',
                                 $data = ['field' => 'image']
                             )
