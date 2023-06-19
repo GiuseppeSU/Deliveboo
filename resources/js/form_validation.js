@@ -77,7 +77,7 @@ export function validateRestaurantRegister() {
             //controllo checkboxes
             const checkboxes = document.querySelectorAll(`input[name='types[]']:checked`);
             const fieldAlert = document.querySelector(`.types-input-alert`);
-                const alertMessage = fieldAlert.querySelector('.alert-message');
+            const alertMessage = fieldAlert.querySelector('.alert-message');
             if (checkboxes.length) {
                 fieldAlert.classList.add('d-none')
                 fieldAlert.classList.remove('text-danger')
@@ -163,4 +163,55 @@ export function validateRestaurantRegister() {
         }
     }
 
+
+
 };
+export function validateProduct() {
+
+
+    const name = document.getElementById('name');
+    const price = document.getElementById('price');
+    const submitBtn = document.getElementById('productBtn');
+    submitBtn.addEventListener('click', event => {
+        event.preventDefault()
+
+        const nameAlert = document.querySelector('.name-input-alert');
+        const priceAlert = document.querySelector('.price-input-alert');
+        const nameMessage = nameAlert.querySelector('.alert-message');
+        const priceMessage = priceAlert.querySelector('.alert-message');
+        nameMessage.innerHTML = '';
+        priceMessage.innerHTML = '';
+        let validField = true;
+        if (name.value == '') {
+            nameMessage.innerHTML += 'Il campo nome è richiesto. ';
+            validField = false;
+            nameAlert.classList.remove('d-none')
+            nameAlert.classList.add("text-danger");
+        }
+
+        if (price.value == '') {
+            priceMessage.innerHTML += 'Il campo prezzo è richiesto. ';
+            validField = false;
+            priceAlert.classList.remove('d-none')
+            priceAlert.classList.add("text-danger");
+        }
+        if (validField) {
+            const form = document.querySelector('form');
+            form.submit();
+        }
+    })
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
