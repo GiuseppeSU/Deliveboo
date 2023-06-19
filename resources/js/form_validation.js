@@ -123,7 +123,7 @@ export function validateRestaurantRegister() {
                         }
                         break;
                     case 'email':
-                        if (!field.value.match(/@{1}[a-z]+.[com|it]/gm)) {
+                        if (!field.value.match(/@.*\.(?:com|it)\b/gm)) {
                             alertMessage.innerHTML += 'Inserisci una mail valida. ';
                             validField = false;
                         }
