@@ -196,7 +196,7 @@ export function validateProduct() {
             priceAlert.classList.add("text-danger");
         }
         if (validField) {
-            const form = document.querySelector('form');
+            const form = document.querySelector('formProduct');
             form.submit();
         }
     })
