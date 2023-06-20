@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Api\TypeController;
+use App\Http\Controllers\Api\RestaurantController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +19,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// *** TYPE ***
+// Rotta per la richiesta dei tipi di cucina
+Route::get('/types', [TypeController::class, 'index']);
+
+// *** RESTAURANT ***
+// Tutti i ristoranti
+
+Route::get('/restaurants', [RestaurantController::class, 'index']);
+// Ristoranti filtrati per tipo
+// Route::get('/restaurants/{types}', [RestaurantController::class, 'show']);
