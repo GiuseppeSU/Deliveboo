@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class RestaurantController extends Controller
 {
@@ -15,7 +16,7 @@ class RestaurantController extends Controller
             $restaurants = Restaurant::with('types')
                             ->join('restaurant_type', 'id', '=', 'restaurant_type.restaurant_id')
                             ->whereIn('type_id',$types)
-                            ->select('restaurants.*')
+                            ->select('*')
                             ->distinct()
                             ->get();
         }else{
@@ -26,6 +27,20 @@ class RestaurantController extends Controller
             'success' => true,
             'results' => $restaurants,
         ]);
+    }
+
+    public function show($id) {
+
+            $restaurant = Product::where('restaurant_id', '=', $id)
+                        ->select('*')
+                        ->get();
+
+            return response()->json([
+                'success' => true,
+                'results' => $restaurant,
+            ]);
+
+    
     }
 
 }
