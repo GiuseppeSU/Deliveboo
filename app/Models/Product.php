@@ -15,6 +15,7 @@ class Product extends Model
         'price',
         'description',
         'image',
+        'visibility',
         'category',
         'restaurant_id',
     ];
