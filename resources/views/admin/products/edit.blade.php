@@ -8,7 +8,7 @@
         @include('partials.forms.validation.errors_alert')
 
         <form method="POST" action=" {{ route('admin.products.update', ['product' => $product->slug]) }}"
-            enctype="multipart/form-data">
+            enctype="multipart/form-data" class="formProduct">
 
             @csrf
 
@@ -17,6 +17,10 @@
             @include(
                 'partials.forms.edit_form_element',
                 $data = ['default' => $product->name, 'type' => 'text', 'field' => 'name', 'label' => 'Nome']
+            )
+            @include(
+                'partials.forms.validation.front_error_alert',
+                $data = ['field'=> 'name']
             )
 
             @include(
@@ -28,6 +32,26 @@
                     'label' => 'Prezzo',
                 ]
             )
+            @include(
+                'partials.forms.validation.front_error_alert',
+                $data = ['field'=> 'price']
+            )
+            <!--Checkbox visibilità-->
+            <div class="mb-3">
+                <p>Visibile</p>
+                <ul class="list-group">
+                    
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" name="visibility"
+                            @checked(old('visibility')) id="visibility" 
+                                value="0">
+                            <label class="form-check-label"
+                                for="visibility">Visibilità</label>
+                        </li>
+                    
+                    @include('partials.forms.validation.error_alert', ['field' => $data['field']])
+                </ul>
+            </div>
 
             @include(
                 'partials.forms.edit_form_element',
@@ -61,7 +85,7 @@
             )
 
 
-            <button type="submit" class="btn btn-primary"> Invia </button>
+            <button type="submit" class="btn btn-primary productBtn"> Invia </button>
         </form>
     </div>
 

@@ -7,7 +7,7 @@
 
         @include('partials.forms.validation.errors_alert')
 
-        <form method="POST" action="{{ route('admin.products.store') }}" enctype="multipart/form-data">
+        <form method="POST" class="formProduct" action="{{ route('admin.products.store') }}" enctype="multipart/form-data">
 
             @csrf
 
@@ -21,16 +21,33 @@
                 $data = ['field'=> 'name']
             )
 
-            
-
             @include(
                 'partials.forms.create_form_element',
                 $data = ['type' => 'number', 'field' => 'price', 'label' => 'Prezzo' ]
             )
-              @include(
+            @include(
                 'partials.forms.validation.front_error_alert',
                 $data = ['field'=> 'price']
             )
+
+            <!--Checkbox visibilità-->
+            
+            <div class="mb-3">
+                <p>Visibile</p>
+                <ul class="list-group">
+                    
+                        <li class="list-group-item">
+                            <input class="form-check-input me-1" type="checkbox" name="visibility"
+                            @checked(old('visibility')) id="visibility" 
+                                value="0">
+                            <label class="form-check-label"
+                                for="visibility">Visibilità</label>
+                        </li>
+                    
+                    @include('partials.forms.validation.error_alert', ['field' => $data['field']])
+                </ul>
+            </div>
+
 
             @include(
                 'partials.forms.create_form_element',
@@ -48,7 +65,7 @@
                 $data = ['type' => 'textarea', 'field' => 'description', 'label' => 'Descrizione']
             )
 
-            <button type="submit" class="btn btn-primary" id="productBtn">Invia</button>
+            <button type="submit" class="btn btn-primary productBtn">Invia</button>
         </form>
     </div>
  
