@@ -25,8 +25,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/types', [TypeController::class, 'index']);
 
 // *** RESTAURANT ***
-// Tutti i ristoranti
-
+// Rotta per la richiesta di una lista di ristoranti
 Route::get('/restaurants', [RestaurantController::class, 'index']);
-// Ristoranti filtrati per tipo
-// Route::get('/restaurants/{types}', [RestaurantController::class, 'show']);
