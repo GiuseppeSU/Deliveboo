@@ -172,42 +172,42 @@ export function validateProduct() {
     const name = document.getElementById('name');
     const price = document.getElementById('price');
     const submitBtn = document.querySelector('.productBtn');
-    submitBtn.addEventListener('click', event => {
-        event.preventDefault()
+    if(submitBtn) {
+    
+        submitBtn.addEventListener('click', event => {
+            event.preventDefault()
 
-        const nameAlert = document.querySelector('.name-input-alert');
-        const priceAlert = document.querySelector('.price-input-alert');
-        const nameMessage = nameAlert.querySelector('.alert-message');
-        const priceMessage = priceAlert.querySelector('.alert-message');
-        nameMessage.innerHTML = '';
-        priceMessage.innerHTML = '';
+            const nameAlert = document.querySelector('.name-input-alert');
+            const priceAlert = document.querySelector('.price-input-alert');
+            const nameMessage = nameAlert.querySelector('.alert-message');
+            const priceMessage = priceAlert.querySelector('.alert-message');
 
-        let validField = true;
-        
-        if (name.value == '') {
-            nameMessage.innerHTML += 'Il campo nome è richiesto. ';
-            validField = false;
-            nameAlert.classList.remove('d-none')
-            nameAlert.classList.add("text-danger");
+
+            nameMessage.innerHTML = '';
+            priceMessage.innerHTML = '';
+            
+                let validField = true;
+            
+                if (name.value == '') {
+                    nameMessage.innerHTML += 'Il campo nome è richiesto. ';
+                    validField = false;
+                    nameAlert.classList.remove('d-none')
+                    nameAlert.classList.add("text-danger");
+                }
+
+                if (price.value == '') {
+                    priceMessage.innerHTML += 'Il campo prezzo è richiesto. ';
+                    validField = false;
+                    priceAlert.classList.remove('d-none')
+                    priceAlert.classList.add("text-danger");
+                }
+                if (validField) {
+                    const form = document.querySelector('.formProduct');
+                    form.submit();
+                }
+            
+            });
         }
-
-        if (price.value == '') {
-            priceMessage.innerHTML += 'Il campo prezzo è richiesto. ';
-            validField = false;
-            priceAlert.classList.remove('d-none')
-            priceAlert.classList.add("text-danger");
-        }
-        if (validField) {
-            const form = document.querySelector('.formProduct');
-            form.submit();
-        }
-    })
-
-
-
-
-
-
 }
 
 
