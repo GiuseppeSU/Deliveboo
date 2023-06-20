@@ -29,6 +29,8 @@ class RestaurantSeeder extends Seeder
                 $restaurant->image = $row[4];
                 $restaurant->slug = Helpers::generateSlug($restaurant->name);
                 $restaurant->save();
+                $restaurant->types()->attach(explode('-',$row[5]));
+                $restaurant->update();
             }
         }
 
