@@ -171,7 +171,7 @@ export function validateProduct() {
 
     const name = document.getElementById('name');
     const price = document.getElementById('price');
-    const submitBtn = document.getElementById('productBtn');
+    const submitBtn = document.querySelector('.productBtn');
     submitBtn.addEventListener('click', event => {
         event.preventDefault()
 
@@ -181,7 +181,9 @@ export function validateProduct() {
         const priceMessage = priceAlert.querySelector('.alert-message');
         nameMessage.innerHTML = '';
         priceMessage.innerHTML = '';
+
         let validField = true;
+
         if (name.value == '') {
             nameMessage.innerHTML += 'Il campo nome è richiesto. ';
             validField = false;
@@ -197,6 +199,7 @@ export function validateProduct() {
         }
         if (validField) {
             const form = document.querySelector('formProduct');
+            const form = document.querySelector('.formProduct');
             form.submit();
         }
     })
