@@ -43,8 +43,6 @@
                             <label class="form-check-label"
                                 for="visibility">Visibilità</label>
                         </li>
-                    
-                    @include('partials.forms.validation.error_alert', ['field' => $data['field']])
                 </ul>
             </div>
 

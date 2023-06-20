@@ -201,6 +201,13 @@ export function validateProduct() {
                     priceAlert.classList.remove('d-none')
                     priceAlert.classList.add("text-danger");
                 }
+
+                if(price.value < 0) {
+                    priceMessage.innerHTML += 'Il prezzo non può essere negativo. ';
+                    validField = false;
+                    priceAlert.classList.remove('d-none')
+                    priceAlert.classList.add("text-danger");
+                }
                 if (validField) {
                     const form = document.querySelector('.formProduct');
                     form.submit();

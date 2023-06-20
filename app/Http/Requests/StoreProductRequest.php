@@ -37,7 +37,7 @@ class StoreProductRequest extends FormRequest
             'restaurant_id' => 'exists:restaurants,id',
             'name' => 'required|max:100',
             'slug' => 'required|max:110|unique:products',
-            'price' => 'required|numeric|decimal:0,2',
+            'price' => 'required|numeric|min:0|decimal:0,2',
             'description' => 'nullable',
             'image' => 'image|nullable|max:255',
             'visibility' => 'nullable',
@@ -54,6 +54,7 @@ class StoreProductRequest extends FormRequest
             'price.required' =>'Il prezzo è richiesto',
             'price.decimal' => 'Impossibile inserire il prezzo richiesto',
             'price.numeric' => 'Il prezzo non può contenere lettere',
+            'price.min' => 'il prezzo non può essere negativo',
             'image.image' => 'Il formato del file non è un immagine'
         ];
     }
