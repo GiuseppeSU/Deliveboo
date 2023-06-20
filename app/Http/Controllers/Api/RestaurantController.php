@@ -32,6 +32,7 @@ class RestaurantController extends Controller
     public function show($id) {
 
             $restaurant = Product::where('restaurant_id', '=', $id)
+                        ->where('visibility','=', 1)
                         ->select('*')
                         ->get();
 

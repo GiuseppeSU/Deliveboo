@@ -111,7 +111,7 @@ class ProductController extends Controller
                 $path = Storage::put('cover', $request->cover_image);
                 $validated_data['cover_image'] = $path;
             }
-
+            
             $product->update($validated_data);
 
             return to_route('admin.products.show', ['product' => $product->slug])

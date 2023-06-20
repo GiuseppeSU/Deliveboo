@@ -36,13 +36,13 @@
                 <p>Visibile</p>
                 <ul class="list-group">
                     
-                        <li class="list-group-item">
-                            <input class="form-check-input me-1" type="checkbox" name="visibility"
-                            @checked(old('visibility')) id="visibility" 
-                                value="0">
-                            <label class="form-check-label"
-                                for="visibility">Visibilità</label>
-                        </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" name="visibility"
+                        @checked(old('visibility')) id="visibility" 
+                            value="1">
+                        <label class="form-check-label"
+                            for="visibility">Visibilità</label>
+                    </li>
                 </ul>
             </div>
 
