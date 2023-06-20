@@ -1,162 +1,237 @@
 import { forEach } from "lodash";
 
-export function validateRestaurantRegister() {
-    //compilazione dei dati
-    let submitBtnId = 'submit-register-restaurant';
-    let fieldsId = ['password-confirm', 'password', 'address', 'email', 'vat', 'name'];
+export function validateForms() {
+
+    // *** FORM CREAZIONE RISTORANTE ***
+    validateForm(
+        'submit-register-restaurant',
+        [
+            {
+                id: 'name',
+                required: true,
+                type: 'input',
+                message: 'Inserisci un nome per il tuo ristorante.',
+
+            },
+            {
+                id: 'vat',
+                required: true,
+                type: 'input',
+                message: 'Inserisci le 11 cifre, solo numeri.',
+
+            },
+            {
+                id: 'email',
+                required: true,
+                type: 'input',
+                message: 'Inserisci una mail valida.',
+
+            },
+            {
+                id: 'address',
+                required: true,
+                type: 'input',
+                message: 'Inserisci un indirizzo.',
+
+            },
+            {
+                id: 'password',
+                required: true,
+                type: 'input',
+                message: 'Inserisci una password di almeno 8 caratteri.',
+
+            },
+            {
+                id: 'password-confirm',
+                required: true,
+                type: 'input',
+                message: 'Deve coincidere con la password inserita prima.',
+
+            },
+            {
+                id: 'types',
+                required: true,
+                type: 'checkboxes',
+                message: 'Seleziona almeno un campo.',
+
+            },
+            {
+                id: 'image',
+                required: false,
+                type: 'file',
+                message: 'Seleziona un file immagine. I formati validi sono: jpg,gif,png,svg.'
+
+            },
+        ]
+    )
+
+};
+
+// Funzione che effettua i controlli sui campi di un form.
+// Richiede l'id del pulsante di submit e un array di oggetti
+
+// ESEMPIO DI FIELDS
+// let fields = [
+//     {
+//         id: 'idString',
+//         required: true/false,
+//         type: 'input/file/checkboxes',
+//         message: '',
+//     }
+// ];
+function validateForm(submitBtnId, fields) {
 
     const submitBtn = document.getElementById(submitBtnId);
-
     if (submitBtn) {
-        //controllo file
-        const imageFile = document.getElementById('image');
-        if (imageFile) {
-            const imageAlert = document.querySelector(`.image-input-alert`);
-            const imageMessage = imageAlert.querySelector('.alert-message');
-            imageFile.onchange = (() => {
-                let ext = imageFile.value.match(/\.([^\.]+)$/)[1];
-                let acceptedExts = ['jpg', 'gif', 'png', 'svg'];
-                if (acceptedExts.includes(ext)) {
-                    imageFile.classList.add('is-valid')
-                    imageFile.classList.remove('is-invalid');
-                    imageAlert.classList.add('d-none')
-                    imageAlert.classList.remove('text-danger')
-                } else {
-                    imageFile.classList.remove('is-valid');
-                    imageFile.classList.add('is-invalid');
-                    imageAlert.classList.remove('d-none')
-                    imageAlert.classList.add('text-danger')
-                    imageMessage.innerHTML = 'Sono ammessi solo file immagine';
-                }
-            });
-        }
 
+        fields.forEach(field => {
 
-        //TYPING CHECK
-        fieldsId.forEach(id => {
-            const field = document.getElementById(id);
-            const fieldAlert = document.querySelector(`.${id}-input-alert`);
-            const alertMessage = fieldAlert.querySelector('.alert-message');
+            // *** DOM LINKS ***
+            let formElement;
+            if (field.type == 'checkboxes') {
+                formElement = document.querySelectorAll(`input[name='${field.id}[]']:checked`);
+            } else {
+                formElement = document.getElementById(field.id);
+            }
+            const inputAlert = document.querySelector(`.${field.id}-input-alert`);
+            const alertMessage = inputAlert.querySelector('.alert-message');
 
-            field.onfocus = (() => {
-                fieldAlert.classList.remove('d-none', 'text-danger');
-                switch (id) {
-                    case 'vat':
-                        alertMessage.innerHTML = 'Inserisci le 11 cifre, solo numeri.';
-                        break;
-                    case 'password':
-                        alertMessage.innerHTML = 'Inserisci una password di almeno 8 caratteri.';
-                        break;
-                    case 'password-confirm':
-                        alertMessage.innerHTML = 'Deve coincidere con la password inserita prima.';
-                        break;
-                    default:
-                        break;
-                }
+            // *** FOCUS ***
+            formElement.onfocus = (() => {
+                inputAlert.classList.remove('d-none', 'text-danger');
+                alertMessage.innerHTML = field.message;
             })
-            field.onblur = (() => {
-                fieldAlert.classList.add('d-none');
+            formElement.onblur = (() => {
+                inputAlert.classList.add('d-none');
             })
-            field.onkeyup = (() => {
-                isFieldValid(id);
+
+            // *** FILES ***
+            if (field.type == 'file') {
+                formElement.onchange = (() => {
+                    isFieldValid(field);
+                });
+            }
+
+            // *** CONTROLLO MENTRE SI DIGITA ***
+            formElement.onkeyup = (() => {
+                isFieldValid(field);
             })
-        });
+        })
 
         //SUBMIT CHECK
 
         submitBtn.addEventListener('click', event => {
+
             event.preventDefault();
+
             let isFormValid = true;
-            //controllo i campi
-            fieldsId.forEach(id => {
-                if (!isFieldValid(id)) {
+
+            //CONTROLLO DI TUTTI I CAMPI DEL FORM
+            fields.forEach(field => {
+                if (!isFieldValid(field)) {
                     isFormValid = false;
                 };
             })
 
-            //controllo checkboxes
-            const checkboxes = document.querySelectorAll(`input[name='types[]']:checked`);
-            const fieldAlert = document.querySelector(`.types-input-alert`);
-                const alertMessage = fieldAlert.querySelector('.alert-message');
-            if (checkboxes.length) {
-                fieldAlert.classList.add('d-none')
-                fieldAlert.classList.remove('text-danger')
-            } else {
-                fieldAlert.classList.remove('d-none')
-                fieldAlert.classList.add('text-danger')
-                alertMessage.innerHTML = 'Selezionare almeno un tipo.';
-            }
-
-            // esito controllo form completo
+            // ESITO
             if (isFormValid) {
                 const form = document.querySelector('form');
                 form.submit();
             }
         })
 
-        // FIELD CHECK
-        function isFieldValid(id) {
-            const field = document.getElementById(id);
-            const fieldAlert = document.querySelector(`.${id}-input-alert`);
-            const alertMessage = fieldAlert.querySelector('.alert-message');
+        // FIELD CHECK - funzione di appoggio
+        function isFieldValid(field) {
+
+            let formElement;
+            if (field.type == 'checkboxes') {
+                formElement = document.querySelectorAll(`input[name='${field.id}[]']:checked`);
+            } else {
+                formElement = document.getElementById(field.id);
+            }
+            const inputAlert = document.querySelector(`.${field.id}-input-alert`);
+            const alertMessage = inputAlert.querySelector('.alert-message');
 
             alertMessage.innerHTML = '';
             let validField = true;
 
-            //controllo campo vuoto
-            if (field.value.trim() == '') {
-                alertMessage.innerHTML += 'Il campo è richiesto. ';
-                validField = false;
+            //CAMPO RICHIESTO
+            if (field.required) {
+                if (field.type == 'checkboxes') {
+                    if (!formElement.length) {
+                        alertMessage.innerHTML = 'Selezionare almeno un elemento.';
+                        validField = false;
+                    };
+                }
+                else if (formElement.value.trim() == '') {
+                    alertMessage.innerHTML += 'Questo campo è richiesto.';
+                    validField = false;
+                }
             }
 
-            // controlli specifici
+            // CONTROLLI SELETTIVI
             if (validField) {
-                switch (id) {
+                switch (field.id) {
                     case 'vat':
-                        if (field.value.length != 11) {
+                        if (formElement.value.length != 11) {
                             alertMessage.innerHTML += 'Deve contenere 11 cifre. ';
                             validField = false;
                         }
-                        if (field.value.match(/[^0-9]/g)) {
+                        if (formElement.value.match(/[^0-9]/g)) {
                             alertMessage.innerHTML += 'Sono ammessi solo numeri. ';
                             validField = false;
                         }
                         break;
                     case 'email':
-                        if (!field.value.match(/@.*\.(?:com|it)\b/gm)) {
+                        if (!formElement.value.match(/@.*\.(?:com|it)\b/gm)) {
                             alertMessage.innerHTML += 'Inserisci una mail valida. ';
                             validField = false;
                         }
                         break;
                     case 'password':
-                        if (field.value.length < 8) {
+                        if (formElement.value.length < 8) {
                             alertMessage.innerHTML += 'Deve contenere almeno 8 caratteri. ';
                             validField = false;
                         }
                         break;
                     case 'password-confirm':
                         let pwd = document.getElementById('password');
-                        if (field.value != pwd.value) {
+                        if (formElement.value != pwd.value) {
                             alertMessage.innerHTML += 'Il valore non coincide. ';
                             validField = false;
                         }
+                        break;
+                    case 'image':
+                        if (formElement.value) {
+                            let fileExt = formElement.value.match(/\.([^\.]+)$/)[1];
+                            let acceptedExts = ['jpg', 'gif', 'png', 'svg'];
+                            if (!acceptedExts.includes(fileExt)) {
+                                alertMessage.innerHTML += 'Sono ammessi solo file immagine';
+                                validField = false;
+                            }
+                        }
+
                         break;
                     default:
                         break;
                 }
             }
 
-            // esito controllo campo singolo
+            // ESITO CONTROLLO FIELD
             if (validField) {
-                field.classList.remove('is-invalid');
-                field.classList.add('is-valid');
-                fieldAlert.classList.remove("text-danger");
-                fieldAlert.classList.add("d-none");
+                if (formElement.classlist) {
+                    formElement.classList.remove('is-invalid');
+                    formElement.classList.add('is-valid');
+                }
+                inputAlert.classList.remove("text-danger");
+                inputAlert.classList.add("d-none");
             } else {
-                field.classList.remove('is-valid');
-                field.classList.add('is-invalid');
-                fieldAlert.classList.add("text-danger");
-                fieldAlert.classList.remove("d-none");
+                if (formElement.classlist) {
+                    formElement.classList.remove('is-valid');
+                    formElement.classList.add('is-invalid');
+                }
+                inputAlert.classList.add("text-danger");
+                inputAlert.classList.remove("d-none");
             }
 
             return validField;
