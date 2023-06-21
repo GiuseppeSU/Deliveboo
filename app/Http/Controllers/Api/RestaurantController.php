@@ -16,7 +16,7 @@ class RestaurantController extends Controller
             $restaurants = Restaurant::with('types')
                             ->join('restaurant_type', 'id', '=', 'restaurant_type.restaurant_id')
                             ->whereIn('type_id',$types)
-                            ->select('*')
+                            ->select('restaurants.*')
                             ->distinct()
                             ->get();
         }else{
