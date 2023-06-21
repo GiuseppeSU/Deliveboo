@@ -25,6 +25,7 @@ class UpdateProductRequest extends FormRequest
         $this->merge([
             'slug' => Helpers::generateSlug($this->name."-".Auth::id()),
         ]);
+
     }
 
     /**
@@ -41,7 +42,7 @@ class UpdateProductRequest extends FormRequest
             'price' => 'required|numeric|min:0|decimal:0,2',
             'description' => 'nullable',
             'image' => 'image|nullable|max:255',
-            'visibility' => 'boolean',
+            'visibility' => 'nullable',
             'category' => 'nullable|max:50'
         ];
     }

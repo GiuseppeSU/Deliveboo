@@ -38,8 +38,8 @@
                     
                     <li class="list-group-item">
                         <input class="form-check-input me-1" type="checkbox" name="visibility"
-                        @checked(old('visibility')) id="visibility" 
-                            value="1">
+                        id="visibility" 
+                        />
                         <label class="form-check-label"
                             for="visibility">Visibilità</label>
                     </li>

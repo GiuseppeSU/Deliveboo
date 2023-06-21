@@ -54,8 +54,18 @@ class ProductController extends Controller
             $validated_data['image'] = $path;
         }
 
+        if ($request->has('visibility')) {
+
+            $validated_data['visibility'] = 1;
+        } else {
+
+            $validated_data['visibility'] = 0;
+        }
+
         $validated_data['restaurant_id'] = Auth::id();
         $newProduct = Product::create($validated_data);
+
+        //$newProduct->products()->sync($request->validated_data);
 
         return to_route('admin.products.show', ['product' => $newProduct->slug])
             ->with('status', 'Success! Product created.');
@@ -111,6 +121,17 @@ class ProductController extends Controller
                 $path = Storage::put('cover', $request->cover_image);
                 $validated_data['cover_image'] = $path;
             }
+
+            if ($request->has('visibility')) {
+
+                $validated_data['visibility'] = 1;
+            } else {
+
+                $validated_data['visibility'] = 0;
+            }
+
+            //dd($validated_data);
+
             
             $product->update($validated_data);
 

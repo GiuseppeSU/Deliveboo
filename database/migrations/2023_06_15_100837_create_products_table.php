@@ -19,7 +19,7 @@ return new class extends Migration {
             $table->decimal('price', 5, 2);
             $table->text('description')->nullable();
             $table->string('image', 255)->nullable();
-            $table->tinyInteger('visibility')->default(1);
+            $table->tinyInteger('visibility')->default(0);
             $table->string('category', 50)->nullable();
             $table->timestamps();
         });
