@@ -123,7 +123,7 @@ export function validateRestaurantRegister() {
                         }
                         break;
                     case 'email':
-                        if (!field.value.match(/@.*\.(?:com|it)\b/gm)) {
+                        if (!field.value.match(/@[^.]*\.(?:com|it)\b/gm)) {
                             alertMessage.innerHTML += 'Inserisci una mail valida. ';
                             validField = false;
                         }
@@ -172,8 +172,8 @@ export function validateProduct() {
     const name = document.getElementById('name');
     const price = document.getElementById('price');
     const submitBtn = document.querySelector('.productBtn');
-    if(submitBtn) {
-    
+    if (submitBtn) {
+
         submitBtn.addEventListener('click', event => {
             event.preventDefault()
 
@@ -185,36 +185,36 @@ export function validateProduct() {
 
             nameMessage.innerHTML = '';
             priceMessage.innerHTML = '';
-            
-                let validField = true;
-            
-                if (name.value == '') {
-                    nameMessage.innerHTML += 'Il campo nome è richiesto. ';
-                    validField = false;
-                    nameAlert.classList.remove('d-none')
-                    nameAlert.classList.add("text-danger");
-                }
 
-                if (price.value == '') {
-                    priceMessage.innerHTML += 'Il campo prezzo è richiesto. ';
-                    validField = false;
-                    priceAlert.classList.remove('d-none')
-                    priceAlert.classList.add("text-danger");
-                }
+            let validField = true;
 
-                if(price.value < 0) {
-                    priceMessage.innerHTML += 'Il prezzo non può essere negativo. ';
-                    validField = false;
-                    priceAlert.classList.remove('d-none')
-                    priceAlert.classList.add("text-danger");
-                }
-                if (validField) {
-                    const form = document.querySelector('.formProduct');
-                    form.submit();
-                }
-            
-            });
-        }
+            if (name.value == '') {
+                nameMessage.innerHTML += 'Il campo nome è richiesto. ';
+                validField = false;
+                nameAlert.classList.remove('d-none')
+                nameAlert.classList.add("text-danger");
+            }
+
+            if (price.value == '') {
+                priceMessage.innerHTML += 'Il campo prezzo è richiesto. ';
+                validField = false;
+                priceAlert.classList.remove('d-none')
+                priceAlert.classList.add("text-danger");
+            }
+
+            if (price.value < 0) {
+                priceMessage.innerHTML += 'Il prezzo non può essere negativo. ';
+                validField = false;
+                priceAlert.classList.remove('d-none')
+                priceAlert.classList.add("text-danger");
+            }
+            if (validField) {
+                const form = document.querySelector('.formProduct');
+                form.submit();
+            }
+
+        });
+    }
 }
 
 
