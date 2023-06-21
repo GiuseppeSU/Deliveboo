@@ -8,26 +8,26 @@
             <div class="col-3">
                 @include('partials.sidebar')
             </div>
-            <div class="col-9">
-                <table class="table table-striped">
-                    <thead>
+            <div class="col-9 p-0 rounded-2 overflow-hidden">
+                <table class="table table-striped text-center h-100">
+                    <thead class="border rounded-2">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">ID_ristorante</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Prezzo</th>
-                            <th scope="col">Categoria</th>
+                            <th scope="col">Visibilità piatto</th>
+                            {{--<th scope="col">Categoria</th>--}}
                             <th scope="col">Azioni</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($products as $product)
+                        @foreach ($products as $key => $product)
                             <tr>
-                                <th scope="row">1</th>
-                                <td>{{ $product->restaurant_id }}</td>
+                                <th scope="row">{{ $key + 1 }}</th>
                                 <td>{{ $product->name }}</td>
                                 <td>€ {{ $product->price }}</td>
-                                <td>{{ $product->category }}</td>
+                                <td>{{ $product->visibility? 'si': 'no' }}</td>
+                                {{--<td>{{ $product->category }}</td>--}}
                                 <td>
                                     <a href="{{ route('admin.products.edit', ['product' => $product->slug]) }}"
                                         class='btn btn-outline-warning p-1'><i
