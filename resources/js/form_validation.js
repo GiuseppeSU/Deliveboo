@@ -168,11 +168,11 @@ export function validateRestaurantRegister() {
 };
 export function validateProduct() {
 
-
-    const name = document.getElementById('name');
-    const price = document.getElementById('price');
     const submitBtn = document.querySelector('.productBtn');
     if (submitBtn) {
+
+        const name = document.getElementById('name');
+        const price = document.getElementById('price');
 
         submitBtn.addEventListener('click', event => {
             event.preventDefault()

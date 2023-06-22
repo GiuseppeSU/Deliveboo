@@ -18,6 +18,13 @@
         </select>
         @include('partials.forms.validation.error_alert', ['field' => $data['field']])
     </div>
+@elseif ($data['type'] == 'checkbox')
+    <div class="mb-3">
+        <input class="form-check-input me-1" type="checkbox" name="{{ $data['field'] }}[]"
+            @checked(old($data['field'], [])) id="{{ $data['field'] }}">
+        <label class="form-check-label" for="{{ $data['field'] }}">{{ $data['label'] }}</label>
+        @include('partials.forms.validation.error_alert', ['field' => $data['field']])
+    </div>
 @elseif ($data['type'] == 'checkboxes')
     <div class="mb-3">
         <p>{{ $data['label'] }}</p>
@@ -37,17 +44,17 @@
 @elseif ($data['type'] == 'file')
     <div class="mb-3">
         <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>
-        <input type="{{ $data['type'] }}" accept="{{ $data['accepted']}}"
+        <input type="{{ $data['type'] }}" accept="{{ $data['accepted'] }}"
             class="form-control @error($data['field']) is-invalid border-2 border-danger border @enderror"
             id="{{ $data['field'] }}" name="{{ $data['field'] }}">
 
         @include('partials.forms.validation.error_alert', ['field' => $data['field']])
     </div>
-    @elseif ($data['type'] == 'number')
+@elseif ($data['type'] == 'number')
     <div class="mb-3">
         <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>
-        <input type="{{ $data['type'] }}" 
-            step=".01" class="form-control @error($data['field']) is-invalid border-2 border-danger border @enderror"
+        <input type="{{ $data['type'] }}" step=".01"
+            class="form-control @error($data['field']) is-invalid border-2 border-danger border @enderror"
             id="{{ $data['field'] }}" name="{{ $data['field'] }}">
 
         @include('partials.forms.validation.error_alert', ['field' => $data['field']])
@@ -62,5 +69,3 @@
         @include('partials.forms.validation.error_alert', ['field' => $data['field']])
     </div>
 @endif
-
-

@@ -35,7 +35,7 @@ Route::middleware(['auth', 'verified'])
             'products' => 'product:slug'
         ]);
 
-        // Route::delete('products/{product}/deleteImg', [ProductController::class, 'deleteImg'])->name('products.deleteImg');
+        Route::delete('products/{product}/deleteImg', [ProductController::class, 'deleteImg'])->name('products.deleteImg');
 
     });
 // /ADMIN

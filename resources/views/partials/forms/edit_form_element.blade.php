@@ -19,6 +19,18 @@
 
         @include('partials.forms.validation.error_alert', ['field' => $data['field']])
     </div>
+@elseif ($data['type'] == 'checkbox')
+    <div class="mb-3">
+
+        <input class="form-check-input me-1" type="checkbox" name="{{ $data['field'] }}" id="{{ $data['field'] }}"
+            value="{{ $data['default'] }}"
+            @if ($errors->any()) @checked(old($data['field']))
+            @else @checked($data['default']) 
+            @endif>
+        <label class="form-check-label" for="{{ $data['field'] }}">{{ $data['label'] }}</label>
+
+        @include('partials.forms.validation.error_alert', ['field' => $data['field']])
+    </div>
 @elseif ($data['type'] == 'checkboxes')
     <div class="mb-3">
         <p>{{ $data['label'] }}</p>
@@ -41,7 +53,7 @@
     <div class="mb-3 d-flex align-items-center">
         <div class="flex-grow-1">
             <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>
-            <input type="{{ $data['type'] }}" accept="{{ $data['accepted']}}"
+            <input type="{{ $data['type'] }}" accept="{{ $data['accepted'] }}"
                 class="form-control @error($data['field']) is-invalid border-2 border-danger border @enderror"
                 id="{{ $data['field'] }}" name="{{ $data['field'] }}">
             @include('partials.forms.validation.error_alert', ['field' => $data['field']])
@@ -66,15 +78,15 @@
 
     </div>
 @elseif ($data['type'] == 'number')
-<div class="mb-3">
-    <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>
-    <input type="{{ $data['type'] }}"
-        step=".01" class="form-control @error($data['field']) is-invalid border-2 border-danger border @enderror"
-        id="{{ $data['field'] }}" name="{{ $data['field'] }}"
-        value="{{ old($data['field'], $data['default']) }}">
+    <div class="mb-3">
+        <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>
+        <input type="{{ $data['type'] }}" step=".01"
+            class="form-control @error($data['field']) is-invalid border-2 border-danger border @enderror"
+            id="{{ $data['field'] }}" name="{{ $data['field'] }}"
+            value="{{ old($data['field'], $data['default']) }}">
 
-    @include('partials.forms.validation.error_alert', ['field' => $data['field']])
-</div>
+        @include('partials.forms.validation.error_alert', ['field' => $data['field']])
+    </div>
 @else
     <div class="mb-3">
         <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>

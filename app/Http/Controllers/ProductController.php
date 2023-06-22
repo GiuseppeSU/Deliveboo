@@ -114,12 +114,12 @@ class ProductController extends Controller
             $validated_data = $request->validated();
             if ($request->hasFile('image')) {
 
-                if ($product->cover_image) {
-                    Storage::delete($product->cover_image);
+                if ($product->image) {
+                    Storage::delete($product->image);
                 }
 
-                $path = Storage::put('cover', $request->cover_image);
-                $validated_data['cover_image'] = $path;
+                $path = Storage::put('cover', $request->image);
+                $validated_data['image'] = $path;
             }
 
             if ($request->has('visibility')) {
@@ -156,5 +156,16 @@ class ProductController extends Controller
         } else {
             abort(404);
         }
+    }
+
+    public function deleteImg(Product $product)
+    {
+        if ($product->image){
+            Storage::delete($product->image);
+            $product->image = null;
+            $product->save();
+        }
+
+        return to_route('admin.products.edit', $product->slug);
     }
 }

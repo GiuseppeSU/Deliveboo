@@ -11,6 +11,7 @@
 
             @csrf
 
+            {{-- Name --}}
             @include(
                 'partials.forms.create_form_element',
                 $data = ['type' => 'text', 'field' => 'name', 'label' => 'Nome']
@@ -21,6 +22,7 @@
                 $data = ['field'=> 'name']
             )
 
+            {{-- Price --}}
             @include(
                 'partials.forms.create_form_element',
                 $data = ['type' => 'number', 'field' => 'price', 'label' => 'Prezzo' ]
@@ -30,38 +32,30 @@
                 $data = ['field'=> 'price']
             )
 
-            <!--Checkbox visibilità-->
-            
-            <div class="mb-3">
-                <p>Visibile</p>
-                <ul class="list-group">
-                    
-                    <li class="list-group-item">
-                        <input class="form-check-input me-1" type="checkbox" name="visibility"
-                        id="visibility" 
-                        />
-                        <label class="form-check-label"
-                            for="visibility">Visibilità</label>
-                    </li>
-                </ul>
-            </div>
-
-
+            {{-- Image file --}}
             @include(
                 'partials.forms.create_form_element',
                 
                 $data = ['type' => 'file', 'field' => 'image', 'label' => 'Immagine', 'accepted' => 'image/*']
             )
 
+            {{-- Category --}}
             @include(
                 'partials.forms.create_form_element',
                 $data = ['type' => 'text', 'field' => 'category', 'label' => 'Categoria']
             )
 
+            {{-- Description --}}
             @include(
                 'partials.forms.create_form_element',
                 $data = ['type' => 'textarea', 'field' => 'description', 'label' => 'Descrizione']
             )
+
+             {{-- Visibility --}}
+
+             @include('partials.forms.create_form_element',
+             $data = ['type' => 'checkbox', 'field' => 'visibility', 'label' => 'Pubblicazione immediata'])
+ 
 
             <button type="submit" class="btn btn-primary productBtn">Invia</button>
         </form>

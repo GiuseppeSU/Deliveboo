@@ -8,9 +8,8 @@ import { validateRestaurantRegister } from './form_validation';
 import { validateProduct } from './form_validation';
 
 
+// *** SWEET DELETE ***
 const deleteButtons = document.querySelectorAll('.form_delete_product button[type="submit"]');
-
-
 deleteButtons.forEach(button => {
     button.addEventListener('click', event => {
         event.preventDefault();
@@ -28,6 +27,21 @@ deleteButtons.forEach(button => {
     })
 });
 
-// *** form di registrazione ristorante ***
+// *** EDIT IMAGE DELETE function ***
+function addFormElementDelete(fieldName){
+    const deleteBtn = document.querySelector('.'+fieldName+'.btn');
+    deleteBtn.addEventListener('click', () => {
+        const deleteForm = document.querySelector('.'+fieldName+' form');
+        deleteForm.submit();
+    })
+}
+
+
+// *** EDIT IMAGE DELETE ***
+addFormElementDelete('image');
+
+// *** RESTAURANT REGISTER FORM VALIDATION ***
 validateRestaurantRegister();
+
+// *** PRODUCT FORMS VALIDATION ***
 validateProduct();
