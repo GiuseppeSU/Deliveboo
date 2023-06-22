@@ -13,7 +13,7 @@
         <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>
         <select class="form-select @error($data['field']) is-invalid border-2 border-danger border @enderror"
             aria-label="Default select example" id="{{ $data['field'] }}" name="{{ $data['field'] }}">
-            <option @selected(old($data['type'], $data['default']) == '') value=''>No types selected</option>
+            <option @selected(old($data['type'], $data['default']) == '') value=''>{{old($data['type'], $data['default'])}}</option>
             @foreach ($data['options'] as $option)
                 <option @selected(old($data['field'], $data['default']) == $option['id']) value="{{ $option['id'] }}">{{ $option['name'] }}</option>
             @endforeach

@@ -38,21 +38,25 @@ class ProductController extends Controller
     {
         $categories = [
             [
-                'id' => 1,
-                'name' => 'primo'
+                'id' => 'primo piatto',
+                'name' => 'primo piatto'
             ],
             [
-                'id' => 2,
-                'name' => 'secondo'
+                'id' => 'secondo piatto',
+                'name' => 'secondo piatto'
             ],
             [
-                'id' => 3,
+                'id' => 'antipasto',
+                'name' => 'antipasto'
+            ],
+            [
+                'id' => 'dolce',
                 'name' => 'dolce'
             ],
             [
-                'id' => 4,
-                'name' => 'bevanda'
-            ],
+                'id' => 'pizza',
+                'name' => 'pizza'
+            ]
         ];
         return view('admin.products.create',compact('categories'));
     }
@@ -115,21 +119,25 @@ class ProductController extends Controller
         if ($product->restaurant_id == Auth::id()) {
             $categories = [
                 [
-                    'id' => 1,
-                    'name' => 'primo'
+                    'id' => 'primo piatto',
+                    'name' => 'primo piatto'
                 ],
                 [
-                    'id' => 2,
-                    'name' => 'secondo'
+                    'id' => 'secondo piatto',
+                    'name' => 'secondo piatto'
                 ],
                 [
-                    'id' => 3,
+                    'id' => 'antipasto',
+                    'name' => 'antipasto'
+                ],
+                [
+                    'id' => 'dolce',
                     'name' => 'dolce'
                 ],
                 [
-                    'id' => 4,
-                    'name' => 'bevanda'
-                ],
+                    'id' => 'pizza',
+                    'name' => 'pizza'
+                ]
             ];
             return view('admin.products.edit', compact('product','categories'));
         } else {
@@ -168,7 +176,7 @@ class ProductController extends Controller
 
             //dd($validated_data);
 
-            
+
             $product->update($validated_data);
 
             return to_route('admin.products.show', ['product' => $product->slug])

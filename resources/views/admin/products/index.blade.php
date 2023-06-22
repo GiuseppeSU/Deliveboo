@@ -16,7 +16,7 @@
                             <th scope="col">Nome</th>
                             <th scope="col">Prezzo</th>
                             <th scope="col">Visibilità piatto</th>
-                            {{--<th scope="col">Categoria</th>--}}
+                            <th scope="col">Categoria</th>
                             <th scope="col">Azioni</th>
                         </tr>
                     </thead>
@@ -27,7 +27,7 @@
                                 <td>{{ $product->name }}</td>
                                 <td>€ {{ $product->price }}</td>
                                 <td>{{ $product->visibility? 'si': 'no' }}</td>
-                                {{--<td>{{ $product->category }}</td>--}}
+                                <td>{{ $product->category }}</td>
                                 <td>
                                     <a href="{{ route('admin.products.edit', ['product' => $product->slug]) }}"
                                         class='btn btn-outline-warning p-1'><i
