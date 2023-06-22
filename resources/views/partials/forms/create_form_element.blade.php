@@ -1,3 +1,4 @@
+{{-- TEXTAREA --}}
 @if ($data['type'] == 'textarea')
     <div class="mb-3">
         <h1></h1>
@@ -6,6 +7,7 @@
             name="{{ $data['field'] }}">{{ old($data['field']) }}</textarea>
         @include('partials.forms.validation.error_alert', ['field' => $data['field']])
     </div>
+{{-- SELECT (options prese da DB) --}}
 @elseif ($data['type'] == 'select')
     <div class="mb-3">
         <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>
@@ -18,13 +20,28 @@
         </select>
         @include('partials.forms.validation.error_alert', ['field' => $data['field']])
     </div>
+{{-- SELECT (options array associativo) --}}
+@elseif ($data['type'] == 'selectArray')
+    <div class="mb-3">
+        <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>
+        <select class="form-select @error($data['field']) is-invalid border-2 border-danger border @enderror"
+            aria-label="Default select example" id="{{ $data['field'] }}" name="{{ $data['field'] }}">
+            <option @selected(old($data['field']) == '') value=''>Nessuna opzione selezionata</option>
+            @foreach ($data['options'] as $option)
+                <option @selected(old($data['field']) == $option['id']) value="{{ $option['id'] }}">{{ $option['name'] }}</option>
+            @endforeach
+        </select>
+        @include('partials.forms.validation.error_alert', ['field' => $data['field']])
+    </div>
+{{-- CHECKBOX SINGOLA --}}
 @elseif ($data['type'] == 'checkbox')
     <div class="mb-3">
-        <input class="form-check-input me-1" type="checkbox" name="{{ $data['field'] }}[]"
-            @checked(old($data['field'], [])) id="{{ $data['field'] }}">
+        <input class="form-check-input me-1" type="checkbox" name="{{ $data['field'] }}[]" @checked(old($data['field'], []))
+            id="{{ $data['field'] }}">
         <label class="form-check-label" for="{{ $data['field'] }}">{{ $data['label'] }}</label>
         @include('partials.forms.validation.error_alert', ['field' => $data['field']])
     </div>
+{{-- CHECKBOX MULTIPLA --}}
 @elseif ($data['type'] == 'checkboxes')
     <div class="mb-3">
         <p>{{ $data['label'] }}</p>
@@ -41,6 +58,7 @@
             @include('partials.forms.validation.error_alert', ['field' => $data['field']])
         </ul>
     </div>
+{{-- FILE IMMAGINE --}}
 @elseif ($data['type'] == 'file')
     <div class="mb-3">
         <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>
@@ -50,6 +68,8 @@
 
         @include('partials.forms.validation.error_alert', ['field' => $data['field']])
     </div>
+
+{{-- NUMERO DECIMALE --}}
 @elseif ($data['type'] == 'number')
     <div class="mb-3">
         <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>
@@ -59,6 +79,7 @@
 
         @include('partials.forms.validation.error_alert', ['field' => $data['field']])
     </div>
+{{-- INPUT DI DEFAULT --}}
 @else
     <div class="mb-3">
         <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>

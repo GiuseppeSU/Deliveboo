@@ -42,7 +42,7 @@
             {{-- Category --}}
             @include(
                 'partials.forms.create_form_element',
-                $data = ['type' => 'text', 'field' => 'category', 'label' => 'Categoria']
+                $data = ['type' => 'selectArray', 'field' => 'category', 'label' => 'Categoria', 'options' => $categories]
             )
 
             {{-- Description --}}

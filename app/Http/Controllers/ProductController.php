@@ -36,7 +36,29 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create');
+        $categories = [
+            [
+                'id' => 'primo piatto',
+                'name' => 'primo piatto'
+            ],
+            [
+                'id' => 'secondo piatto',
+                'name' => 'secondo piatto'
+            ],
+            [
+                'id' => 'antipasto',
+                'name' => 'antipasto'
+            ],
+            [
+                'id' => 'dolce',
+                'name' => 'dolce'
+            ],
+            [
+                'id' => 'pizza',
+                'name' => 'pizza'
+            ]
+        ];
+        return view('admin.products.create',compact('categories'));
     }
 
     /**
@@ -95,7 +117,29 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         if ($product->restaurant_id == Auth::id()) {
-            return view('admin.products.edit', compact('product'));
+            $categories = [
+                [
+                    'id' => 'primo piatto',
+                    'name' => 'primo piatto'
+                ],
+                [
+                    'id' => 'secondo piatto',
+                    'name' => 'secondo piatto'
+                ],
+                [
+                    'id' => 'antipasto',
+                    'name' => 'antipasto'
+                ],
+                [
+                    'id' => 'dolce',
+                    'name' => 'dolce'
+                ],
+                [
+                    'id' => 'pizza',
+                    'name' => 'pizza'
+                ]
+            ];
+            return view('admin.products.edit', compact('product','categories'));
         } else {
             abort(404);
         }
@@ -132,7 +176,7 @@ class ProductController extends Controller
 
             //dd($validated_data);
 
-            
+
             $product->update($validated_data);
 
             return to_route('admin.products.show', ['product' => $product->slug])

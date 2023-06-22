@@ -48,9 +48,10 @@
                 'partials.forms.edit_form_element',
                 $data = [
                     'default' => $product->category,
-                    'type' => 'text',
+                    'type' => 'selectArray',
                     'field' => 'category',
                     'label' => 'Categoria',
+                    'options' => $categories,
                 ]
             )
 
