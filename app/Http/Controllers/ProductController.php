@@ -36,7 +36,25 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create');
+        $categories = [
+            [
+                'id' => 1,
+                'name' => 'primo'
+            ],
+            [
+                'id' => 2,
+                'name' => 'secondo'
+            ],
+            [
+                'id' => 3,
+                'name' => 'dolce'
+            ],
+            [
+                'id' => 4,
+                'name' => 'bevanda'
+            ],
+        ];
+        return view('admin.products.create',compact('categories'));
     }
 
     /**
@@ -95,7 +113,25 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         if ($product->restaurant_id == Auth::id()) {
-            return view('admin.products.edit', compact('product'));
+            $categories = [
+                [
+                    'id' => 1,
+                    'name' => 'primo'
+                ],
+                [
+                    'id' => 2,
+                    'name' => 'secondo'
+                ],
+                [
+                    'id' => 3,
+                    'name' => 'dolce'
+                ],
+                [
+                    'id' => 4,
+                    'name' => 'bevanda'
+                ],
+            ];
+            return view('admin.products.edit', compact('product','categories'));
         } else {
             abort(404);
         }
