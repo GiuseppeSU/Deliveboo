@@ -30,10 +30,12 @@ deleteButtons.forEach(button => {
 // *** EDIT IMAGE DELETE function ***
 function addFormElementDelete(fieldName){
     const deleteBtn = document.querySelector('.'+fieldName+'.btn');
-    deleteBtn.addEventListener('click', () => {
-        const deleteForm = document.querySelector('.'+fieldName+' form');
-        deleteForm.submit();
-    })
+    if(deleteBtn){
+        deleteBtn.addEventListener('click', () => {
+            const deleteForm = document.querySelector('.'+fieldName+' form');
+            deleteForm.submit();
+        })
+    }
 }
 
 
