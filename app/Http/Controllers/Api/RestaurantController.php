@@ -31,21 +31,21 @@ class RestaurantController extends Controller
 
     public function show($id) {
 
-        if($id) {
+        
 
             $restaurant = Product::where('restaurant_id', '=', $id)
                         ->where('visibility','=', 1)
-                        ->select('*')
+                        ->select('products.*')
                         ->get();
 
             return response()->json([
                 'success' => true,
                 'results' => $restaurant,
             ]);
-        } else {
+        
 
             abort(404);
-        }
+        
 
     
     }

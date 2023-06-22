@@ -26,6 +26,7 @@ class ProductSeeder extends Seeder
                 $product->price = $row[2];
                 $product->description = $row[3];
                 $product->image = $row[4];
+                $product->visibility = 1;
                 $product->slug = Helpers::generateSlug("$product->name $product->restaurant_id");
                 $product->save();
 
