@@ -1,5 +1,5 @@
 <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary border rounded-2" style="width: 280px;">
-    <a href="{{ route('admin.dashboard') }}" class="nav-link link-body-emphasis @if(Route::currentRouteName() == 'admin.dashboard') active text-white @endif" aria-current="page">
+    <a href="{{ route('admin.dashboard') }}" class="nav-link link-body-emphasis fw-bolder"  aria-current="page">
         <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
         Dashboard
         </a>
