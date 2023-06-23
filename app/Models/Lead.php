@@ -10,7 +10,7 @@ class Lead extends Model
     use HasFactory;
 
     protected $fillable = [
-        
+
         'name',
         'email',
         'address',
@@ -18,5 +18,11 @@ class Lead extends Model
         'products'
 
     ];
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class);
+
+    }
     
 }

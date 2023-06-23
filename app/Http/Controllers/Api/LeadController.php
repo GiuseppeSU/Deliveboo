@@ -36,6 +36,11 @@ class LeadController extends Controller
 
         $newMail = new Lead();
         $newMail->fill($data);
+
+        if ($request->has('products')) {
+            $newMail->products()->attach($request->products);
+        }
+        
         $newMail->save();
 
         $oggettoNewOrder = new NewOrder($newMail);
