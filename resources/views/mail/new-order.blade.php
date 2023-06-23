@@ -3,8 +3,10 @@
     <h4>Hai ricevuto un nuovo ordine</h4>
 
     <div>L'ordine comprende:
-        <ul v-for="product as $lead->products">
-            <li>{{$lead->products}}</li>
+        <ul>
+            @foreach($lead->pruducts as $product)
+            <li>{{$product}}</li>
+            @endforeach
         </ul>
     </div>
 

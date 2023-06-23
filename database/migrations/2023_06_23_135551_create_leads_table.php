@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('leads', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->string('address');
+            $table->unsignedDecimal('price', 5, 2 );
+            $table->
             $table->timestamps();
         });
     }
