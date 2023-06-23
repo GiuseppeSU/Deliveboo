@@ -34,7 +34,7 @@ class PaymentController extends Controller
         ]);
 
         $result = $gateway->transaction()->sale([
-            'amount' => '0.01', // Update with your desired amount
+            'amount' => $request->total, // Update with your desired amount
             'paymentMethodNonce' => $request->paymentMethodNonce,
             'options' => [
                 'submitForSettlement' => true
@@ -45,11 +45,13 @@ class PaymentController extends Controller
             // Payment successful
             return response()->json([
                 'message' => 'Payment successful',
+                'success' => true
             ]);
         } else {
             // Payment failed
             return response()->json([
                 'message' => 'Payment failed',
+                'success' => false
             ]);
         
         }
