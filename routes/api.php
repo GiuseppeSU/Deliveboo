@@ -3,7 +3,6 @@
 use App\Http\Controllers\Api\PaymentController;
 use App\Http\Controllers\Api\TypeController;
 use App\Http\Controllers\Api\RestaurantController;
-use App\Http\Controllers\Api\LeadController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Braintree\Gateway;
@@ -45,7 +44,7 @@ Route::get('/generate-client-token',[PaymentController::class, 'getToken']);
 Route::post('/process-payment',[PaymentController::class, 'processPayment']);
 
 
-Route::post('/neworder',[LeadController::class, 'store']);
+Route::post('/neworder',[OrderController::class, 'store']);
 
     
 

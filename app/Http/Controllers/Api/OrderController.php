@@ -4,16 +4,18 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Lead;
+use App\Models\Order;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\NewOrder;
 use Illuminate\Support\Facades\Validator;
 
-class LeadController extends Controller
+class OrderController extends Controller
 {
     public function store(Request $request) {
 
         $data = $request->all();
+
+        $newProducts = Product::where()
 
         $validator = Validator::make($data,
             [
@@ -34,7 +36,7 @@ class LeadController extends Controller
             );
         }
 
-        $newMail = new Lead();
+        $newMail = new Order();
         $newMail->fill($data);
 
         if ($request->has('products')) {
