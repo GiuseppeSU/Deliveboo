@@ -1,10 +1,12 @@
 <?php
 
-
+use App\Http\Controllers\Api\PaymentController;
 use App\Http\Controllers\Api\TypeController;
 use App\Http\Controllers\Api\RestaurantController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Braintree\Gateway;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +34,15 @@ Route::get('/restaurants', [RestaurantController::class, 'index']);
 // *** PRODUCT ***
 // Rotta per la richiesta di piatti di un ristorante
 Route::get('/restaurants/{id}', [RestaurantController::class, 'show']);
+
+
+// *** PAYMENT ***
+// Rotta per la richiesta di piatti di un ristorante
+Route::get('/generate-client-token',[PaymentController::class, 'getToken']);
+// *** PAYMENT ***
+
+Route::post('/process-payment',[PaymentController::class, 'processPayment']);
+
+    
+
+

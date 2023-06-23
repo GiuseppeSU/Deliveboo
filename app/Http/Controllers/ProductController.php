@@ -172,6 +172,7 @@ class ProductController extends Controller
             } else {
 
                 $validated_data['visibility'] = 0;
+                
             }
 
             //dd($validated_data);
