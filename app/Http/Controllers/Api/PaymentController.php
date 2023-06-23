@@ -33,6 +33,8 @@ class PaymentController extends Controller
             'privateKey' => config('services.braintree.private_key')
         ]);
 
+        
+
         $result = $gateway->transaction()->sale([
             'amount' => $request->total, // Update with your desired amount
             'paymentMethodNonce' => $request->paymentMethodNonce,
