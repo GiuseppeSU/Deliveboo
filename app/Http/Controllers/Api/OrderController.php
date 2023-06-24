@@ -17,13 +17,14 @@ class OrderController extends Controller
 
         $newProducts = Product::where()
 
-        $validator = Validator::make($data,
+        $validator = Validator::make( 
+            
+            $data,
             [
                 'name' => 'required',
                 'email' => 'required|email',
                 'address' => 'required',
                 'price' => 'required',
-                'products' => 'required'
             ]
         );
 
