@@ -3,8 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Mail\NewOrder;
+use App\Models\Order;
 use Illuminate\Http\Request;
-use Braintree\Gateway; 
+use Braintree\Gateway;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 
 class PaymentController extends Controller
 {
@@ -34,17 +38,52 @@ class PaymentController extends Controller
         ]);
 
         
-
         $result = $gateway->transaction()->sale([
-            'amount' => $request->total, // Update with your desired amount
+            'amount' => $request->order['total'], // Update with your desired amount
             'paymentMethodNonce' => $request->paymentMethodNonce,
             'options' => [
-                'submitForSettlement' => true
+                'submitForSettlement' => false
             ]
         ]);
     
         if ($result->success) {
             // Payment successful
+
+            $data = $request->order;
+
+            $validator = Validator::make( 
+                
+                $data,
+                [
+                    'name' => 'required',
+                    'email' => 'required|email',
+                    'address' => 'required',
+                ]
+            );
+    
+            if ($validator->fails()) {
+                return response()->json(
+                    [
+                        'success' => false,
+                        'errors' => $validator->errors()
+                    ]
+                );
+            }
+
+            $newOrder = new Order();
+            $newOrder->fill($data);
+    
+            // if ($request->has('products')) {
+            //     $newMail->products()->attach($request->products);
+            // }
+            
+            $newOrder->save();
+    
+            $newMail = new NewOrder($newOrder);
+
+    
+            Mail::to('mail@gmail.com')->send($newMail);
+
             return response()->json([
                 'message' => 'Payment successful',
                 'success' => true

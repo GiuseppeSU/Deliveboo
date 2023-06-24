@@ -17,10 +17,12 @@ class Order extends Model
 
     protected $fillable = [
 
+        'order_number',
         'name',
         'email',
         'address',
-        'price',
+        'total',
+        'phone_number',
 
     ];
 }

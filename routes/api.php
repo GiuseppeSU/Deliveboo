@@ -40,11 +40,8 @@ Route::get('/restaurants/{id}', [RestaurantController::class, 'show']);
 // Rotta per la richiesta di piatti di un ristorante
 Route::get('/generate-client-token',[PaymentController::class, 'getToken']);
 // *** PAYMENT ***
-
 Route::post('/process-payment',[PaymentController::class, 'processPayment']);
 
-
-Route::post('/neworder',[OrderController::class, 'store']);
 
     
 
