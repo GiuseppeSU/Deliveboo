@@ -15,8 +15,6 @@ class OrderController extends Controller
 
         $data = $request->all();
 
-        $newProducts = Product::where()
-
         $validator = Validator::make( 
             
             $data,
