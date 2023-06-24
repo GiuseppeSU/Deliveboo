@@ -33,11 +33,11 @@ Route::get('/restaurants', [RestaurantController::class, 'index']);
 
 // *** PRODUCT ***
 // Rotta per la richiesta di piatti di un ristorante
-Route::get('/restaurants/{id}', [RestaurantController::class, 'show']);
+Route::get('/restaurants/{slug}', [RestaurantController::class, 'show']);
 
 
-// *** PAYMENT ***
-// Rotta per la richiesta di piatti di un ristorante
+// *** TOKEN ***
+// Rotta per la richiesta di un token per creare il dropin
 Route::get('/generate-client-token',[PaymentController::class, 'getToken']);
 // *** PAYMENT ***
 Route::post('/process-payment',[PaymentController::class, 'processPayment']);

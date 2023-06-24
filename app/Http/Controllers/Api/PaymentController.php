@@ -5,14 +5,18 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Mail\NewOrder;
 use App\Models\Order;
+use App\Models\Restaurant;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Braintree\Gateway;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class PaymentController extends Controller
 {
-    public function getToken() {
+    public function getToken()
+    {
 
         $gateway = new Gateway([
             'environment' => config('services.braintree.environment'),
@@ -28,7 +32,8 @@ class PaymentController extends Controller
             'clientToken' => $clientToken,
         ]);
     }
-    public function processPayment(Request $request) {
+    public function processPayment(Request $request)
+    {
 
         $gateway = new Gateway([
             'environment' => config('services.braintree.environment'),
@@ -37,22 +42,22 @@ class PaymentController extends Controller
             'privateKey' => config('services.braintree.private_key')
         ]);
 
-        
+
         $result = $gateway->transaction()->sale([
             'amount' => $request->order['total'], // Update with your desired amount
             'paymentMethodNonce' => $request->paymentMethodNonce,
             'options' => [
-                'submitForSettlement' => false
+                'submitForSettlement' => true
             ]
         ]);
-    
+
         if ($result->success) {
             // Payment successful
 
             $data = $request->order;
 
-            $validator = Validator::make( 
-                
+            $validator = Validator::make(
+
                 $data,
                 [
                     'name' => 'required',
@@ -60,7 +65,7 @@ class PaymentController extends Controller
                     'address' => 'required',
                 ]
             );
-    
+
             if ($validator->fails()) {
                 return response()->json(
                     [
@@ -72,17 +77,19 @@ class PaymentController extends Controller
 
             $newOrder = new Order();
             $newOrder->fill($data);
-    
-            // if ($request->has('products')) {
-            //     $newMail->products()->attach($request->products);
-            // }
-            
             $newOrder->save();
-    
+
+            if ($data['products']) {
+                foreach ($data['products'] as $product) {
+                    $newOrder->products()->attach($product['id'], ['quantity' => $product['quantity']]);
+                }
+            }
+
             $newMail = new NewOrder($newOrder);
 
-    
-            Mail::to('mail@gmail.com')->send($newMail);
+            $restaurant = DB::table('users')->where('id',$data['restaurant_id'])->get('email');
+
+            Mail::to($restaurant)->send($newMail);
 
             return response()->json([
                 'message' => 'Payment successful',
@@ -94,8 +101,6 @@ class PaymentController extends Controller
                 'message' => 'Payment failed',
                 'success' => false
             ]);
-        
         }
     }
-    
 }
