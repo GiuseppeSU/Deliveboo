@@ -43,6 +43,9 @@ Route::get('/generate-client-token',[PaymentController::class, 'getToken']);
 
 Route::post('/process-payment',[PaymentController::class, 'processPayment']);
 
+
+Route::post('/neworder',[OrderController::class, 'store']);
+
     
 
 

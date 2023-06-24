@@ -25,9 +25,9 @@ class Product extends Model
         return $this->belongsTo(Restaurant::class);
     }
 
-    public function orders()
+    public function leads()
     {
-        return $this->belongsToMany(Order::class);
+        return $this->belongsToMany(Lead::class);
 
 
     }
