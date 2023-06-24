@@ -19,8 +19,7 @@ class Order extends Model
 
         'name',
         'email',
-        'address',
-        'price',
+        'address'
 
     ];
 }

@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Validator;
 
 class OrderController extends Controller
 {
-    public function store(Request $request) {
+   /* public function store(Request $request) {
 
         $data = $request->all();
 
@@ -48,5 +48,5 @@ class OrderController extends Controller
 
         Mail::to('ange.rouda@gmail.com')->send($oggettoNewOrder);
 
-    }
+    }*/
 }

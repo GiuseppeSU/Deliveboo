@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Braintree\Gateway; 
+use App\Models\Order;
+use App\Mail\NewOrder;
+use Illuminate\Support\Facades\Mail;
 
 class PaymentController extends Controller
 {
@@ -45,6 +48,21 @@ class PaymentController extends Controller
     
         if ($result->success) {
             // Payment successful
+            $newMail = new Order();
+            $newMail->name = $request->name;
+            $newMail->email = $request->email;
+            $newMail->address = $request->address;
+
+            /*if ($request->has('products')) {
+                $newMail->products()->attach($request->products);
+            }*/
+        
+            $newMail->save();
+
+            $oggettoNewOrder = new NewOrder($newMail);
+
+            Mail::to('ange.rouda@gmail.com')->send($oggettoNewOrder);
+
             return response()->json([
                 'message' => 'Payment successful',
                 'success' => true

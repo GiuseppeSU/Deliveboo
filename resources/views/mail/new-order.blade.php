@@ -4,9 +4,9 @@
 
     <div>L'ordine comprende:
         <ul>
-            @foreach($lead->pruducts as $product)
-            <li>{{$product}}</li>
-            @endforeach
+            
+            <li></li>
+
         </ul>
     </div>
 
