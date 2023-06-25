@@ -19,7 +19,8 @@ class Order extends Model
 
         'name',
         'email',
-        'address'
+        'address',
+        'total'
 
     ];
 }

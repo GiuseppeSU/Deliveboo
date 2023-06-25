@@ -8,6 +8,7 @@ use Braintree\Gateway;
 use App\Models\Order;
 use App\Mail\NewOrder;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 
 class PaymentController extends Controller
 {
@@ -29,6 +30,26 @@ class PaymentController extends Controller
     }
     public function processPayment(Request $request) {
 
+        /*$validator = Validator::make( 
+                
+            $data,
+            [
+                'name' => 'required',
+                'email' => 'required|email',
+                'address' => 'required',
+                'price' => 'required',
+            ]
+        );
+
+        if ($validator->fails()) {
+            return response()->json(
+                [
+                    'success' => false,
+                    'errors' => $validator->errors()
+                ]
+            );
+        }*/
+
         $gateway = new Gateway([
             'environment' => config('services.braintree.environment'),
             'merchantId' => config('services.braintree.merchant_id'),
@@ -47,11 +68,14 @@ class PaymentController extends Controller
         ]);
     
         if ($result->success) {
-            // Payment successful
+            // Payment successfull
+
+
             $newMail = new Order();
-            $newMail->name = $request->name;
+            $newMail->name = $request->user_name;
             $newMail->email = $request->email;
             $newMail->address = $request->address;
+            $newMail->total = $request->total;
 
             /*if ($request->has('products')) {
                 $newMail->products()->attach($request->products);

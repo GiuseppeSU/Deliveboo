@@ -14,13 +14,13 @@ return new class extends Migration {
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->string('order_number', 32);
+            $table->string('order_number', 32)->nullable();
             $table->decimal('total', 6, 2);
             $table->string('email', 50);
             $table->string('address', 100);
             $table->string('name', 100);
-            $table->string('phone_number', 10);
-            $table->string('status', 25)->default('pending');
+            $table->string('phone_number', 10)->nullable();
+            $table->string('status', 25)->default('pending')->nullable();
             $table->timestamps();
         });
     }

@@ -10,11 +10,11 @@
         </ul>
     </div>
 
-    <p>Nome cliente: {{ $lead->name}}</p>
+    <p>Nome cliente: {{ $order->name}}</p>
 
-    <p>Email: {{$lead->email}}</p>
+    <p>Email: {{$order->email}}</p>
 
-    <p>Indirizzo: {{$lead->address}}</p>
+    <p>Indirizzo: {{$order->address}}</p>
 
     
     

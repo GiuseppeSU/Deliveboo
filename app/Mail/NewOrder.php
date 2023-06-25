@@ -12,15 +12,15 @@ use Illuminate\Queue\SerializesModels;
 class NewOrder extends Mailable
 {
     use Queueable, SerializesModels;
-    public $lead;
+    public $order;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($_lead)
+    public function __construct($_order)
     {
-        $this->lead = $_lead;
+        $this->order = $_order;
     }
 
     /**
@@ -32,7 +32,6 @@ class NewOrder extends Mailable
     {
         return new Envelope(
 
-            replyTo: $this->lead->email,
             subject: 'New Order',
         );
     }
