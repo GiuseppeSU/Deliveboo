@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Mail\NewOrder;
+use App\Mail\ClientMail;
 use App\Models\Order;
 use App\Models\Restaurant;
 use App\Models\User;
@@ -75,6 +76,8 @@ class PaymentController extends Controller
                 );
             }
 
+            $restaurantName = DB::table('users')->where('id',$data['restaurant_id'])->get('name');
+
             $newOrder = new Order();
             $newOrder->fill($data);
             $newOrder->save();
@@ -86,10 +89,13 @@ class PaymentController extends Controller
             }
 
             $newMail = new NewOrder($newOrder);
+            $clientMail = new ClientMail($newOrder, $restaurantName);
+
 
             $restaurant = DB::table('users')->where('id',$data['restaurant_id'])->get('email');
 
             Mail::to($restaurant)->send($newMail);
+            Mail::to($newOrder->email)->send($clientMail);
 
             return response()->json([
                 'message' => 'Payment successful',

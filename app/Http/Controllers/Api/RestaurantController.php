@@ -43,6 +43,7 @@ class RestaurantController extends Controller
             }
             $restaurants = $filteredRestaurants;
         } else {
+
             $restaurants = Restaurant::all();
         }
 
