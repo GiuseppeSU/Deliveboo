@@ -20,7 +20,9 @@ class RestaurantController extends Controller
                 ->select('restaurants.*')
                 ->distinct()
                 ->get();
+                
         } else {
+
             $restaurants = Restaurant::all();
         }
 
