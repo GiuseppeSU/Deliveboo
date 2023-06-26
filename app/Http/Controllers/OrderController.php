@@ -16,7 +16,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $orders = Order::where('');
+
+        return view('admin.orders.index', compact('orders'));
     }
 
     /**
