@@ -25,10 +25,4 @@ class Product extends Model
         return $this->belongsTo(Restaurant::class);
     }
 
-    public function leads()
-    {
-        return $this->belongsToMany(Lead::class);
-
-
-    }
 }

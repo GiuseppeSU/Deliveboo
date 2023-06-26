@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Order;
+use App\Models\Product;
 use App\Http\Requests\StoreOrderRequest;
 use App\Http\Requests\UpdateOrderRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
@@ -14,9 +18,19 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $orders = Order::where('');
+        /*$orders = Order::where('restaurant_id', Auth::id())
+                //->orderBy('desc')
+                ->get();*/
+
+        $orders = Order::with('products')
+                ->join('order_product', 'orders.id', 'order_product.order_id')
+                ->join('products', 'product_id', 'products.id')
+                ->where('restaurant_id', Auth::id())
+                ->select('orders.*')
+                ->distinct()
+                ->get();
 
         return view('admin.orders.index', compact('orders'));
     }

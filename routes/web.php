@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,10 @@ Route::middleware(['auth', 'verified'])
 
         Route::resource('/products', ProductController::class)->parameters([
             'products' => 'product:slug'
+        ]);
+
+        Route::resource('/orders', OrderController::class)->parameters([
+            'orders' => 'orders:id'
         ]);
 
         Route::delete('products/{product}/deleteImg', [ProductController::class, 'deleteImg'])->name('products.deleteImg');

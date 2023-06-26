@@ -22,7 +22,7 @@
         @endif
 
         <li>
-            <a href="#" class="nav-link link-body-emphasis">
+            <a href="{{ route('admin.orders.index') }}" class="nav-link link-body-emphasis @if(Route::currentRouteName() == 'admin.orders.index') active text-white @endif">
             <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
             Ordini
             </a>
