@@ -23,17 +23,20 @@ class RestaurantController extends Controller
 
             $filteredRestaurants = [];
             foreach ($restaurants as $restaurant) {
-                //salvo i tipi di cucina del ristorante ciclato in un array
+                // creo un array dei "types" della query
                 $restaurantTypes = [];
                 foreach($restaurant->types as $type){
                     $restaurantTypes[] = $type->slug;
                 }
+                //verifico se ogni "type" della query è presente nei "types" del ristorante ciclato
                 $matchingTypes = true;
                 foreach ($types as $type){
                     if(!in_array($type,$restaurantTypes)){
+                        //non corrisponde
                         $matchingTypes = false;
                     }
                 }
+                //esito finale
                 if($matchingTypes){
                     $filteredRestaurants[] = $restaurant;
                 }
