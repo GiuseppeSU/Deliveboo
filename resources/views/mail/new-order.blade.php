@@ -4,7 +4,6 @@
 
     <div>L'ordine comprende:
         <ul>
-            @dump($products)
             @foreach($order->products as $product)
             <li>{{$product->name}} {{$product->pivot->quantity}}</li>
             @endforeach
