@@ -20,6 +20,25 @@ class RestaurantController extends Controller
                 ->select('restaurants.*')
                 ->distinct()
                 ->get();
+
+            $filteredRestaurants = [];
+            foreach ($restaurants as $restaurant) {
+                //salvo i tipi di cucina del ristorante ciclato in un array
+                $restaurantTypes = [];
+                foreach($restaurant->types as $type){
+                    $restaurantTypes[] = $type->slug;
+                }
+                $matchingTypes = true;
+                foreach ($types as $type){
+                    if(!in_array($type,$restaurantTypes)){
+                        $matchingTypes = false;
+                    }
+                }
+                if($matchingTypes){
+                    $filteredRestaurants[] = $restaurant;
+                }
+            }
+            $restaurants = $filteredRestaurants;
         } else {
             $restaurants = Restaurant::all();
         }
