@@ -4,11 +4,7 @@
         <h2 class="fs-4 text-secondary my-4">
             {{ __('Lista dei piatti') }}
         </h2>
-        <div class="row justify-content-center">
-            <div class="col-3">
-                @include('partials.sidebar')
-            </div>
-            <div class="col-9 p-0 rounded-2 overflow-hidden bg-light">
+            <div class="rounded-2 overflow-hidden bg-light">
                 <table class="table table-striped text-center ">
                     <thead class="border rounded-2">
                         <tr>

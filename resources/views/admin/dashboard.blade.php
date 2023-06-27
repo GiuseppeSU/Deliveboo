@@ -2,13 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h2 class="fs-4 text-secondary my-4">
-            {{ __('Dashboard') }}
-        </h2>
-        <div class="row justify-content-center">
-            <div class="col-sm-6 col-lg-3 col-md-6 mb-3">
-                @include('partials.sidebar')
-            </div>
+
             <div class="col-lg-9 col-sm-6 col-md-6">
                 <div class="card">
                     <div class="card-header">{{ __('User Dashboard') }}</div>
@@ -33,6 +27,5 @@
                     </h1>
                 </div>
             </div>
-        </div>
     </div>
 @endsection
