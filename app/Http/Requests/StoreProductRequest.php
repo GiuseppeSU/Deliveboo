@@ -25,7 +25,7 @@ class StoreProductRequest extends FormRequest
             'slug' => Helpers::generateSlug($this->name."-".Auth::id()),
         ]);
     }
-    
+
     /**
      * Get the validation rules that apply to the request.
      *

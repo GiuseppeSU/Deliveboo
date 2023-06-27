@@ -41,7 +41,7 @@ class UpdateProductRequest extends FormRequest
             'slug' => ['required', 'max:110', Rule::unique('products')->ignore($this->product)],
             'price' => 'required|numeric|min:0|decimal:0,2',
             'description' => 'nullable',
-            'image' => 'image|nullable|max:255',
+            'image' => 'image|nullable',
             'visibility' => 'nullable',
             'category' => 'nullable|max:50'
         ];
