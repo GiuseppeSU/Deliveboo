@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\StatsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,7 +38,11 @@ Route::middleware(['auth', 'verified'])
         ]);
 
         Route::resource('/orders', OrderController::class)->parameters([
-            'orders' => 'orders:id'
+            'orders' => 'order:id'
+        ]);
+
+        Route::resource('/stats', StatsController::class)->parameters([
+            'stats' => 'order:id'
         ]);
 
         Route::delete('products/{product}/deleteImg', [ProductController::class, 'deleteImg'])->name('products.deleteImg');
