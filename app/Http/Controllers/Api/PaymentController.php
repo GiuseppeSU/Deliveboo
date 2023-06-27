@@ -79,6 +79,7 @@ class PaymentController extends Controller
             $restaurantName = DB::table('users')->where('id',$data['restaurant_id'])->get('name');
 
             $newOrder = new Order();
+            $newOrder->order_code = 'ExampleOrderSerialNumber';
             $newOrder->fill($data);
             $newOrder->save();
 
@@ -99,6 +100,7 @@ class PaymentController extends Controller
 
             return response()->json([
                 'message' => 'Payment successful',
+                'orderCode' => $newOrder->order_code,
                 'success' => true
             ]);
         } else {
