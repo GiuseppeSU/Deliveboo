@@ -84,8 +84,8 @@
         left: 0;
         z-index: -1;
         border-radius: 5px;
-        background-color: rgb(223, 133, 51);
-        background-image: linear-gradient(315deg, rgb(223, 133, 51), rgb(223, 133, 51));
+        background-color: rgb(255, 0, 84);
+        background-image: linear-gradient(315deg, rgb(255, 0, 84), rgb(255, 0, 84));
         box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5);
         7px 7px 20px 0px rgba(0, 0, 0, .1),
         4px 4px 5px 0px rgba(0, 0, 0, .1);
