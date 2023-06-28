@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\RestaurantController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Braintree\Gateway;
+use App\Http\Controllers\StatsController;
 
 
 /*
@@ -41,6 +42,9 @@ Route::get('/restaurants/{slug}', [RestaurantController::class, 'show']);
 Route::get('/generate-client-token',[PaymentController::class, 'getToken']);
 // *** PAYMENT ***
 Route::post('/process-payment',[PaymentController::class, 'processPayment']);
+
+Route::get('/stats', [StatsController::class, 'index'])
+
 
 
     
