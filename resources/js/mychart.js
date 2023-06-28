@@ -7,18 +7,27 @@ import.meta.glob([
 ])
 
 
-let canvas = document.getElementById('myChart');
+let canvas = document.getElementById('myCountChart');
 let orders = JSON.parse(JSON.parse(canvas.dataset.orders));
 let monthly_orders = [];
-for(let i=1;i<13;i++){
+let monthly_total = [];
+
+for (let i = 1; i < 13; i++) {
     let selectedMonthOrders = orders.filter(order => {
         let splitdDate = order.created_at.split('-');
         return splitdDate[1] == i;
     })
-    let ordersTotal = selectedMonthOrders.map(order => order.total)
-    monthly_orders.push([selectedMonthOrders.length,sum(ordersTotal)]);
-    console.log
+
+    let ordersTotal = 0;
+    selectedMonthOrders.forEach(order => {
+        ordersTotal += parseInt(order.total);
+    });
+
+    monthly_orders.push(selectedMonthOrders.length);
+    monthly_total.push(ordersTotal);
+    
 }
+console.log(monthly_total);
 
 const labels = [
     'Gennaio',
@@ -35,23 +44,48 @@ const labels = [
     'Dicembre',
 ];
 
-const data = {
+const dataCount = {
     labels: labels,
-    datasets: [{
-        label: 'Ordini del 2022',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: monthly_orders,
-    }]
+    datasets: [
+        {
+            label: 'Numero di ordini nel 2022',
+            backgroundColor: 'white',
+            borderColor: 'black',
+            data: monthly_orders
+        },
+    ]
 };
 
-const config = {
+const configCount = {
     type: 'bar',
-    data: data,
+    data: dataCount,
     options: {}
 };
 
 new Chart(
-    document.getElementById('myChart'),
-    config
+    document.getElementById('myCountChart'),
+    configCount
+);
+
+const dataTotal = {
+    labels: labels,
+    datasets: [
+        {
+            label: 'Totale guadagni nel 2022',
+            backgroundColor: 'white',
+            borderColor: 'black',
+            data: monthly_total
+        }
+    ]
+};
+
+const configTotal = {
+    type: 'line',
+    data: dataTotal,
+    options: {}
+};
+
+new Chart(
+    document.getElementById('myTotalChart'),
+    configTotal
 );

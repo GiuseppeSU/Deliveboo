@@ -1,16 +1,15 @@
 @extends('layouts.stats')
 
 @section('content')
+    <div class="container">
+        <div class="row row-cols-2 h-100">
+            <div class="col">
+                <canvas id="myCountChart" data-orders='@json($total_orders)'></canvas>
 
-    <div class="container stat-container justify-content-center">
-        <div class="row col-10 h-100">
-            <div class="h-100 mx-auto">
-                <canvas id="myChart" data-orders='@json($total_orders)'></canvas>
+            </div>
+            <div>
+                <canvas id="myTotalChart"></canvas>
             </div>
         </div>
     </div>
-
-
 @endsection
-
-
