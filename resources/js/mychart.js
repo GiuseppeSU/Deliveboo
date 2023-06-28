@@ -1,4 +1,10 @@
 import Chart from 'chart.js/auto';
+import './bootstrap';
+import '~resources/scss/app.scss';
+import * as bootstrap from 'bootstrap';
+import.meta.glob([
+    '../img/**'
+])
 
 
 //let canvas = document.getElementById('myChart');

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.stats')
 
 @section('content')
 
@@ -10,7 +10,6 @@
         </div>
     </div>
 
-    
-
-
 @endsection
+
+
