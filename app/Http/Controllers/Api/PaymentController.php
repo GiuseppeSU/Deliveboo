@@ -79,7 +79,7 @@ class PaymentController extends Controller
             $restaurantName = DB::table('users')->where('id',$data['restaurant_id'])->get('name');
 
             $newOrder = new Order();
-            $newOrder->order_code = 'ExampleOrderSerialNumber';
+            $newOrder->order_code = 'AspettaESperaChePoiSiAvvera!!!!!';
             $newOrder->fill($data);
             $newOrder->save();
 
