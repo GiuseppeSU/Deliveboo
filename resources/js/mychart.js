@@ -1,10 +1,8 @@
 import Chart from 'chart.js/auto';
 
 
-let canvas = document.getElementById('myChart');
-let orders = JSON.parse(canvas.dataset.id);
-
-console.log(orders)
+//let canvas = document.getElementById('myChart');
+//let orders = JSON.parse(canvas.dataset.id);
 
 const labels = [
     'January',
@@ -21,7 +19,7 @@ const data = {
         label: 'My First dataset',
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132)',
-        data: orders        // [1 , 5, 23, 42, 6, 9, 74]
+        data: [1, 5, 23, 42, 6, 9, 74]
     }]
 };
 
