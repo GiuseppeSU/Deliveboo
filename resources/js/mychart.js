@@ -8,14 +8,10 @@ import.meta.glob([
 ])
 
 
-//let canvas = document.getElementById('myChart');
-//let orders = JSON.parse(canvas.dataset.id);
+let canvas = document.getElementById('myChart');
 
-let orders = axios.get('http://127.0.0.1:8000/apiadmin/stats')
-
-
-
-
+console.log(canvas.dataset.id)
+let orders = JSON.parse(canvas.data-info);
 
 
 const labels = [
