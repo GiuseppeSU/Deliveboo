@@ -37,25 +37,8 @@
             </div>
         </div>
 
-        <main class="container">
-            <div class="row">
-                @auth
-                    <div class="col-3">
-                        @include('partials.sidebar')
-                    </div>
-                    <div class="col-9">
-                        @yield('content')
-                    </div>
-                @endauth
-                @guest
-                    <div class="col-12">
-                        @yield('content')
-                    </div>
-                @endguest
-
-
-            </div>
-
+        <main class="">
+            @yield('content')
         </main>
     </div>
 </body>
