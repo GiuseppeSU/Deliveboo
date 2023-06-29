@@ -127,25 +127,33 @@ class ProductController extends Controller
         if ($product->restaurant_id == Auth::id()) {
             $categories = [
                 [
-                    'id' => 'primo piatto',
-                    'name' => 'primo piatto'
+                    'id' => '1',
+                    'name' => 'Antipasto'
                 ],
                 [
-                    'id' => 'secondo piatto',
-                    'name' => 'secondo piatto'
+                    'id' => '2',
+                    'name' => 'Primo'
                 ],
                 [
-                    'id' => 'antipasto',
-                    'name' => 'antipasto'
+                    'id' => '3',
+                    'name' => 'Secondo'
                 ],
                 [
-                    'id' => 'dolce',
-                    'name' => 'dolce'
+                    'id' => '4',
+                    'name' => 'Pizza'
                 ],
                 [
-                    'id' => 'pizza',
-                    'name' => 'pizza'
-                ]
+                    'id' => '5',
+                    'name' => 'Contorno'
+                ],
+                [
+                    'id' => '6',
+                    'name' => 'Dolce'
+                ],
+                [
+                    'id' => '7',
+                    'name' => 'Bevanda'
+                ],
             ];
             return view('admin.products.edit', compact('product', 'categories'));
         } else {

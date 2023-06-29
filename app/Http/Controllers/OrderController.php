@@ -64,7 +64,11 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        //
+        if ($order->products()->first()->restaurant_id == Auth::id()) {
+            return view('admin.orders.show', compact('order'));
+        } else {
+            abort(404);
+        }
     }
 
     /**
@@ -75,7 +79,33 @@ class OrderController extends Controller
      */
     public function edit(Order $order)
     {
-        //
+        if ($order->products()->first()->restaurant_id == Auth::id()){
+            $status = [
+                [
+                    'id' => '1',
+                    'name' => 'Pending'
+                ],
+                [
+                    'id' => '2',
+                    'name' => 'Accepted'
+                ],
+                [
+                    'id' => '3',
+                    'name' => 'Finished'
+                ],
+                [
+                    'id' => '4',
+                    'name' => 'Sent'
+                ],
+                [
+                    'id' => '5',
+                    'name' => 'Done'
+                ],
+            ];
+            return view('admin.orders.edit', compact('order'));
+        } else {
+            abort(404);
+        }
     }
 
     /**
@@ -87,7 +117,16 @@ class OrderController extends Controller
      */
     public function update(UpdateOrderRequest $request, Order $order)
     {
-        //
+        if ($order->products()->first()->restaurant_id == Auth::id()) {
+            $validated_data = $request->validated();
+
+            $order->update($validated_data);
+
+            return to_route('admin.orders.show', ['order' => $order->order_code])
+                ->with('status', 'Success! Order updated.');
+        } else {
+            abort(404);
+        }
     }
 
     /**
