@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md">
     <div class="container">
         <div class="logo-header">
-            <a class="w-25" href="{{ url('/') }}">
+            <a class="w-25" href="{{ url('http://localhost:5173') }}">
                 <img class="img-fluid" src="img/deliveboo.png" alt="">
             </a>
         </div>
@@ -15,7 +15,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
+                    <a class="nav-link" href="{{ url('') }}">{{ __('Home') }}</a>
                 </li>
             </ul>
 
