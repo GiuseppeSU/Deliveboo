@@ -8,7 +8,7 @@
         </a>
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
-            <li>
+            <li class="mt-1">
                 <a href="{{ route('admin.products.index') }}"
                     class="nav-link link-body-emphasis @if (Route::currentRouteName() == 'admin.products.index') active text-white @endif">
                     <svg class="bi pe-none me-2" width="16" height="16">
@@ -19,7 +19,7 @@
             </li>
 
             @if (Route::currentRouteName() == 'admin.products.index')
-                <li>
+                <li class="mt-1">
                     <a href="{{ route('admin.products.create') }}"
                         class="nav-link link-body-emphasis @if (Route::currentRouteName() == 'admin.products.create') active text-white @endif">
                         <svg class="bi pe-none me-2" width="16" height="16">
@@ -30,7 +30,7 @@
                 </li>
             @endif
 
-            <li>
+            <li class="mt-1">
                 <a href="{{ route('admin.orders.index') }}"
                     class="nav-link link-body-emphasis @if (Route::currentRouteName() == 'admin.orders.index') active text-white @endif">
                     <svg class="bi pe-none me-2" width="16" height="16">
@@ -40,7 +40,7 @@
                 </a>
             </li>
 
-            <li>
+            <li class="mt-1">
                 <a href="#" class="nav-link link-body-emphasis">
                     <svg class="bi pe-none me-2" width="16" height="16">
                         <use xlink:href="#grid"></use>
