@@ -38,31 +38,31 @@ class ProductController extends Controller
     {
         $categories = [
             [
-                'id' => '1',
+                'id' => 'Antipasto',
                 'name' => 'Antipasto'
             ],
             [
-                'id' => '2',
+                'id' => 'Primo',
                 'name' => 'Primo'
             ],
             [
-                'id' => '3',
+                'id' => 'Secondo',
                 'name' => 'Secondo'
             ],
             [
-                'id' => '4',
+                'id' => 'Pizza',
                 'name' => 'Pizza'
             ],
             [
-                'id' => '5',
+                'id' => 'Contorno',
                 'name' => 'Contorno'
             ],
             [
-                'id' => '6',
+                'id' => 'Dolce',
                 'name' => 'Dolce'
             ],
             [
-                'id' => '7',
+                'id' => 'Bevanda',
                 'name' => 'Bevanda'
             ],
         ];
@@ -127,31 +127,31 @@ class ProductController extends Controller
         if ($product->restaurant_id == Auth::id()) {
             $categories = [
                 [
-                    'id' => '1',
+                    'id' => 'Antipasto',
                     'name' => 'Antipasto'
                 ],
                 [
-                    'id' => '2',
+                    'id' => 'Primo',
                     'name' => 'Primo'
                 ],
                 [
-                    'id' => '3',
+                    'id' => 'Secondo',
                     'name' => 'Secondo'
                 ],
                 [
-                    'id' => '4',
+                    'id' => 'Pizza',
                     'name' => 'Pizza'
                 ],
                 [
-                    'id' => '5',
+                    'id' => 'Contorno',
                     'name' => 'Contorno'
                 ],
                 [
-                    'id' => '6',
+                    'id' => 'Dolce',
                     'name' => 'Dolce'
                 ],
                 [
-                    'id' => '7',
+                    'id' => 'Bevanda',
                     'name' => 'Bevanda'
                 ],
             ];

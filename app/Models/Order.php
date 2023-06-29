@@ -23,6 +23,7 @@ class Order extends Model
         'address',
         'total',
         'phone_number',
+        'status'
         
     ];
 }
