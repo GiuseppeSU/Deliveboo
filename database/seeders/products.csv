@@ -1,178 +1,178 @@
 restaurant_id,name,price,description,image,category
-1,Spaghetti alla carbonara,10.00,"Spaghetti alla carbonara con uovo, pancetta e pecorino",/public/img_piatti/carbonara.jpg
-1,Pizza margherita,8.50,"Pizza con mozzarella, pomodoro e basilico",/public/img_piatti/pizzamarherita.jpg
-1,Tagliata di manzo,18.50,"Tagliata di manzo con rucola e scaglie di grana",/public/img_piatti/tagliatamanzo.jpg
-1,Risotto ai funghi,12.00,"Risotto con funghi porcini e parmigiano",/public/img_piatti/risottofunghi.jpg
-1,Tiramisù,6.00,"Dolce al cucchiaio con savoiardi, caffè e crema di mascarpone",/public/img_piatti/tiramisu.jpg
-1,Lasagne al ragù,11.50,"Lasagne con ragù di carne, besciamella e parmigiano",/public/img_piatti/lasagne.jpg
-1,Salmone alla griglia,16.00,"Salmone alla griglia con contorno di verdure",/public/img_piatti/salmonegriglia.jpg
-1,Panna cotta,5.50,"Dolce al cucchiaio con salsa di fragole",/public/img_piatti/pannacotta.jpg
-1,Pasta alla norma,9.00,"Pasta con pomodoro, melanzane fritte e ricotta salata",/public/img_piatti/norma.jpg
-1,Bistecca alla fiorentina,25.00,"Bistecca di manzo alla griglia",/public/img_piatti/fiorentina.jpg
-1,Tartare di tonno,14.50,"Tartare di tonno fresco con avocado e sesamo",/public/img_piatti/tartaretonno.jpg
-1,Gnocchi al pesto,11.00,"Gnocchi con pesto alla genovese e parmigiano",/public/img_piatti/gnocchipesto.jpg
-1,Cheesecake,7.50,"Cheesecake con base di biscotti e crema al formaggio",/public/img_piatti/cheesecake.jpg
-1,Ravioli di zucca,13.00,"Ravioli ripieni di zucca con burro e salvia",/public/img_piatti/raviolizucca.jpg
-1,Torta al cioccolato,6.50,"Torta al cioccolato fondente con glassa al cioccolato",/public/img_piatti/tortacioccolato.jpg
-2,Penne all'arrabbiata,9.50,"Penne con salsa all'arrabbiata e peperoncino",/public/img_piatti/pennearrabbiata.jpg
-2,Cotoletta alla milanese,12.50,"Cotoletta di maiale impanata e fritta",/public/img_piatti/cotoletta.jpg
-2,Ravioli di carne,10.00,"Ravioli ripieni di carne con salsa al pomodoro",/public/img_piatti/raviolicarne.jpg
-2,Spaghetti alle vongole,13.00,"Spaghetti con vongole, aglio, prezzemolo e peperoncino",/public/img_piatti/spaghettivongole.jpg
-2,Torta di mele,6.50,"Torta di mele con zucchero di canna e cannella",/public/img_piatti/tortamele.jpg
-2,Pollo alla cacciatora,14.00,"Pollo cotto con pomodoro, olive, cipolla e vino bianco",/public/img_piatti/pollocacciatora.jpg
-2,Cannoli siciliani,5.00,"Dolce siciliano con crema di ricotta e gocce di cioccolato",/public/img_piatti/cannoli.jpg
-2,Gnocchi al gorgonzola,12.00,"Gnocchi con salsa al gorgonzola e noci",/public/img_piatti/gnocchigorgonzola.jpg
-2,Tagliatelle al ragù,11.50,"Tagliatelle con ragù di carne e parmigiano",/public/img_piatti/tagliatelleragu.jpg
-2,Torta di fragole,7.00,"Torta con fragole fresche e crema pasticcera",/public/img_piatti/tortafragole.jpg
-2,Carpaccio di manzo,15.50,"Carpaccio di manzo con rucola, scaglie di grana e olio extravergine di oliva",/public/img_piatti/carpacciomanzo.jpg
-2,Tonno alla griglia,16.00,"Tonno alla griglia con insalata mista",/public/img_piatti/tonnogriglia.jpg
-2,Croissant alla crema,3.50,"Croissant sfogliato ripieno di crema pasticcera",/public/img_piatti/cornettocrema.jpg
-2,Pizza prosciutto e funghi,9.00,"Pizza con mozzarella, pomodoro, prosciutto cotto e funghi",/public/img_piatti/pizzaprosciutto.jpg
-2,Tiramisù al limone,6.50,"Dolce al cucchiaio con savoiardi, crema al limone e panna montata",/public/img_piatti/tiramisulimone.jpg
-2,Risotto agli asparagi,12.50,"Risotto con asparagi e parmigiano",/public/img_piatti/risottoasparagi.jpg
-3,Pasta al pesto,9.00,"Pasta con pesto alla genovese e pinoli",/public/img_piatti/pastapesto.jpg
-3,Bruschetta,5.00,"Pane abbrustolito con pomodoro, aglio, olio e basilico",/public/img_piatti/bruschetta.jpg
-3,Filetto di maiale,17.50,"Filetto di maiale con salsa al pepe verde",/public/img_piatti/filettomaiale.jpg
-3,Ravioli al burro e salvia,11.50,"Ravioli con burro fuso e foglie di salvia",/public/img_piatti/ravioliburro.jpg
-3,Torta al limone,6.50,"Torta al limone con glassa di zucchero",/public/img_piatti/tortalimone.jpg
-3,Insalata caprese,8.00,"Insalata con mozzarella, pomodoro e basilico",/public/img_piatti/caprese.jpg
-3,Pesce spada alla griglia,19.00,"Pesce spada alla griglia con contorno di verdure",/public/img_piatti/spadagriglia.jpg
-3,Cannolo siciliano,4.50,"Dolce siciliano con crema di ricotta e gocce di cioccolato",/public/img_piatti/cannoloricotta.jpg
-3,Pasta al ragù,10.50,"Pasta con ragù di carne e parmigiano",/public/img_piatti/pastaragu.jpg
-3,Torta al cioccolato e arancia,7.50,"Torta al cioccolato con scorza d'arancia candita",/public/img_piatti/tortacioccolatoarancia.jpg
-3,Carpaccio di salmone,14.50,"Carpaccio di salmone marinato con rucola e limone",/public/img_piatti/carpacciosalmone.jpg
-3,Pollo arrosto,15.00,"Pollo arrosto con patate al forno",/public/img_piatti/polloarrosto.jpg
-3,Croissant alla marmellata,3.50,"Croissant sfogliato con marmellata di fragole",/public/img_piatti/cornettomarmellata.jpg
-3,Pizza quattro stagioni,10.00,"Pizza con mozzarella, pomodoro, prosciutto cotto, funghi, carciofi e olive",/public/img_piatti/quattrostagioni.jpg
-3,Panna cotta ai frutti di bosco,7.00,"Dolce al cucchiaio con salsa ai frutti di bosco",/public/img_piatti/pannacottafrutti.jpg
-4,Lasagne vegetariane,11.50,"Lasagne con verdure miste, besciamella e parmigiano",/public/img_piatti/lasagneveggy.jpg
-4,Insalata di mare,16.50,"Insalata di mare con gamberetti, polpo, calamari e verdure",/public/img_piatti/insalatamare.jpg
-4,Bistecca di pollo,13.50,"Bistecca di pollo alla griglia",/public/img_piatti/bisteccapollo.jpg
-4,Pasta alla carbonara,10.00,"Pasta alla carbonara con uovo, pancetta e pecorino",/public/img_piatti/pennecarbonara.jpg
-4,Mousse al cioccolato,6.50,"Mousse al cioccolato fondente con panna montata",/public/img_piatti/moussecioccolato.jpg
-4,Bruschetta al pomodoro,5.00,"Pane abbrustolito con pomodoro fresco, aglio, olio e basilico",/public/img_piatti/bruschetta.jpg
-4,Filetto di branzino,18.00,"Filetto di branzino con salsa al limone",/public/img_piatti/branzino.jpg
-4,Torta al pistacchio,7.50,"Torta al pistacchio con crema al pistacchio e granella di pistacchi",/public/img_piatti/tortapistacchio.jpg
-4,Gnocchi alla sorrentina,11.00,"Gnocchi con salsa di pomodoro, mozzarella e basilico",/public/img_piatti/gnocchisorrentina.jpg
-4,Torta al cioccolato e pere,7.50,"Torta al cioccolato con pere sciroppate",/public/img_piatti/tortacioccolatopere.jpg
-4,Polpettine di carne,14.00,"Polpettine di carne con salsa di pomodoro",/public/img_piatti/polpettecarne.jpg
-4,Cornetto alla crema,3.00,"Cornetto sfogliato ripieno di crema pasticcera",/public/img_piatti/cornettocrema.jpg
-4,Pizza prosciutto e funghi,9.00,"Pizza con mozzarella, pomodoro, prosciutto cotto e funghi",/public/img_piatti/pizzafunghi.jpg
-4,Panna cotta alla fragola,6.50,"Dolce al cucchiaio con salsa di fragole",/public/img_piatti/pannacottafragola.jpg
-5,Tagliolini al tartufo,14.50,"Tagliolini con salsa al tartufo e parmigiano",/public/img_piatti/tagliatelletartufo.jpg
-5,Bruschetta mista,6.00,"Selezione di bruschette miste: pomodoro, funghi, olive",/public/img_piatti/bruschettamista.jpg
-5,Polpette al sugo,12.00,"Polpette di carne con salsa di pomodoro",/public/img_piatti/polpettesugo.jpg
-5,Pasta alla norma,9.00,"Pasta con pomodoro, melanzane fritte e ricotta salata",/public/img_piatti/pastanorma.jpg
-5,Torta al cioccolato bianco,7.00,"Torta al cioccolato bianco con glassa di cioccolato bianco",/public/img_piatti/tortabianco.jpg
-5,Caprese di bufala,8.50,"Insalata caprese con mozzarella di bufala, pomodoro e basilico",/public/img_piatti/capresebufala.jpg
-5,Pesce spada alla siciliana,19.00,"Pesce spada alla siciliana con olive, capperi, pomodoro e origano",/public/img_piatti/pescespadasici.jpg
-5,Profiteroles,6.50,"Bignè ripieni di crema chantilly e glassati al cioccolato",/public/img_piatti/profiteroles.jpg
-5,Pasta al limone,10.00,"Pasta con crema al limone e prezzemolo",/public/img_piatti/pastalimone.jpg
-5,Insalata di pollo,13.50,"Insalata con petto di pollo grigliato, verdure e dressing",/public/img_piatti/insalatapollo.jpg
-5,Calamari fritti,15.50,"Calamari fritti con maionese al limone",/public/img_piatti/calamarifritti.jpg
-5,Croissant alla cioccolata,3.50,"Croissant sfogliato con crema alla cioccolata",/public/img_piatti/cornettocioccolato.jpg
-5,Pizza quattro formaggi,10.00,"Pizza con mozzarella, pomodoro e quattro tipi di formaggio",/public/img_piatti/pizzaformaggi.jpg
-5,Tiramisù al pistacchio,7.50,"Dolce al cucchiaio con savoiardi, crema al pistacchio e pistacchi tritati",/public/img_piatti/tiramisupistacchio.jpg
-6,Spaghetti alle vongole,13.00,"Spaghetti con vongole, aglio, prezzemolo e peperoncino",/public/img_piatti/spaghettivongole.jpg
-6,Cotoletta alla milanese,12.50,"Cotoletta di maiale impanata e fritta",/public/img_piatti/cotolettamila.jpg
-6,Ravioli di carne,10.00,"Ravioli ripieni di carne con salsa al pomodoro",/public/img_piatti/ravioliripieni.jpg
-6,Torta di mele,6.50,"Torta di mele con zucchero di canna e cannella",/public/img_piatti/tortamele.jpg
-6,Pollo alla cacciatora,14.00,"Pollo cotto con pomodoro, olive, cipolla e vino bianco",/public/img_piatti/pollocacciatora.jpg
-6,Cannoli siciliani,5.00,"Dolce siciliano con crema di ricotta e gocce di cioccolato",/public/img_piatti/cannolisici.jpg
-6,Gnocchi al gorgonzola,12.00,"Gnocchi con salsa al gorgonzola e noci",/public/img_piatti/gnocchigorgo.jpg
-6,Tagliatelle al ragù,11.50,"Tagliatelle con ragù di carne e parmigiano",/public/img_piatti/tagliateragu.jpg
-6,Torta di fragole,7.00,"Torta con fragole fresche e crema pasticcera",/public/img_piatti/tortafragole.jpg
-6,Carpaccio di manzo,15.50,"Carpaccio di manzo con rucola, scaglie di grana e olio extravergine di oliva",/public/img_piatti/carpacciomanzo.jpg
-6,Tonno alla griglia,16.00,"Tonno alla griglia con insalata mista",/public/img_piatti/tonnogriglia.jpg
-6,Croissant alla crema,3.50,"Croissant sfogliato ripieno di crema pasticcera",/public/img_piatti/cornettopasticcera.jpg
-6,Pizza prosciutto e funghi,9.00,"Pizza con mozzarella, pomodoro, prosciutto cotto e funghi",/public/img_piatti/capricciosa.jpg
-6,Tiramisù al limone,6.50,"Dolce al cucchiaio con savoiardi, crema al limone e panna montata",/public/img_piatti/tiramisulimone.jpg
-6,Risotto agli asparagi,12.50,"Risotto con asparagi e parmigiano",/public/img_piatti/risottoasparagi.jpg
-7,Pasta al pesto,9.00,"Pasta con pesto alla genovese e pinoli",/public/img_piatti/pastapesto.jpg
-7,Bruschetta,5.00,"Pane abbrustolito con pomodoro, aglio, olio e basilico",/public/img_piatti/bruschetta.jpg
-7,Filetto di maiale,17.50,"Filetto di maiale con salsa al pepe verde",/public/img_piatti/filettomaiale.jpg
-7,Ravioli al burro e salvia,11.50,"Ravioli con burro fuso e foglie di salvia",/public/img_piatti/ravioliburro.jpg
-7,Torta al limone,6.50,"Torta al limone con glassa di zucchero",/public/img_piatti/tortalimone.jpg
-7,Insalata caprese,8.00,"Insalata con mozzarella, pomodoro e basilico",/public/img_piatti/insalacaprese.jpg
-7,Pesce spada alla griglia,19.00,"Pesce spada alla griglia con contorno di verdure",/public/img_piatti/pescespadagriglia.jpg
-7,Cannolo siciliano,4.50,"Dolce siciliano con crema di ricotta e gocce di cioccolato",/public/img_piatti/cannolo.jpg
-7,Pasta al ragù,10.50,"Pasta con ragù di carne e parmigiano",/public/img_piatti/pastaragu.jpg
-7,Torta al cioccolato e arancia,7.50,"Torta al cioccolato con scorza d'arancia candita",/public/img_piatti/tortacioccolatoarancia.jpg
-7,Carpaccio di salmone,14.50,"Carpaccio di salmone marinato con rucola e limone",/public/img_piatti/carpacciosalmone.jpg
-7,Pollo arrosto,15.00,"Pollo arrosto con patate al forno",/public/img_piatti/polloarrosto.jpg
-7,Croissant alla marmellata,3.50,"Croissant sfogliato con marmellata di fragole",/public/img_piatti/cornettomarmellata.jpg
-7,Pizza quattro stagioni,10.00,"Pizza con mozzarella, pomodoro, prosciutto cotto, funghi, carciofi e olive",/public/img_piatti/pizzastagioni.jpg
-7,Panna cotta ai frutti di bosco,7.00,"Dolce al cucchiaio con salsa ai frutti di bosco",/public/img_piatti/pannacotta.jpg
-8,Lasagne vegetariane,11.50,"Lasagne con verdure miste, besciamella e parmigiano",/public/img_piatti/lasagnaveggy.jpg
-8,Insalata di mare,16.50,"Insalata di mare con gamberetti, polpo, calamari e verdure",/public/img_piatti/insalatamare.jpg
-8,Bistecca di pollo,13.50,"Bistecca di pollo alla griglia",/public/img_piatti/bisteccapollo.jpg
-8,Pasta alla carbonara,10.00,"Pasta alla carbonara con uovo, pancetta e pecorino",/public/img_piatti/pastacarbonara.jpg
-8,Mousse al cioccolato,6.50,"Mousse al cioccolato fondente con panna montata",/public/img_piatti/moussecioccolato.jpg
-8,Bruschetta al pomodoro,5.00,"Pane abbrustolito con pomodoro fresco, aglio, olio e basilico",/public/img_piatti/bruschetta.jpg
-8,Filetto di branzino,18.00,"Filetto di branzino con salsa al limone",/public/img_piatti/filettobrazino.jpg
-8,Torta al pistacchio,7.50,"Torta al pistacchio con crema al pistacchio e granella di pistacchi",/public/img_piatti/tortapistacchio.jpg
-8,Gnocchi alla sorrentina,11.00,"Gnocchi con salsa di pomodoro, mozzarella e basilico",/public/img_piatti/gnocchipomodoro.jpg
-8,Torta al cioccolato e pere,7.50,"Torta al cioccolato con pere sciroppate",/public/img_piatti/tortacioccolato.jpg
-8,Polpettine di carne,14.00,"Polpettine di carne con salsa di pomodoro",/public/img_piatti/polpettinecarne.jpg
-8,Cornetto alla crema,3.00,"Cornetto sfogliato ripieno di crema pasticcera",/public/img_piatti/cornettocrema.jpg
-8,Pizza prosciutto e funghi,9.00,"Pizza con mozzarella, pomodoro, prosciutto cotto e funghi",/public/img_piatti/pizzaprosciutto.jpg
-8,Panna cotta alla fragola,6.50,"Dolce al cucchiaio con salsa di fragole",/public/img_piatti/pannacottafragola.jpg
-9,Tagliolini al tartufo,14.50,"Tagliolini con salsa al tartufo e parmigiano",/public/img_piatti/tagliolinitartufo.jpg
-9,Bruschetta mista,6.00,"Selezione di bruschette miste: pomodoro, funghi, olive",/public/img_piatti/bruschettamista.jpg
-9,Polpette al sugo,12.00,"Polpette di carne con salsa di pomodoro",/public/img_piatti/polpettesugo.jpg
-9,Pasta alla norma,9.00,"Pasta con pomodoro, melanzane fritte e ricotta salata",/public/img_piatti/pastanorma.jpg
-9,Torta al cioccolato bianco,7.00,"Torta al cioccolato bianco con glassa di cioccolato bianco",/public/img_piatti/tortacioccolatobianca.jpg
-9,Caprese di bufala,8.50,"Insalata caprese con mozzarella di bufala, pomodoro e basilico",/public/img_piatti/capresebufala.jpg
-9,Pesce spada alla siciliana,19.00,"Pesce spada alla siciliana con olive, capperi, pomodoro e origano",/public/img_piatti/pescespada.jpg
-9,Profiteroles,6.50,"Bignè ripieni di crema chantilly e glassati al cioccolato",/public/img_piatti/profiteroles.jpg
-9,Pasta al limone,10.00,"Pasta con crema al limone e prezzemolo",/public/img_piatti/pastalimone.jpg
-9,Insalata di pollo,13.50,"Insalata con petto di pollo grigliato, verdure e dressing",/public/img_piatti/insalatapollo.jpg
-9,Calamari fritti,15.50,"Calamari fritti con maionese al limone",/public/img_piatti/calamarifritti.jpg
-9,Croissant alla cioccolata,3.50,"Croissant sfogliato con crema alla cioccolata",/public/img_piatti/cornettocioccolato.jpg
-9,Pizza quattro formaggi,10.00,"Pizza con mozzarella, pomodoro e quattro tipi di formaggio",/public/img_piatti/pizzaformaggi.jpg
-9,Tiramisù al pistacchio,7.50,"Dolce al cucchiaio con savoiardi, crema al pistacchio e pistacchi tritati",/public/img_piatti/tiramisupistacchio.jpg
-10,Spaghetti alle vongole,13.00,"Spaghetti con vongole, aglio, prezzemolo e peperoncino",/public/img_piatti/spaghettivongole.jpg
-10,Cotoletta alla milanese,12.50,"Cotoletta di maiale impanata e fritta",/public/img_piatti/cotolettamilanese.jpg
-10,Ravioli di carne,10.00,"Ravioli ripieni di carne con salsa al pomodoro",/public/img_piatti/raviolicarne.jpg
-10,Torta di mele,6.50,"Torta di mele con zucchero di canna e cannella",/public/img_piatti/tortamele.jpg
-10,Pollo alla cacciatora,14.00,"Pollo cotto con pomodoro, olive, cipolla e vino bianco",/public/img_piatti/pollopomodoro.jpg
-10,Cannoli siciliani,5.00,"Dolce siciliano con crema di ricotta e gocce di cioccolato",/public/img_piatti/cannolisiciliani.jpg
-10,Gnocchi al gorgonzola,12.00,"Gnocchi con salsa al gorgonzola e noci",/public/img_piatti/gnocchinoci.jpg
-10,Tagliatelle al ragù,11.50,"Tagliatelle con ragù di carne e parmigiano",/public/img_piatti/tagliatelleragu.jpg
-10,Torta di fragole,7.00,"Torta con fragole fresche e crema pasticcera",/public/img_piatti/tortafragole.jpg
-10,Carpaccio di manzo,15.50,"Carpaccio di manzo con rucola, scaglie di grana e olio extravergine di oliva",/public/img_piatti/carpacciomanzo.jpg
-10,Tonno alla griglia,16.00,"Tonno alla griglia con insalata mista",/public/img_piatti/tonnogriglia.jpg
-10,Croissant alla crema,3.50,"Croissant sfogliato ripieno di crema pasticcera",/public/img_piatti/cornettocrema.jpg
-10,Pizza prosciutto e funghi,9.00,"Pizza con mozzarella, pomodoro, prosciutto cotto e funghi",/public/img_piatti/pizzaprosciutto.jpg
-10,Tiramisù al limone,6.50,"Dolce al cucchiaio con savoiardi, crema al limone e panna montata",/public/img_piatti/tiramisulimone.jpg
-10,Risotto agli asparagi,12.50,"Risotto con asparagi e parmigiano",/public/img_piatti/risottoasparagi.jpg
-11,Chicken Tikka Masala,11.50,"Pollo marinato in salsa di yogurt e spezie, cotto nel tandoor e servito con salsa di pomodoro e crema",/public/img_piatti/pollomarinato.jpg
-11,Paneer Tikka,9.50,Formaggio paneer marinato in spezie e cotto nel tandoor,/public/img_piatti/formaggiomarinato.jpg
-11,Riso Basmati,4.00,Riso aromatico al vapore,/public/img_piatti/risovapore.jpg
-11,Gulab Jamun,5.50,Dolce indiano a base di palline di latte condensato fritte in sciroppo di zucchero,/public/img_piatti/gulab.jpg
-11,Butter Chicken,12.50,"Pollo cucinato in salsa cremosa al burro, pomodoro e spezie",/public/img_piatti/polloburro.jpg
-11,Aloo Gobi,9.00,Curry di patate e cavolfiore cotto con spezie indiane,/public/img_piatti/currypatate.jpg
-11,Pollo Tandoori,10.50,"Pollo marinato in yogurt e spezie, cotto nel tandoor",/public/img_piatti/pollomarinatoyogu.jpg
-11,Naan,3.50,Pane indiano cotto in forno tandoor,/public/img_piatti/paneindiano.jpg
-11,Mango Lassi,4.50,Bevanda a base di yogurt e mango,/public/img_piatti/mangolassi.jpg
-11,Samosa,5.00,"Pasticcino fritto ripieno di patate, piselli e spezie",/public/img_piatti/pasticciopatate.jpg
-12,Moussaka,12.50,"Piatto greco a base di melanzane, carne macinata e besciamella gratinata al forno",/public/img_piatti/piattomelenzane.jpg
-12,Souvlaki,9.00,Spiedini di carne di maiale o pollo con verdure e salsa tzatziki,/public/img_piatti/spiedinimaiale.jpg
-12,Tzatziki,6.50,"Salsa a base di yogurt greco, cetriolo e aglio",/public/img_piatti/salsagreca.jpg
-12,Baklava,7.00,"Dolce tradizionale greco a base di pasta fillo, noci e miele",/public/img_piatti/pastafilo.jpg
-12,Spanakopita,8.50,"Torta salata greca con spinaci, formaggio feta e pasta fillo",/public/img_piatti/tortasalata.jpg
-12,Greek Salad,9.50,"Insalata greca con pomodori, cetrioli, olive, feta, cipolla e condimento di olio e aceto",/public/img_piatti/insalatagreca.jpg
-12,Moussaka Vegetariana,11.50,"Piatto vegetariano con melanzane, patate, zucchine, pomodori e besciamella gratinata al forno",/public/img_piatti/piattoveggy.jpg
-12,Dolmades,7.50,"Involtini di foglie di vite ripieni di riso, erbe aromatiche e spezie",/public/img_piatti/involtinialghe.jpg
-12,Greek Gyro,10.00,"Piadina greca con carne di maiale o pollo, verdure e salsa tzatziki",/public/img_piatti/piadinagreca.jpg
-12,Frappe,4.50,Bevanda fredda alla greca con caffè e schiuma,/public/img_piatti/caffegreco.jpg
-13,Pad Thai Gamberi,12.00,"Noodles di riso saltati in padella con gamberi, uova, germogli di soia e arachidi",/public/img_piatti/noodgamberi.jpg
-13,Satay di Pollo,9.50,"Spiedini di pollo marinati in salsa di arachidi, grigliati e serviti con salsa agrodolce",/public/img_piatti/spiedinipollo.jpg
-13,Mango Sticky Rice,6.50,"Dolce thailandese a base di riso glutinoso, mango fresco e salsa di cocco",/public/img_piatti/mangoriso.jpg
-13,Tom Yum,8.00,"Zuppa piccante di gamberi o pollo con citronella, lime e peperoncino",/public/img_piatti/zuppagamberi.jpg
-13,Pad See Ew,10.50,"Noodles di riso saltati in padella con carne di maiale, broccoli e salsa di soia",/public/img_piatti/noodle.jpg
-13,Green Curry,11.50,"Curry verde tailandese con carne o verdure, latte di cocco e basilico",/public/img_piatti/curryverde.jpg
-13,Spring Rolls,5.50,Involtini primavera croccanti ripieni di verdure e carne o gamberi,/public/img_piatti/involtiniprimavera.jpg
-13,Thai Iced Tea,4.50,"Bevanda fredda thailandese a base di tè nero, latte condensato e ghiaccio",/public/img_piatti/thenero.jpg
-13,Papaya Salad,8.50,"Insalata di papaya verde, carote, pomodori, fagioli verdi e salsa piccante",/public/img_piatti/insalatapapaya.jpg
-13,Fried Rice,9.00,"Riso saltato in padella con carne o verdure, uova e salsa di soia",/public/img_piatti/risopadella.jpg
+1,Spaghetti alla carbonara,10.00,"Spaghetti alla carbonara con uovo, pancetta e pecorino",/public/img_piatti/carbonara.jpg,primo piatto
+1,Pizza margherita,8.50,"Pizza con mozzarella, pomodoro e basilico",/public/img_piatti/pizzamarherita.jpg,pizza
+1,Tagliata di manzo,18.50,Tagliata di manzo con rucola e scaglie di grana,/public/img_piatti/tagliatamanzo.jpg,secondo piatto
+1,Risotto ai funghi,12.00,Risotto con funghi porcini e parmigiano,/public/img_piatti/risottofunghi.jpg,primo piatto
+1,Tiramisù,6.00,"Dolce al cucchiaio con savoiardi, caffè e crema di mascarpone",/public/img_piatti/tiramisu.jpg,dolce
+1,Lasagne al ragù,11.50,"Lasagne con ragù di carne, besciamella e parmigiano",/public/img_piatti/lasagne.jpg,primo piatto
+1,Salmone alla griglia,16.00,Salmone alla griglia con contorno di verdure,/public/img_piatti/salmonegriglia.jpg,secondo piatto
+1,Panna cotta,5.50,Dolce al cucchiaio con salsa di fragole,/public/img_piatti/pannacotta.jpg,dolce
+1,Pasta alla norma,9.00,"Pasta con pomodoro, melanzane fritte e ricotta salata",/public/img_piatti/norma.jpg,primo piatto
+1,Bistecca alla fiorentina,25.00,Bistecca di manzo alla griglia,/public/img_piatti/fiorentina.jpg,secondo piatto
+1,Tartare di tonno,14.50,Tartare di tonno fresco con avocado e sesamo,/public/img_piatti/tartaretonno.jpg,secondo piatto
+1,Gnocchi al pesto,11.00,Gnocchi con pesto alla genovese e parmigiano,/public/img_piatti/gnocchipesto.jpg,primo piatto
+1,Cheesecake,7.50,Cheesecake con base di biscotti e crema al formaggio,/public/img_piatti/cheesecake.jpg,dolce
+1,Ravioli di zucca,13.00,Ravioli ripieni di zucca con burro e salvia,/public/img_piatti/raviolizucca.jpg,primo piatto
+1,Torta al cioccolato,6.50,Torta al cioccolato fondente con glassa al cioccolato,/public/img_piatti/tortacioccolato.jpg,dolce
+2,Penne all'arrabbiata,9.50,Penne con salsa all'arrabbiata e peperoncino,/public/img_piatti/pennearrabbiata.jpg,primo piatto
+2,Cotoletta alla milanese,12.50,Cotoletta di maiale impanata e fritta,/public/img_piatti/cotoletta.jpg,secondo piatto
+2,Ravioli di carne,10.00,Ravioli ripieni di carne con salsa al pomodoro,/public/img_piatti/raviolicarne.jpg,primo piatto
+2,Spaghetti alle vongole,13.00,"Spaghetti con vongole, aglio, prezzemolo e peperoncino",/public/img_piatti/spaghettivongole.jpg,primo piatto
+2,Torta di mele,6.50,Torta di mele con zucchero di canna e cannella,/public/img_piatti/tortamele.jpg,dolce
+2,Pollo alla cacciatora,14.00,"Pollo cotto con pomodoro, olive, cipolla e vino bianco",/public/img_piatti/pollocacciatora.jpg,secondo piatto
+2,Cannoli siciliani,5.00,Dolce siciliano con crema di ricotta e gocce di cioccolato,/public/img_piatti/cannoli.jpg,dolce
+2,Gnocchi al gorgonzola,12.00,Gnocchi con salsa al gorgonzola e noci,/public/img_piatti/gnocchigorgonzola.jpg,primo piatto
+2,Tagliatelle al ragù,11.50,Tagliatelle con ragù di carne e parmigiano,/public/img_piatti/tagliatelleragu.jpg,primo piatto
+2,Torta di fragole,7.00,Torta con fragole fresche e crema pasticcera,/public/img_piatti/tortafragole.jpg,dolce
+2,Carpaccio di manzo,15.50,"Carpaccio di manzo con rucola, scaglie di grana e olio extravergine di oliva",/public/img_piatti/carpacciomanzo.jpg,antipasto
+2,Tonno alla griglia,16.00,Tonno alla griglia con insalata mista,/public/img_piatti/tonnogriglia.jpg,secondo piatto
+2,Croissant alla crema,3.50,Croissant sfogliato ripieno di crema pasticcera,/public/img_piatti/cornettocrema.jpg,caffetteria
+2,Pizza prosciutto e funghi,9.00,"Pizza con mozzarella, pomodoro, prosciutto cotto e funghi",/public/img_piatti/pizzaprosciutto.jpg,pizza
+2,Tiramisù al limone,6.50,"Dolce al cucchiaio con savoiardi, crema al limone e panna montata",/public/img_piatti/tiramisulimone.jpg,dolce
+2,Risotto agli asparagi,12.50,Risotto con asparagi e parmigiano,/public/img_piatti/risottoasparagi.jpg,primo piatto
+3,Pasta al pesto,9.00,Pasta con pesto alla genovese e pinoli,/public/img_piatti/pastapesto.jpg,primo piatto
+3,Bruschetta,5.00,"Pane abbrustolito con pomodoro, aglio, olio e basilico",/public/img_piatti/bruschetta.jpg,antipasto
+3,Filetto di maiale,17.50,Filetto di maiale con salsa al pepe verde,/public/img_piatti/filettomaiale.jpg,secondo piatto
+3,Ravioli al burro e salvia,11.50,Ravioli con burro fuso e foglie di salvia,/public/img_piatti/ravioliburro.jpg,primo piatto
+3,Torta al limone,6.50,Torta al limone con glassa di zucchero,/public/img_piatti/tortalimone.jpg,dolce
+3,Insalata caprese,8.00,"Insalata con mozzarella, pomodoro e basilico",/public/img_piatti/caprese.jpg,antipasto
+3,Pesce spada alla griglia,19.00,Pesce spada alla griglia con contorno di verdure,/public/img_piatti/spadagriglia.jpg,secondo piatto
+3,Cannolo siciliano,4.50,Dolce siciliano con crema di ricotta e gocce di cioccolato,/public/img_piatti/cannoloricotta.jpg,dolce
+3,Pasta al ragù,10.50,Pasta con ragù di carne e parmigiano,/public/img_piatti/pastaragu.jpg,primo piatto
+3,Torta al cioccolato e arancia,7.50,Torta al cioccolato con scorza d'arancia candita,/public/img_piatti/tortacioccolatoarancia.jpg,dolce
+3,Carpaccio di salmone,14.50,Carpaccio di salmone marinato con rucola e limone,/public/img_piatti/carpacciosalmone.jpg,antipasto
+3,Pollo arrosto,15.00,Pollo arrosto con patate al forno,/public/img_piatti/polloarrosto.jpg,secondo piatto
+3,Croissant alla marmellata,3.50,Croissant sfogliato con marmellata di fragole,/public/img_piatti/cornettomarmellata.jpg,caffetteria
+3,Pizza quattro stagioni,10.00,"Pizza con mozzarella, pomodoro, prosciutto cotto, funghi, carciofi e olive",/public/img_piatti/quattrostagioni.jpg,pizza
+3,Panna cotta ai frutti di bosco,7.00,Dolce al cucchiaio con salsa ai frutti di bosco,/public/img_piatti/pannacottafrutti.jpg,dolce
+4,Lasagne vegetariane,11.50,"Lasagne con verdure miste, besciamella e parmigiano",/public/img_piatti/lasagneveggy.jpg,primo piatto
+4,Insalata di mare,16.50,"Insalata di mare con gamberetti, polpo, calamari e verdure",/public/img_piatti/insalatamare.jpg,antipasto
+4,Bistecca di pollo,13.50,Bistecca di pollo alla griglia,/public/img_piatti/bisteccapollo.jpg,secondo piatto
+4,Pasta alla carbonara,10.00,"Pasta alla carbonara con uovo, pancetta e pecorino",/public/img_piatti/pennecarbonara.jpg,primo piatto
+4,Mousse al cioccolato,6.50,Mousse al cioccolato fondente con panna montata,/public/img_piatti/moussecioccolato.jpg,dolce
+4,Bruschetta al pomodoro,5.00,"Pane abbrustolito con pomodoro fresco, aglio, olio e basilico",/public/img_piatti/bruschetta.jpg,antipasto
+4,Filetto di branzino,18.00,Filetto di branzino con salsa al limone,/public/img_piatti/branzino.jpg,secondo piatto
+4,Torta al pistacchio,7.50,Torta al pistacchio con crema al pistacchio e granella di pistacchi,/public/img_piatti/tortapistacchio.jpg,dolce
+4,Gnocchi alla sorrentina,11.00,"Gnocchi con salsa di pomodoro, mozzarella e basilico",/public/img_piatti/gnocchisorrentina.jpg,primo piatto
+4,Torta al cioccolato e pere,7.50,Torta al cioccolato con pere sciroppate,/public/img_piatti/tortacioccolatopere.jpg,dolce
+4,Polpettine di carne,14.00,Polpettine di carne con salsa di pomodoro,/public/img_piatti/polpettecarne.jpg,secondo piatto
+4,Cornetto alla crema,3.00,Cornetto sfogliato ripieno di crema pasticcera,/public/img_piatti/cornettocrema.jpg,caffetteria
+4,Pizza prosciutto e funghi,9.00,"Pizza con mozzarella, pomodoro, prosciutto cotto e funghi",/public/img_piatti/pizzafunghi.jpg,pizza
+4,Panna cotta alla fragola,6.50,Dolce al cucchiaio con salsa di fragole,/public/img_piatti/pannacottafragola.jpg,dolce
+5,Tagliolini al tartufo,14.50,Tagliolini con salsa al tartufo e parmigiano,/public/img_piatti/tagliatelletartufo.jpg,primo piatto
+5,Bruschetta mista,6.00,"Selezione di bruschette miste: pomodoro, funghi, olive",/public/img_piatti/bruschettamista.jpg,antipasto
+5,Polpette al sugo,12.00,Polpette di carne con salsa di pomodoro,/public/img_piatti/polpettesugo.jpg,secondo piatto
+5,Pasta alla norma,9.00,"Pasta con pomodoro, melanzane fritte e ricotta salata",/public/img_piatti/pastanorma.jpg,primo piatto
+5,Torta al cioccolato bianco,7.00,Torta al cioccolato bianco con glassa di cioccolato bianco,/public/img_piatti/tortabianco.jpg,dolce
+5,Caprese di bufala,8.50,"Insalata caprese con mozzarella di bufala, pomodoro e basilico",/public/img_piatti/capresebufala.jpg,antipasto
+5,Pesce spada alla siciliana,19.00,"Pesce spada alla siciliana con olive, capperi, pomodoro e origano",/public/img_piatti/pescespadasici.jpg,secondo piatto
+5,Profiteroles,6.50,Bignè ripieni di crema chantilly e glassati al cioccolato,/public/img_piatti/profiteroles.jpg,dolce
+5,Pasta al limone,10.00,Pasta con crema al limone e prezzemolo,/public/img_piatti/pastalimone.jpg,primo piatto
+5,Insalata di pollo,13.50,"Insalata con petto di pollo grigliato, verdure e dressing",/public/img_piatti/insalatapollo.jpg,antipasto
+5,Calamari fritti,15.50,Calamari fritti con maionese al limone,/public/img_piatti/calamarifritti.jpg,secondo piatto
+5,Croissant alla cioccolata,3.50,Croissant sfogliato con crema alla cioccolata,/public/img_piatti/cornettocioccolato.jpg,caffetteria
+5,Pizza quattro formaggi,10.00,"Pizza con mozzarella, pomodoro e quattro tipi di formaggio",/public/img_piatti/pizzaformaggi.jpg,pizza
+5,Tiramisù al pistacchio,7.50,"Dolce al cucchiaio con savoiardi, crema al pistacchio e pistacchi tritati",/public/img_piatti/tiramisupistacchio.jpg,dolce
+6,Spaghetti alle vongole,13.00,"Spaghetti con vongole, aglio, prezzemolo e peperoncino",/public/img_piatti/spaghettivongole.jpg,primo piatto
+6,Cotoletta alla milanese,12.50,Cotoletta di maiale impanata e fritta,/public/img_piatti/cotolettamila.jpg,secondo piatto
+6,Ravioli di carne,10.00,Ravioli ripieni di carne con salsa al pomodoro,/public/img_piatti/ravioliripieni.jpg,primo piatto
+6,Torta di mele,6.50,Torta di mele con zucchero di canna e cannella,/public/img_piatti/tortamele.jpg,dolce
+6,Pollo alla cacciatora,14.00,"Pollo cotto con pomodoro, olive, cipolla e vino bianco",/public/img_piatti/pollocacciatora.jpg,secondo piatto
+6,Cannoli siciliani,5.00,Dolce siciliano con crema di ricotta e gocce di cioccolato,/public/img_piatti/cannolisici.jpg,dolce
+6,Gnocchi al gorgonzola,12.00,Gnocchi con salsa al gorgonzola e noci,/public/img_piatti/gnocchigorgo.jpg,primo piatto
+6,Tagliatelle al ragù,11.50,Tagliatelle con ragù di carne e parmigiano,/public/img_piatti/tagliateragu.jpg,primo piatto
+6,Torta di fragole,7.00,Torta con fragole fresche e crema pasticcera,/public/img_piatti/tortafragole.jpg,dolce
+6,Carpaccio di manzo,15.50,"Carpaccio di manzo con rucola, scaglie di grana e olio extravergine di oliva",/public/img_piatti/carpacciomanzo.jpg,antipasto
+6,Tonno alla griglia,16.00,Tonno alla griglia con insalata mista,/public/img_piatti/tonnogriglia.jpg,secondo piatto
+6,Croissant alla crema,3.50,Croissant sfogliato ripieno di crema pasticcera,/public/img_piatti/cornettopasticcera.jpg,caffetteria
+6,Pizza prosciutto e funghi,9.00,"Pizza con mozzarella, pomodoro, prosciutto cotto e funghi",/public/img_piatti/capricciosa.jpg,pizza
+6,Tiramisù al limone,6.50,"Dolce al cucchiaio con savoiardi, crema al limone e panna montata",/public/img_piatti/tiramisulimone.jpg,dolce
+6,Risotto agli asparagi,12.50,Risotto con asparagi e parmigiano,/public/img_piatti/risottoasparagi.jpg,primo piatto
+7,Pasta al pesto,9.00,Pasta con pesto alla genovese e pinoli,/public/img_piatti/pastapesto.jpg,primo piatto
+7,Bruschetta,5.00,"Pane abbrustolito con pomodoro, aglio, olio e basilico",/public/img_piatti/bruschetta.jpg,antipasto
+7,Filetto di maiale,17.50,Filetto di maiale con salsa al pepe verde,/public/img_piatti/filettomaiale.jpg,secondo piatto
+7,Ravioli al burro e salvia,11.50,Ravioli con burro fuso e foglie di salvia,/public/img_piatti/ravioliburro.jpg,primo piatto
+7,Torta al limone,6.50,Torta al limone con glassa di zucchero,/public/img_piatti/tortalimone.jpg,dolce
+7,Insalata caprese,8.00,"Insalata con mozzarella, pomodoro e basilico",/public/img_piatti/insalacaprese.jpg,antipasto
+7,Pesce spada alla griglia,19.00,Pesce spada alla griglia con contorno di verdure,/public/img_piatti/pescespadagriglia.jpg,secondo piatto
+7,Cannolo siciliano,4.50,Dolce siciliano con crema di ricotta e gocce di cioccolato,/public/img_piatti/cannolo.jpg,dolce
+7,Pasta al ragù,10.50,Pasta con ragù di carne e parmigiano,/public/img_piatti/pastaragu.jpg,primo piatto
+7,Torta al cioccolato e arancia,7.50,Torta al cioccolato con scorza d'arancia candita,/public/img_piatti/tortacioccolatoarancia.jpg,dolce
+7,Carpaccio di salmone,14.50,Carpaccio di salmone marinato con rucola e limone,/public/img_piatti/carpacciosalmone.jpg,antipasto
+7,Pollo arrosto,15.00,Pollo arrosto con patate al forno,/public/img_piatti/polloarrosto.jpg,secondo piatto
+7,Croissant alla marmellata,3.50,Croissant sfogliato con marmellata di fragole,/public/img_piatti/cornettomarmellata.jpg,caffetteria
+7,Pizza quattro stagioni,10.00,"Pizza con mozzarella, pomodoro, prosciutto cotto, funghi, carciofi e olive",/public/img_piatti/pizzastagioni.jpg,pizza
+7,Panna cotta ai frutti di bosco,7.00,Dolce al cucchiaio con salsa ai frutti di bosco,/public/img_piatti/pannacotta.jpg,dolce
+8,Lasagne vegetariane,11.50,"Lasagne con verdure miste, besciamella e parmigiano",/public/img_piatti/lasagnaveggy.jpg,primo piatto
+8,Insalata di mare,16.50,"Insalata di mare con gamberetti, polpo, calamari e verdure",/public/img_piatti/insalatamare.jpg,antipasto
+8,Bistecca di pollo,13.50,Bistecca di pollo alla griglia,/public/img_piatti/bisteccapollo.jpg,secondo piatto
+8,Pasta alla carbonara,10.00,"Pasta alla carbonara con uovo, pancetta e pecorino",/public/img_piatti/pastacarbonara.jpg,primo piatto
+8,Mousse al cioccolato,6.50,Mousse al cioccolato fondente con panna montata,/public/img_piatti/moussecioccolato.jpg,dolce
+8,Bruschetta al pomodoro,5.00,"Pane abbrustolito con pomodoro fresco, aglio, olio e basilico",/public/img_piatti/bruschetta.jpg,antipasto
+8,Filetto di branzino,18.00,Filetto di branzino con salsa al limone,/public/img_piatti/filettobrazino.jpg,secondo piatto
+8,Torta al pistacchio,7.50,Torta al pistacchio con crema al pistacchio e granella di pistacchi,/public/img_piatti/tortapistacchio.jpg,dolce
+8,Gnocchi alla sorrentina,11.00,"Gnocchi con salsa di pomodoro, mozzarella e basilico",/public/img_piatti/gnocchipomodoro.jpg,primo piatto
+8,Torta al cioccolato e pere,7.50,Torta al cioccolato con pere sciroppate,/public/img_piatti/tortacioccolato.jpg,dolce
+8,Polpettine di carne,14.00,Polpettine di carne con salsa di pomodoro,/public/img_piatti/polpettinecarne.jpg,secondo piatto
+8,Cornetto alla crema,3.00,Cornetto sfogliato ripieno di crema pasticcera,/public/img_piatti/cornettocrema.jpg,caffetteria
+8,Pizza prosciutto e funghi,9.00,"Pizza con mozzarella, pomodoro, prosciutto cotto e funghi",/public/img_piatti/pizzaprosciutto.jpg,pizza
+8,Panna cotta alla fragola,6.50,Dolce al cucchiaio con salsa di fragole,/public/img_piatti/pannacottafragola.jpg,dolce
+9,Tagliolini al tartufo,14.50,Tagliolini con salsa al tartufo e parmigiano,/public/img_piatti/tagliolinitartufo.jpg,primo piatto
+9,Bruschetta mista,6.00,"Selezione di bruschette miste: pomodoro, funghi, olive",/public/img_piatti/bruschettamista.jpg,antipasto
+9,Polpette al sugo,12.00,Polpette di carne con salsa di pomodoro,/public/img_piatti/polpettesugo.jpg,secondo piatto
+9,Pasta alla norma,9.00,"Pasta con pomodoro, melanzane fritte e ricotta salata",/public/img_piatti/pastanorma.jpg,primo piatto
+9,Torta al cioccolato bianco,7.00,Torta al cioccolato bianco con glassa di cioccolato bianco,/public/img_piatti/tortacioccolatobianca.jpg,dolce
+9,Caprese di bufala,8.50,"Insalata caprese con mozzarella di bufala, pomodoro e basilico",/public/img_piatti/capresebufala.jpg,antipasto
+9,Pesce spada alla siciliana,19.00,"Pesce spada alla siciliana con olive, capperi, pomodoro e origano",/public/img_piatti/pescespada.jpg,secondo piatto
+9,Profiteroles,6.50,Bignè ripieni di crema chantilly e glassati al cioccolato,/public/img_piatti/profiteroles.jpg,dolce
+9,Pasta al limone,10.00,Pasta con crema al limone e prezzemolo,/public/img_piatti/pastalimone.jpg,primo piatto
+9,Insalata di pollo,13.50,"Insalata con petto di pollo grigliato, verdure e dressing",/public/img_piatti/insalatapollo.jpg,antipasto
+9,Calamari fritti,15.50,Calamari fritti con maionese al limone,/public/img_piatti/calamarifritti.jpg,secondo piatto
+9,Croissant alla cioccolata,3.50,Croissant sfogliato con crema alla cioccolata,/public/img_piatti/cornettocioccolato.jpg,caffetteria
+9,Pizza quattro formaggi,10.00,"Pizza con mozzarella, pomodoro e quattro tipi di formaggio",/public/img_piatti/pizzaformaggi.jpg,pizza
+9,Tiramisù al pistacchio,7.50,"Dolce al cucchiaio con savoiardi, crema al pistacchio e pistacchi tritati",/public/img_piatti/tiramisupistacchio.jpg,dolce
+10,Spaghetti alle vongole,13.00,"Spaghetti con vongole, aglio, prezzemolo e peperoncino",/public/img_piatti/spaghettivongole.jpg,primo piatto
+10,Cotoletta alla milanese,12.50,Cotoletta di maiale impanata e fritta,/public/img_piatti/cotolettamilanese.jpg,secondo piatto
+10,Ravioli di carne,10.00,Ravioli ripieni di carne con salsa al pomodoro,/public/img_piatti/raviolicarne.jpg,primo piatto
+10,Torta di mele,6.50,Torta di mele con zucchero di canna e cannella,/public/img_piatti/tortamele.jpg,dolce
+10,Pollo alla cacciatora,14.00,"Pollo cotto con pomodoro, olive, cipolla e vino bianco",/public/img_piatti/pollopomodoro.jpg,secondo piatto
+10,Cannoli siciliani,5.00,Dolce siciliano con crema di ricotta e gocce di cioccolato,/public/img_piatti/cannolisiciliani.jpg,dolce
+10,Gnocchi al gorgonzola,12.00,Gnocchi con salsa al gorgonzola e noci,/public/img_piatti/gnocchinoci.jpg,primo piatto
+10,Tagliatelle al ragù,11.50,Tagliatelle con ragù di carne e parmigiano,/public/img_piatti/tagliatelleragu.jpg,primo piatto
+10,Torta di fragole,7.00,Torta con fragole fresche e crema pasticcera,/public/img_piatti/tortafragole.jpg,dolce
+10,Carpaccio di manzo,15.50,"Carpaccio di manzo con rucola, scaglie di grana e olio extravergine di oliva",/public/img_piatti/carpacciomanzo.jpg,antipasto
+10,Tonno alla griglia,16.00,Tonno alla griglia con insalata mista,/public/img_piatti/tonnogriglia.jpg,secondo piatto
+10,Croissant alla crema,3.50,Croissant sfogliato ripieno di crema pasticcera,/public/img_piatti/cornettocrema.jpg,caffetteria
+10,Pizza prosciutto e funghi,9.00,"Pizza con mozzarella, pomodoro, prosciutto cotto e funghi",/public/img_piatti/pizzaprosciutto.jpg,pizza
+10,Tiramisù al limone,6.50,"Dolce al cucchiaio con savoiardi, crema al limone e panna montata",/public/img_piatti/tiramisulimone.jpg,dolce
+10,Risotto agli asparagi,12.50,Risotto con asparagi e parmigiano,/public/img_piatti/risottoasparagi.jpg,primo piatto
+11,Chicken Tikka Masala,11.50,"Pollo marinato in salsa di yogurt e spezie, cotto nel tandoor e servito con salsa di pomodoro e crema",/public/img_piatti/pollomarinato.jpg,secondo piatto
+11,Paneer Tikka,9.50,Formaggio paneer marinato in spezie e cotto nel tandoor,/public/img_piatti/formaggiomarinato.jpg,antipasto
+11,Riso Basmati,4.00,Riso aromatico al vapore,/public/img_piatti/risovapore.jpg,primo piatto
+11,Gulab Jamun,5.50,Dolce indiano a base di palline di latte condensato fritte in sciroppo di zucchero,/public/img_piatti/gulab.jpg, dolce
+11,Butter Chicken,12.50,"Pollo cucinato in salsa cremosa al burro, pomodoro e spezie",/public/img_piatti/polloburro.jpg,secondo piatto
+11,Aloo Gobi,9.00,Curry di patate e cavolfiore cotto con spezie indiane,/public/img_piatti/currypatate.jpg,antipasto
+11,Pollo Tandoori,10.50,"Pollo marinato in yogurt e spezie, cotto nel tandoor",/public/img_piatti/pollomarinatoyogu.jpg,secondo piatto
+11,Naan,3.50,Pane indiano cotto in forno tandoor,/public/img_piatti/paneindiano.jpg,antipasto
+11,Mango Lassi,4.50,Bevanda a base di yogurt e mango,/public/img_piatti/mangolassi.jpg,dolce
+11,Samosa,5.00,"Pasticcino fritto ripieno di patate, piselli e spezie",/public/img_piatti/pasticciopatate.jpg,dolce
+12,Moussaka,12.50,"Piatto greco a base di melanzane, carne macinata e besciamella gratinata al forno",/public/img_piatti/piattomelenzane.jpg,secondo piatto
+12,Souvlaki,9.00,Spiedini di carne di maiale o pollo con verdure e salsa tzatziki,/public/img_piatti/spiedinimaiale.jpg,secondo piatto
+12,Tzatziki,6.50,"Salsa a base di yogurt greco, cetriolo e aglio",/public/img_piatti/salsagreca.jpg,antipasto
+12,Baklava,7.00,"Dolce tradizionale greco a base di pasta fillo, noci e miele",/public/img_piatti/pastafilo.jpg,dolce
+12,Spanakopita,8.50,"Torta salata greca con spinaci, formaggio feta e pasta fillo",/public/img_piatti/tortasalata.jpg,antipasto
+12,Greek Salad,9.50,"Insalata greca con pomodori, cetrioli, olive, feta, cipolla e condimento di olio e aceto",/public/img_piatti/insalatagreca.jpg,antipasto
+12,Moussaka Vegetariana,11.50,"Piatto vegetariano con melanzane, patate, zucchine, pomodori e besciamella gratinata al forno",/public/img_piatti/piattoveggy.jpg,primo piatto
+12,Dolmades,7.50,"Involtini di foglie di vite ripieni di riso, erbe aromatiche e spezie",/public/img_piatti/involtinialghe.jpg,primo piatto
+12,Greek Gyro,10.00,"Piadina greca con carne di maiale o pollo, verdure e salsa tzatziki",/public/img_piatti/piadinagreca.jpg,antipasto
+12,Frappe,4.50,Bevanda fredda alla greca con caffè e schiuma,/public/img_piatti/caffegreco.jpg,dolce
+13,Pad Thai Gamberi,12.00,"Noodles di riso saltati in padella con gamberi, uova, germogli di soia e arachidi",/public/img_piatti/noodgamberi.jpg,primo piatto
+13,Satay di Pollo,9.50,"Spiedini di pollo marinati in salsa di arachidi, grigliati e serviti con salsa agrodolce",/public/img_piatti/spiedinipollo.jpg,secondo piatto
+13,Mango Sticky Rice,6.50,"Dolce thailandese a base di riso glutinoso, mango fresco e salsa di cocco",/public/img_piatti/mangoriso.jpg,dolce
+13,Tom Yum,8.00,"Zuppa piccante di gamberi o pollo con citronella, lime e peperoncino",/public/img_piatti/zuppagamberi.jpg,primo piatto
+13,Pad See Ew,10.50,"Noodles di riso saltati in padella con carne di maiale, broccoli e salsa di soia",/public/img_piatti/noodle.jpg,primo piatto
+13,Green Curry,11.50,"Curry verde tailandese con carne o verdure, latte di cocco e basilico",/public/img_piatti/curryverde.jpg,secondo piatto
+13,Spring Rolls,5.50,Involtini primavera croccanti ripieni di verdure e carne o gamberi,/public/img_piatti/involtiniprimavera.jpg,primo piatto
+13,Thai Iced Tea,4.50,"Bevanda fredda thailandese a base di tè nero, latte condensato e ghiaccio",/public/img_piatti/thenero.jpg,dolce
+13,Papaya Salad,8.50,"Insalata di papaya verde, carote, pomodori, fagioli verdi e salsa piccante",/public/img_piatti/insalatapapaya.jpg,antipasto
+13,Fried Rice,9.00,"Riso saltato in padella con carne o verdure, uova e salsa di soia",/public/img_piatti/risopadella.jpg,primo piatto
