@@ -21,7 +21,7 @@ class ProductController extends Controller
         // Trova il ristorante corrente
         //$products = Product::all();
         //$products = Product::where('restaurant_id', 1)->get();
-        $products = Product::where('restaurant_id', Auth::id())->get();
+        $products = Product::where('restaurant_id', Auth::id())->orderBy('name', 'asc')->get();
         // Ottieni solo i piatti relativi al ristorante corrente
         // $products = $restaurant->products;
 
@@ -38,27 +38,35 @@ class ProductController extends Controller
     {
         $categories = [
             [
-                'id' => 'primo piatto',
-                'name' => 'primo piatto'
+                'id' => '1',
+                'name' => 'Antipasto'
             ],
             [
-                'id' => 'secondo piatto',
-                'name' => 'secondo piatto'
+                'id' => '2',
+                'name' => 'Primo'
             ],
             [
-                'id' => 'antipasto',
-                'name' => 'antipasto'
+                'id' => '3',
+                'name' => 'Secondo'
             ],
             [
-                'id' => 'dolce',
-                'name' => 'dolce'
+                'id' => '4',
+                'name' => 'Pizza'
             ],
             [
-                'id' => 'pizza',
-                'name' => 'pizza'
-            ]
+                'id' => '5',
+                'name' => 'Contorno'
+            ],
+            [
+                'id' => '6',
+                'name' => 'Dolce'
+            ],
+            [
+                'id' => '7',
+                'name' => 'Bevanda'
+            ],
         ];
-        return view('admin.products.create',compact('categories'));
+        return view('admin.products.create', compact('categories'));
     }
 
     /**
@@ -139,7 +147,7 @@ class ProductController extends Controller
                     'name' => 'pizza'
                 ]
             ];
-            return view('admin.products.edit', compact('product','categories'));
+            return view('admin.products.edit', compact('product', 'categories'));
         } else {
             abort(404);
         }
@@ -172,7 +180,6 @@ class ProductController extends Controller
             } else {
 
                 $validated_data['visibility'] = 0;
-                
             }
 
             //dd($validated_data);
@@ -205,7 +212,7 @@ class ProductController extends Controller
 
     public function deleteImg(Product $product)
     {
-        if ($product->image){
+        if ($product->image) {
             Storage::delete($product->image);
             $product->image = null;
             $product->save();
