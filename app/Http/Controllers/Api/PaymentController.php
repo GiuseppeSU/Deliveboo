@@ -44,16 +44,14 @@ class PaymentController extends Controller
             'privateKey' => config('services.braintree.private_key')
         ]);
 
-        // Validazione form utente
+        // Creazione di un codice ordine unico
         $data = $request->order;
-
         do{
-            $data->order_code = $faker->number;
-
+            $data->order_code = $faker->regexify('[A-Z0-9]{32}');
         }while (Order::where('order_code',$data->order_code)->first());
 
+        // Validazione input utente
         $validator = Validator::make(
-
             $data,
             [
                 'name' => 'required|max:100',
@@ -81,6 +79,7 @@ class PaymentController extends Controller
         );
 
         if ($validator->fails()) {
+            //errori negli input
             return response()->json(
                 [
                     'success' => false,
@@ -89,9 +88,9 @@ class PaymentController extends Controller
             );
         }
 
-
+        //Validazione pagamento di braintree
         $result = $gateway->transaction()->sale([
-            'amount' => $request->order['total'], // Update with your desired amount
+            'amount' => $request->order['total'],
             'paymentMethodNonce' => $request->paymentMethodNonce,
             'options' => [
                 'submitForSettlement' => true
@@ -99,12 +98,9 @@ class PaymentController extends Controller
         ]);
 
         if ($result->success) {
-            // Payment successful
-
-            $restaurantName = DB::table('users')->where('id', $data['restaurant_id'])->get('name');
+            //Pagamento riuscito, creo l'ordine
 
             $newOrder = new Order();
-            $newOrder->order_code = 'AspettaESperaChePoiSiAvvera!!!!!';
             $newOrder->fill($data);
             $newOrder->save();
 
@@ -114,24 +110,25 @@ class PaymentController extends Controller
                 }
             }
 
-            $newOrderMail = new NewOrder($newOrder);
-            $clientMail = new ClientMail($newOrder, $restaurantName);
-
-
+            //Invio Mail al ristoratore
             $restaurantMail = DB::table('users')->where('id', $data['restaurant_id'])->get('email');
-
+            $newOrderMail = new NewOrder($newOrder);
             Mail::to($restaurantMail)->send($newOrderMail);
-            Mail::to($newOrder->email)->send($clientMail);
 
+            //Invio Mail al cliente
+            $restaurantName = DB::table('users')->where('id', $data['restaurant_id'])->get('name');
+            $clientMail = new ClientMail($newOrder, $restaurantName);
+            Mail::to($newOrder->email)->send($clientMail);
+            
             return response()->json([
                 'message' => 'Payment successful',
                 'orderCode' => $newOrder->order_code,
                 'success' => true
             ]);
         } else {
-            // Payment failed
+            // Pagamento Fallito
             return response()->json([
-                'message' => 'Payment failed',
+                'message' => 'Il pagamento non è andato a buon fine.',
                 'success' => false
             ]);
         }
