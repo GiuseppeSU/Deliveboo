@@ -59,7 +59,7 @@ class PaymentController extends Controller
                 'name' => 'required|max:100',
                 'email' => 'required|email|max:50',
                 'address' => 'required|max:100',
-                'phone_number' => ['required', 'max:10', 'not-regex:/[^0-9]/i'],
+                'phone_number' => ['required','min:10', 'max:10', 'not-regex:/[^0-9]/i'],
                 'total' => 'decimal:0,2|between:0,9999'
             ],
             [
