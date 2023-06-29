@@ -3,14 +3,13 @@
 //btn
 @use 'partials/mixins';
 @import 'views/welcome.scss';
+@import 'views/auth/register.scss';
+@import 'views/auth/login.scss';
+@import 'views/sidebar.scss';
+@import 'views/admin/index.scss';
 @import '~bootstrap/scss/bootstrap';
 
 
-
-.my-btn {
-
-    width: 100px;
-}
 
 body {
     padding-bottom: 5rem;

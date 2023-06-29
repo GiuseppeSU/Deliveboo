@@ -1,22 +1,23 @@
-@use '../partials/variables' as *;
-@use '../partials/mixins';
+@use '../../partials/variables' as *;
+@use '../../partials/mixins';
 
+#container_login {
+    .card_container {
+        background-color: white;
+        padding: 50px;
+        border-radius: 20px
+    }
 
-
-#welcome_container {
-    //.card_container {
-
-    //      border-radius: 10px;
-    //      margin-right: 10px;
-    //    border: 1px solid linear-gradient(to top, rgba(255, 255, 255, 1), rgba(223, 133, 51, 0.5));
-
-    //  }
+    .title_element {
+        width: 100%;
+        padding-bottom: 20px;
+        border-bottom: 2px solid $secondary-color;
+    }
 
     button {
         @include mixins.primary-btn;
         // background-color: $secondary-color;
         color: $secondary-color;
-        font-size: 20px;
         border: 1px solid $secondary-color;
     }
 

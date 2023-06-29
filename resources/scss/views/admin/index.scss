@@ -1,0 +1,12 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins';
+
+#container_dish {
+    .container_general {
+
+        border-radius: 40px;
+        width: 100%;
+        background-color: white;
+        padding: 100px;
+    }
+}

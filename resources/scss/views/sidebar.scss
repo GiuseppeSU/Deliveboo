@@ -1,0 +1,29 @@
+@use '../partials/variables' as *;
+@use '../partials/mixins';
+
+#container_sidebar {
+    .general_container {
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 2px solid rgba($color: $secondary-color, $alpha: 0.5);
+    }
+
+    .color_hr {
+        color: $secondary-color;
+    }
+
+    a:hover {
+        background-color: rgba($color: $secondary-color, $alpha: 0.5);
+
+    }
+
+    a:hover p {
+        color: white;
+    }
+
+    .active {
+        background-color: rgba($color: $secondary-color, $alpha: 0.5);
+
+    }
+
+}
