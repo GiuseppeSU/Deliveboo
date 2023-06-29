@@ -82,27 +82,27 @@ class OrderController extends Controller
         if ($order->products()->first()->restaurant_id == Auth::id()){
             $status = [
                 [
-                    'id' => '1',
-                    'name' => 'Pending'
+                    'id' => 'pending',
+                    'name' => 'pending'
                 ],
                 [
-                    'id' => '2',
-                    'name' => 'Accepted'
+                    'id' => 'accepted',
+                    'name' => 'accepted'
                 ],
                 [
-                    'id' => '3',
-                    'name' => 'Finished'
+                    'id' => 'finished',
+                    'name' => 'finished'
                 ],
                 [
-                    'id' => '4',
-                    'name' => 'Sent'
+                    'id' => 'sent',
+                    'name' => 'sent'
                 ],
                 [
-                    'id' => '5',
-                    'name' => 'Done'
+                    'id' => 'done',
+                    'name' => 'done'
                 ],
             ];
-            return view('admin.orders.edit', compact('order'));
+            return view('admin.orders.edit', compact('order','status'));
         } else {
             abort(404);
         }
@@ -118,9 +118,9 @@ class OrderController extends Controller
     public function update(UpdateOrderRequest $request, Order $order)
     {
         if ($order->products()->first()->restaurant_id == Auth::id()) {
-            $validated_data = $request->validated();
 
-            $order->update($validated_data);
+            $order->status = $request->status;
+            $order->update();
 
             return to_route('admin.orders.show', ['order' => $order->order_code])
                 ->with('status', 'Success! Order updated.');
