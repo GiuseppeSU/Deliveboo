@@ -1,4 +1,5 @@
 {{-- TEXTAREA --}}
+
 @if ($data['type'] == 'textarea')
     <div class="mb-3">
         <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>
@@ -6,14 +7,14 @@
             name="{{ $data['field'] }}">{{ old($data['field'], $data['default']) }}</textarea>
         @include('partials.forms.validation.error_alert', ['field' => $data['field']])
     </div>
-{{-- SELECT (options array associativo) --}}
+    {{-- SELECT (options array associativo) --}}
 @elseif ($data['type'] == 'selectArray')
     <div class="mb-3">
 
         <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>
         <select class="form-select @error($data['field']) is-invalid border-2 border-danger border @enderror"
             aria-label="Default select example" id="{{ $data['field'] }}" name="{{ $data['field'] }}">
-            <option @selected(old($data['type'], $data['default']) == '') value=''>{{old($data['type'], $data['default'])}}</option>
+            <option @selected(old($data['type'], $data['default']) == '') value=''>{{ old($data['type'], $data['default']) }}</option>
             @foreach ($data['options'] as $option)
                 <option @selected(old($data['field'], $data['default']) == $option['id']) value="{{ $option['id'] }}">{{ $option['name'] }}</option>
             @endforeach
@@ -21,7 +22,7 @@
 
         @include('partials.forms.validation.error_alert', ['field' => $data['field']])
     </div>
-{{-- SELECT (options prese da DB) --}}
+    {{-- SELECT (options prese da DB) --}}
 @elseif ($data['type'] == 'select')
     <div class="mb-3">
 
@@ -36,7 +37,7 @@
 
         @include('partials.forms.validation.error_alert', ['field' => $data['field']])
     </div>
-{{-- CHECKBOX SINGOLA --}}
+    {{-- CHECKBOX SINGOLA --}}
 @elseif ($data['type'] == 'checkbox')
     <div class="mb-3">
 
@@ -48,7 +49,7 @@
 
         @include('partials.forms.validation.error_alert', ['field' => $data['field']])
     </div>
-{{-- CHECKBOX MULTIPLA --}}
+    {{-- CHECKBOX MULTIPLA --}}
 @elseif ($data['type'] == 'checkboxes')
     <div class="mb-3">
         <p>{{ $data['label'] }}</p>
@@ -67,9 +68,9 @@
             @include('partials.forms.validation.error_alert', ['field' => $data['field']])
         </ul>
     </div>
-{{-- FILE IMMAGINE --}}
+    {{-- FILE IMMAGINE --}}
 @elseif ($data['type'] == 'file')
-    <div class="mb-3 d-flex align-items-center">
+    <div class="mb-3 d-flex edit_component align-items-center">
         <div class="flex-grow-1">
             <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>
             <input type="{{ $data['type'] }}" accept="{{ $data['accepted'] }}"
@@ -78,10 +79,11 @@
             @include('partials.forms.validation.error_alert', ['field' => $data['field']])
         </div>
         @if ($data['default'])
-            <div class="container-fluid w-50">
+            <div class="container w-50 ">
                 <p class="text-center">Last cover preview</p>
                 <div class="img-container position-relative">
-                    <span class="position-absolute top-0 end-0 m-2 btn btn-danger {{ $data['field'] }}"> X </span>
+                    <span class="position-absolute m-2 btn btn-danger mydelete {{ $data['field'] }}"> X
+                    </span>
                     <img class="img-fluid" src="{{ asset('storage/' . $data['default']) }}"
                         alt="immagine non disponibile">
                 </div>
@@ -96,7 +98,7 @@
         </form>
 
     </div>
-{{-- NUMERO DECIMALE --}}
+    {{-- NUMERO DECIMALE --}}
 @elseif ($data['type'] == 'number')
     <div class="mb-3">
         <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>
@@ -108,7 +110,7 @@
         @include('partials.forms.validation.error_alert', ['field' => $data['field']])
     </div>
 @else
-{{-- INPUT DI DEFAULT --}}
+    {{-- INPUT DI DEFAULT --}}
     <div class="mb-3">
         <label for="{{ $data['field'] }}" class="form-label">{{ $data['label'] }}:</label>
         <input type="{{ $data['type'] }}"
@@ -118,4 +120,6 @@
 
         @include('partials.forms.validation.error_alert', ['field' => $data['field']])
     </div>
+
+
 @endif

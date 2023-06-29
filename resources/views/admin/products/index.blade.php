@@ -5,30 +5,31 @@
             <h2 class="fs-4 text-secondary my-4">
                 {{ __('Lista dei piatti') }}
             </h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-12">
+            <div class="row justify-content-center ">
+                <div class="col-lg-4 col-md-12 col-sm-12 mb-5">
                     @include('partials.sidebar')
                 </div>
-                <div class="col-lg-9 col-md-12">
-                    <table class=" container_general text-center ">
+                <div class="col-lg-8 col-md-12 col-sm-12 container_general p-3">
+                    <table class="text-center w-100 ">
                         <thead>
-                            <tr>
+                            <tr class="mb-3">
                                 <th scope="col">#</th>
                                 <th scope="col">Nome</th>
                                 <th scope="col">Prezzo</th>
                                 <th scope="col">Visibilità piatto</th>
-                                <th scope="col">Categoria</th>
+                                <!-- <th scope="col">Categoria</th>-->
                                 <th scope="col">Azioni</th>
                             </tr>
                         </thead>
-                        <tbody>
+
+                        <tbody class="p-5">
                             @foreach ($products as $key => $product)
                                 <tr>
                                     <th scope="row">{{ $key + 1 }}</th>
                                     <td>{{ $product->name }}</td>
                                     <td>€ {{ $product->price }}</td>
                                     <td>{{ $product->visibility ? 'si' : 'no' }}</td>
-                                    <td>{{ $product->category }}</td>
+                                    <!--  <td>{{ $product->category }}</td>-->
                                     <td>
                                         <a href="{{ route('admin.products.edit', ['product' => $product->slug]) }}"
                                             class='btn btn-outline-warning p-1'><i

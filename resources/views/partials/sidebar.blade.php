@@ -1,5 +1,5 @@
 <div id="container_sidebar">
-    <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary general_container" style="width: 280px;">
+    <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary general_container w-100" style="width: 280px;">
         <a href="{{ route('admin.dashboard') }}" class="nav-link link-body-emphasis fw-bolder" aria-current="page">
             <svg class="bi pe-none me-2" width="16" height="16">
                 <use xlink:href="#home"></use>
@@ -14,7 +14,7 @@
                     <svg class="bi pe-none me-2" width="16" height="16">
                         <use xlink:href="#speedometer2"></use>
                     </svg>
-                    Lista dei piatti
+                    <span>Lista dei piatti</span>
                 </a>
             </li>
 
@@ -25,7 +25,7 @@
                         <svg class="bi pe-none me-2" width="16" height="16">
                             <use xlink:href="#speedometer2"></use>
                         </svg>
-                        + Aggiungi piatto
+                        <span>+ Aggiungi piatto</span>
                     </a>
                 </li>
             @endif
@@ -36,7 +36,7 @@
                     <svg class="bi pe-none me-2" width="16" height="16">
                         <use xlink:href="#table"></use>
                     </svg>
-                    Ordini
+                    <span> Ordini</span>
                 </a>
             </li>
 
@@ -45,7 +45,7 @@
                     <svg class="bi pe-none me-2" width="16" height="16">
                         <use xlink:href="#grid"></use>
                     </svg>
-                    Statistiche
+                    <span>Statistiche</span>
                 </a>
             </li>
 

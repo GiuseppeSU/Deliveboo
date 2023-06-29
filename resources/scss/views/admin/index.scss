@@ -3,10 +3,18 @@
 
 #container_dish {
     .container_general {
-
         border-radius: 40px;
-        width: 100%;
         background-color: white;
-        padding: 100px;
+        border: 2px solid rgba($color: $secondary-color, $alpha: 1.0);
+
+        th {
+            border-bottom: 1px solid rgba($color: $secondary-color, $alpha: 0.5);
+            padding: 5px;
+        }
+
+        td {
+            border-bottom: 1px solid rgba($color: $secondary-color, $alpha: 0.5);
+            padding: 5px;
+        }
     }
 }

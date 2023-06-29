@@ -1,0 +1,39 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins';
+
+#container_show {
+
+
+    .card_general {
+        border-radius: 40px;
+        background-color: white;
+        padding: 20px;
+    }
+
+    img {
+        border-radius: 40px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .button_my {
+        @include mixins.primary-btn;
+
+        color: $secondary-color;
+        font-size: 20px;
+        border: 1px solid $secondary-color;
+    }
+
+    .button_my:hover {
+        @include mixins.btn-hover;
+        border: 1px solid white;
+    }
+
+    .button_my:active {
+        @include mixins.btn-active;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

@@ -2,11 +2,15 @@
 @use 'partials/variables';
 //btn
 @use 'partials/mixins';
+@import 'views/admin/editform.scss';
 @import 'views/welcome.scss';
 @import 'views/auth/register.scss';
 @import 'views/auth/login.scss';
 @import 'views/sidebar.scss';
 @import 'views/admin/index.scss';
+@import 'views/admin/create.scss';
+@import 'views/admin/edit.scss';
+@import 'views/admin/show.scss';
 @import '~bootstrap/scss/bootstrap';
 
 

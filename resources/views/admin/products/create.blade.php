@@ -3,65 +3,68 @@
 {{-- @section('page-title', 'New Project') --}}
 
 @section('content')
-    <div class="container">
+    <div id="new_container">
+        <div class="container container_general">
 
-        @include('partials.forms.validation.errors_alert')
+            @include('partials.forms.validation.errors_alert')
 
-        <form method="POST" class="formProduct" action="{{ route('admin.products.store') }}" enctype="multipart/form-data">
+            <form method="POST" class="formProduct" action="{{ route('admin.products.store') }}" enctype="multipart/form-data">
 
-            @csrf
+                @csrf
 
-            {{-- Name --}}
-            @include(
-                'partials.forms.create_form_element',
-                $data = ['type' => 'text', 'field' => 'name', 'label' => 'Nome']
+                {{-- Name --}}
+                @include(
+                    'partials.forms.create_form_element',
+                    $data = ['type' => 'text', 'field' => 'name', 'label' => 'Nome']
+                )
+                @include('partials.forms.validation.front_error_alert', $data = ['field' => 'name'])
+
+                {{-- Price --}}
+                @include(
+                    'partials.forms.create_form_element',
+                    $data = ['type' => 'number', 'field' => 'price', 'label' => 'Prezzo']
+                )
+                @include('partials.forms.validation.front_error_alert', $data = ['field' => 'price'])
+
+                {{-- Image file --}}
+                @include(
+                    'partials.forms.create_form_element',
                 
-            )
-            @include(
-                'partials.forms.validation.front_error_alert',
-                $data = ['field'=> 'name']
-            )
+                    $data = ['type' => 'file', 'field' => 'image', 'label' => 'Immagine', 'accepted' => 'image/*']
+                )
 
-            {{-- Price --}}
-            @include(
-                'partials.forms.create_form_element',
-                $data = ['type' => 'number', 'field' => 'price', 'label' => 'Prezzo' ]
-            )
-            @include(
-                'partials.forms.validation.front_error_alert',
-                $data = ['field'=> 'price']
-            )
+                {{-- Category --}}
+                @include(
+                    'partials.forms.create_form_element',
+                    $data = [
+                        'type' => 'selectArray',
+                        'field' => 'category',
+                        'label' => 'Categoria',
+                        'options' => $categories,
+                    ]
+                )
 
-            {{-- Image file --}}
-            @include(
-                'partials.forms.create_form_element',
-                
-                $data = ['type' => 'file', 'field' => 'image', 'label' => 'Immagine', 'accepted' => 'image/*']
-            )
+                {{-- Description --}}
+                @include(
+                    'partials.forms.create_form_element',
+                    $data = ['type' => 'textarea', 'field' => 'description', 'label' => 'Descrizione']
+                )
 
-            {{-- Category --}}
-            @include(
-                'partials.forms.create_form_element',
-                $data = ['type' => 'selectArray', 'field' => 'category', 'label' => 'Categoria', 'options' => $categories]
-            )
+                {{-- Visibility --}}
 
-            {{-- Description --}}
-            @include(
-                'partials.forms.create_form_element',
-                $data = ['type' => 'textarea', 'field' => 'description', 'label' => 'Descrizione']
-            )
+                @include(
+                    'partials.forms.create_form_element',
+                    $data = ['type' => 'checkbox', 'field' => 'visibility', 'label' => 'Pubblicazione immediata']
+                )
 
-             {{-- Visibility --}}
 
-             @include('partials.forms.create_form_element',
-             $data = ['type' => 'checkbox', 'field' => 'visibility', 'label' => 'Pubblicazione immediata'])
- 
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary productBtn">Invia</button>
+                </div>
 
-            <button type="submit" class="btn btn-primary productBtn">Invia</button>
-        </form>
+            </form>
+        </div>
+
+
     </div>
- 
-
-        
-
 @endsection

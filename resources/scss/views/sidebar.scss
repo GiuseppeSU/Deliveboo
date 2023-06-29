@@ -5,25 +5,22 @@
     .general_container {
         border-radius: 20px;
         background-color: rgba(255, 255, 255, 0.5);
-        border: 2px solid rgba($color: $secondary-color, $alpha: 0.5);
+        border: 2px solid rgba($color: $secondary-color, $alpha: 1.0);
     }
 
-    .color_hr {
-        color: $secondary-color;
-    }
 
     a:hover {
-        background-color: rgba($color: $secondary-color, $alpha: 0.5);
+        background-color: rgba($color: $secondary-color, $alpha: 1.0);
+        color: white;
 
     }
 
-    a:hover p {
+    a:hover span {
+
         color: white;
     }
 
     .active {
-        background-color: rgba($color: $secondary-color, $alpha: 0.5);
-
+        background-color: rgba($color: $secondary-color, $alpha: 1.0);
     }
-
 }
