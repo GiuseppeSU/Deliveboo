@@ -2,7 +2,7 @@
     <div class="container">
         <div class="logo-header">
             <a class="w-25" href="{{ url('http://localhost:5173') }}">
-                <img class="img-fluid" src="img/deliveboo.png" alt="">
+                <img class="img-fluid" src="img/deliveboo.svg" alt="">
             </a>
         </div>
 

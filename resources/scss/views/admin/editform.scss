@@ -1,0 +1,22 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins';
+
+
+
+.edit_component {
+    .img-container {
+        height: 250px;
+    }
+
+    img {
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .mydelete {
+        border-radius: 100%;
+        top: -25px;
+        right: -10px;
+
+    }
+}

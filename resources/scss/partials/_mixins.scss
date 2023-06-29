@@ -1,0 +1,38 @@
+@use '../partials/variables.scss' as *;
+
+@mixin primary-btn {
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all .5s ease;
+    //scale: 1;
+    text-align: center
+}
+
+;
+
+@mixin btn-hover {
+    //letter-spacing: 3px;
+    scale: 1.1;
+    background-color: $secondary-color;
+    color: hsl(0, 0%, 100%);
+    box-shadow: $secondary-color 0px 0px 15px 0px;
+}
+
+;
+
+@mixin btn-active {
+    //letter-spacing: 3px;
+    scale: 1.1;
+    background-color: $secondary-color;
+    color: hsl(0, 0%, 100%);
+    box-shadow: $secondary-color 0px 0px 0px 0px;
+    transition: 100ms;
+}
+
+;

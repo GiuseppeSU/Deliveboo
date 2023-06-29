@@ -1,0 +1,30 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins';
+
+#new_container {
+    .container_general {
+        margin-top: 30px;
+        padding: 30px;
+        border-radius: 40px;
+        background-color: white;
+        border: 2px solid rgba($color: $secondary-color, $alpha: 1);
+
+    }
+
+    button {
+        @include mixins.primary-btn;
+        // background-color: $secondary-color;
+        color: $secondary-color;
+        font-size: 20px;
+        border: 1px solid $secondary-color;
+    }
+
+    button:hover {
+        @include mixins.btn-hover;
+        border: 1px solid white;
+    }
+
+    button:active {
+        @include mixins.btn-active;
+    }
+}

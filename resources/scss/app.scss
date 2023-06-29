@@ -1,15 +1,25 @@
+//color
+@use 'partials/variables';
+//btn
+@use 'partials/mixins';
+@import 'views/admin/editform.scss';
+@import 'views/welcome.scss';
+@import 'views/auth/register.scss';
+@import 'views/auth/login.scss';
+@import 'views/sidebar.scss';
+@import 'views/admin/index.scss';
+@import 'views/admin/create.scss';
+@import 'views/admin/edit.scss';
+@import 'views/admin/show.scss';
 @import '~bootstrap/scss/bootstrap';
 
 
-.my-btn {
-
-    width: 100px;
-}
 
 body {
     padding-bottom: 5rem;
     min-height: 100vh;
-    background: linear-gradient(to bottom, rgb(255, 0, 84)0%, rgb(255, 255, 255) 40%, rgb(255, 255, 255) 70%, rgb(133, 4, 75))100%;
+
+    background-color: lightgray;
 }
 
 .logo-header {
