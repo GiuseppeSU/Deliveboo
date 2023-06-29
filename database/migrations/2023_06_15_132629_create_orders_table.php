@@ -14,7 +14,7 @@ return new class extends Migration {
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->string('order_code', 32)->default('ExampleOrderSerialNumber');
+            $table->string('order_code', 32);
             $table->decimal('total', 6, 2);
             $table->string('email', 50);
             $table->string('address', 100);
