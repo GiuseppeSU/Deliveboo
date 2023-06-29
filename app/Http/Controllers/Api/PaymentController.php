@@ -47,8 +47,8 @@ class PaymentController extends Controller
         // Creazione di un codice ordine unico
         $data = $request->order;
         do{
-            $data->order_code = $faker->regexify('[A-Z0-9]{32}');
-        }while (Order::where('order_code',$data->order_code)->first());
+            $data['order_code'] = $faker->regexify('[A-Z0-9]{32}');
+        }while (Order::where('order_code',$data['order_code'])->first());
 
         // Validazione input utente
         $validator = Validator::make(
@@ -57,7 +57,7 @@ class PaymentController extends Controller
                 'name' => 'required|max:100',
                 'email' => 'required|email|max:50',
                 'address' => 'required|max:100',
-                'phone_number' => ['required', 'max:10', 'not-regex:/[^0-9]/g'],
+                'phone_number' => ['required', 'max:10', 'not-regex:/[^0-9]/i'],
                 'total' => 'decimal:0,2|between:0,9999'
             ],
             [
