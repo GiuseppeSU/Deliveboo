@@ -17,6 +17,7 @@ use Faker\Generator as Faker;
 
 class PaymentController extends Controller
 {
+
     public function getToken()
     {
 
@@ -34,7 +35,8 @@ class PaymentController extends Controller
             'clientToken' => $clientToken,
         ]);
     }
-    public function processPayment(Request $request,Faker $faker)
+
+    public function processPayment(Request $request, Faker $faker)
     {
 
         $gateway = new Gateway([
@@ -46,9 +48,9 @@ class PaymentController extends Controller
 
         // Creazione di un codice ordine unico
         $data = $request->order;
-        do{
+        do {
             $data['order_code'] = $faker->regexify('[A-Z0-9]{32}');
-        }while (Order::where('order_code',$data['order_code'])->first());
+        } while (Order::where('order_code', $data['order_code'])->first());
 
         // Validazione input utente
         $validator = Validator::make(
@@ -99,7 +101,6 @@ class PaymentController extends Controller
 
         if ($result->success) {
             //Pagamento riuscito, creo l'ordine
-
             $newOrder = new Order();
             $newOrder->fill($data);
             $newOrder->save();
@@ -119,7 +120,7 @@ class PaymentController extends Controller
             $restaurantName = DB::table('users')->where('id', $data['restaurant_id'])->get('name');
             $clientMail = new ClientMail($newOrder, $restaurantName);
             Mail::to($newOrder->email)->send($clientMail);
-            
+
             return response()->json([
                 'message' => 'Payment successful',
                 'orderCode' => $newOrder->order_code,
