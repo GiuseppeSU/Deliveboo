@@ -1,0 +1,18 @@
+@use '../partials/variables' as *;
+@use '../partials/mixins';
+
+
+
+#welcome_container {
+    .card_container {
+
+        border-radius: 10px;
+        margin-right: 10px;
+        border: 1px solid linear-gradient(to top, rgba(255, 255, 255, 1), rgba(223, 133, 51, 0.5));
+
+    }
+
+    button {
+        background-color: $primary-color;
+    }
+}

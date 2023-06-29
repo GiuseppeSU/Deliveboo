@@ -31,7 +31,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col d-flex justify-content-center">
-                        <img src="img/deliveboo.png" alt="">
+                        <img src="img/deliveboo.svg" alt="">
                     </div>
                 </div>
             </div>

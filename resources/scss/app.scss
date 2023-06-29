@@ -1,4 +1,10 @@
+//color
+@use 'partials/variables';
+//btn
+@use 'partials/mixins';
+@import 'views/welcome.scss';
 @import '~bootstrap/scss/bootstrap';
+
 
 
 .my-btn {
@@ -9,7 +15,8 @@
 body {
     padding-bottom: 5rem;
     min-height: 100vh;
-    background: linear-gradient(to bottom, rgb(255, 0, 84)0%, rgb(255, 255, 255) 40%, rgb(255, 255, 255) 70%, rgb(133, 4, 75))100%;
+
+    background-color: lightgray;
 }
 
 .logo-header {
