@@ -31,7 +31,7 @@ class OrderSeeder extends Seeder
             $newOrder->status = 'done';
             $newOrder->save();
             $months = $faker->randomElement(['01','02','03','04','05','06','07','08','09','10','11','12']);
-            $newOrder->created_at = '2022-'.$months.'-27 15:24:07';
+            $newOrder->created_at = '2023-'.$months.'-27 15:24:07';
             $newOrder->update();
 
             $csvContent = Helpers::getCsvContent(__DIR__ . '/order_product.csv');
