@@ -38,7 +38,7 @@ Route::middleware(['auth', 'verified'])
         ]);
 
         Route::resource('/orders', OrderController::class)->parameters([
-            'orders' => 'order:id'
+            'orders' => 'order:order_code'
         ]);
 
         Route::resource('/stats', StatsController::class)->parameters([
