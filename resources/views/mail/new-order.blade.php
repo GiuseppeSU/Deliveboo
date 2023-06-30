@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="text-container mt-5 text-center">
+        <img class="img-fluid" src="{{asset('img/deliveboo.svg')}}" alt="Logo deliveboo">
         <h1>Hai ricevuto un nuovo ordine</h1>
         <div>
             <h2>L'ordine comprende:</h2>
@@ -16,7 +17,7 @@
             @endforeach
         </div>
         <div class="d-flex justify-content-center mt-5">
-            <table class="table table-bordered table-dark w-75">
+            <table class="table table-bordered  w-75">
                 <thead>
                   <tr class="info-container">
                     <th scope="col">Nome cliente:</th>
@@ -51,6 +52,12 @@
         border: 2px solid black;
 
     }
+
+    img{
+        width: 50%;
+        margin: auto;
+    }
+
 
     
 
