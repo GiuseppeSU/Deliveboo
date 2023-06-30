@@ -42,7 +42,7 @@
                             </h6>
                             <h1 class="text-center">
                                 <a href="{{ route('admin.products.index') }}" class="nav-link link-body-emphasis">
-                                    {{ $products->count() }}
+                                    {{ $products }}
                                 </a>
                             </h1>
                         </div>
@@ -51,12 +51,12 @@
                         <div class="card rounded-4">
                             <h6 class="card-header text-center">
                                 <strong>
-                                    Numero di piatti
+                                    Numero degli ordini
                                 </strong>
                             </h6>
                             <h1 class="text-center">
-                                <a href="{{ route('admin.products.index') }}" class="nav-link link-body-emphasis">
-                                    {{ $products->count() }}
+                                <a href="{{ route('admin.orders.index') }}" class="nav-link link-body-emphasis">
+                                    {{ $orders }}
                                 </a>
                             </h1>
                         </div>
