@@ -40,14 +40,12 @@
                 </a>
             </li>
 
-            <li class="mt-1">
-                <a href="#" class="nav-link link-body-emphasis">
-                    <svg class="bi pe-none me-2" width="16" height="16">
-                        <use xlink:href="#grid"></use>
-                    </svg>
-                    <span>Statistiche</span>
-                </a>
-            </li>
+        <li>
+            <a href="{{ route('admin.stats.index', Auth::id()) }}" class="nav-link link-body-emphasis @if(Route::currentRouteName() == 'admin.orders.show') active text-white @endif">
+            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+            Statistiche
+            </a>
+        </li>
 
         </ul>
         <hr>

@@ -1,6 +1,3 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,20 +17,46 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Usando Vite -->
-    @vite(['resources/js/app.js'])
+    @vite(['resources/js/mychart.js'])
 </head>
 
 <body>
     <div id="app">
-
         @include('partials.header')
+        <div class="container_nav">
 
-        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <img src="img/deliveboo.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main class="">
             @yield('content')
         </main>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
 </body>
 
 </html>
+
+<style lang="scss" scoped>
+    img {
+        width: 500px
+    }
+</style>
+
+
+    <div class="container stat-container justify-content-center">
+        <div class="row col-10 h-100">
+            <div class="h-100 mx-auto">
+                <canvas id="myChart" data-info='@json($total_orders)'></canvas>
+            </div>
+        </div>
+    </div>
+
+
+
+
