@@ -11,6 +11,7 @@
 
   
 </style>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,34 +24,29 @@
 <body>
     <div class="container text-center" id="my_container">
         <img class="img-fluid" src="{{asset('img/deliveboo.svg')}}" alt="Logo deliveboo">
-        <h1 class=" w-50 m-auto mb-5">{{ $order->name}} il tuo ordine da: {{ $restaurant_name[0]->name }} è stato confermato </h1>
+        <h1 class=" w-50 m-auto mb-5">{{ $order->name}} il tuo ordine da {{ $restaurant_name[0]->name }} è stato confermato </h1>
     
      <div class="container ">
         
             <h3 class="mb-4">Il tuo ordine comprende:</h3>
-           
-                @foreach($order->products as $product)
-              
-                <table class="table table-bordered table-dark w-75 m-auto">
-                    <thead>
-                      <tr class="info-container">
-                        <th scope="col">Nome cliente:</th>
-                        <th scope="col">Quantità:</th>
-                        <th scope="col">Prezzo:</th>
-                        
-                      </tr>
-                    </thead>
+            <table class="table w-50 m-auto">
                     <tbody>
+                        @foreach($order->products as $product)
                       <tr>
+                        <th scope="row">{{$product->pivot->quantity}}</th>
                         <td>{{$product->name}}</td>
-                        <td>{{$product->pivot->quantity}}</td>
-                        <td>{{$product->price}}</td>
-                    </tr>
-                </tbody>
+                        <td>{{$product->price * $product->pivot->quantity}}</td>
+                        
+                     </tr>
+                      @endforeach
+                      
+                      <tr>
+                        <td colspan="2">Totale</td>
+                        <td>{{$total}}</td>
+                      </tr>
+                    </tbody>
                   </table>
-                @endforeach
-         
-        </table>
+            </table>
     </div>
     <div class="mt-4">
         <p>{{ $order->name}} grazie per averci scelto!</p>
@@ -63,6 +59,7 @@
     
 </body>
 </html>
+
 
 
 
