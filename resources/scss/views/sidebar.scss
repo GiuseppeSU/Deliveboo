@@ -8,7 +8,11 @@
         border: 2px solid rgba($color: $secondary-color, $alpha: 1.0);
     }
 
-
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
     a:hover {
         background-color: rgba($color: $secondary-color, $alpha: 1.0);
         color: white;
