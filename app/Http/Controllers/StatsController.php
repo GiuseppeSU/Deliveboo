@@ -11,9 +11,9 @@ class StatsController extends Controller
     public function index()
     {
         $firstStart = "2022-01-01 00:00:00";
-        $firstEnd = "2022-12-31 23:59:00";
+        $firstEnd = "2022-12-31 23:59:59";
         $secondStart = "2023-01-01 00:00:00";
-        $secondEnd = "2023-12-31 23:59:00";
+        $secondEnd = "2023-12-31 23:59:59";
 
 
         $total_orders_2022 = Order::with('products')
@@ -34,7 +34,6 @@ class StatsController extends Controller
             ->get()
             ->toJson();
 
-        dd($total_orders_2022);
 
         return view('admin.stats.index', compact('total_orders_2022','total_orders_2023'));
     }
