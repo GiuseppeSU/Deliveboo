@@ -5,6 +5,7 @@
             <h2 class="fs-4 text-center my-4">
                 {{ __('Lista dei piatti') }}
             </h2>
+            <br>
             <div class="row justify-content-center ">
                 <div class="col-lg-4 col-md-12 col-sm-12 mb-5">
                     @include('partials.sidebar')

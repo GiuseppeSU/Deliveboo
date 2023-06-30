@@ -5,6 +5,7 @@
         <h2 class="fs-4 text-center my-4">
             {{ __('Dashboard') }}
         </h2>
+        <br>
         <div class="row justify-content-center">
             <div class="col-lg-4 col-sm-12 col-md-12 mb-3">
                 @include('partials.sidebar')
@@ -32,15 +33,16 @@
 
 
                 <br>
+
                 <div class="row">
                     <div class="col-6">
-                        <div class="card rounded-4">
+                        <div class="card rounded-4 simple-card">
                             <h6 class="card-header text-center">
                                 <strong>
                                     Numero di piatti
                                 </strong>
                             </h6>
-                            <h1 class="text-center">
+                            <h1 class="d-flex align-items-center justify-content-center">
                                 <a href="{{ route('admin.products.index') }}" class="nav-link link-body-emphasis">
                                     {{ $products }}
                                 </a>
@@ -48,13 +50,13 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="card rounded-4">
+                        <div class="card rounded-4 simple-card">
                             <h6 class="card-header text-center">
                                 <strong>
                                     Numero degli ordini
                                 </strong>
                             </h6>
-                            <h1 class="text-center">
+                            <h1 class="d-flex align-items-center justify-content-center">
                                 <a href="{{ route('admin.orders.index') }}" class="nav-link link-body-emphasis">
                                     {{ $orders }}
                                 </a>
@@ -62,6 +64,8 @@
                         </div>
                     </div>
                 </div>
+                <br>
+
 
 
             </div>

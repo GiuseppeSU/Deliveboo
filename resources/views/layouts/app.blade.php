@@ -21,6 +21,9 @@
 
     <!-- Usando Vite -->
     @vite(['resources/js/app.js'])
+    <!--
+    @vite(['resources/js/mychart.js'])
+    -->
 </head>
 
 <body>
@@ -30,7 +33,7 @@
 
         <main>
             @yield('content')
-            
+
         </main>
     </div>
 

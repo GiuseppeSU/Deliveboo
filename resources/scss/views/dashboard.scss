@@ -4,8 +4,25 @@
 #dashboard_cont {
     h2 {
         color: $secondary-color;
+        border-bottom: 2px solid $secondary-color;
     }
     .card {
         border: 2px solid rgba($color: $secondary-color, $alpha: 1.0);
     }
+    .card-body{
+        font-size: 30px;
+        text-align: center;
+    }
+    .simple-card {
+        height: 150px;
+
+        h1 {
+            height: 100%;
+
+            a {
+                font-size: 60px;
+            }
+        }
+    }
+
 }

@@ -4,6 +4,8 @@
 #container_dish {
     h2 {
         color: $secondary-color;
+        border-bottom: 2px solid $secondary-color;
+
     }
     .container_general {
         background-color: white;

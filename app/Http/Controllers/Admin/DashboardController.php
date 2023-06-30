@@ -13,7 +13,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $products = Product::where('restaurant_id', Auth::id())->count()->get();
+        $products = Product::where('restaurant_id', Auth::id())->count();
         $orders = Product::where('restaurant_id', Auth::id())
             ->join('order_product', 'product_id', 'products.id')
             ->select('order_id')
@@ -21,7 +21,17 @@ class DashboardController extends Controller
             ->get()
             ->count();
 
+        /*
+        $total_orders = Order::with('products')
+            ->join('order_product', 'orders.id', 'order_product.order_id')
+            ->join('products', 'product_id', 'products.id')
+            ->where('restaurant_id', Auth::id())
+            ->select('orders.*')
+            ->get()
+            ->toJson();
+        */
 
         return view('admin.dashboard', compact('products', 'orders'));
+        //'total_orders'
     }
 }
