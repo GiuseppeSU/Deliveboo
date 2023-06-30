@@ -12,6 +12,8 @@ let orders = JSON.parse(JSON.parse(canvas.dataset.orders));
 let monthly_orders = [];
 let monthly_total = [];
 
+console.log(orders)
+
 for (let i = 1; i < 13; i++) {
     let selectedMonthOrders = orders.filter(order => {
         let splitdDate = order.created_at.split('-');
