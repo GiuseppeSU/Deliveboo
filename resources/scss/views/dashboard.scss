@@ -1,0 +1,8 @@
+@use '../partials/variables' as *;
+@use '../partials/mixins';
+
+#dashboard_cont {
+    .card {
+        border: 2px solid rgba($color: $secondary-color, $alpha: 1.0);
+    }
+}

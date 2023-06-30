@@ -1,7 +1,7 @@
 @extends('layouts.nav')
 @section('content')
     <div id="welcome_container">
-        <div class="mt-5">
+        <div class="mt-5 text-center">
             <div class="row d-flex justify-content-center container_info ">
                 <div class="card_container col-sm-6 col-md-3 mb-3 p-5">
                     <img class="w-50" src="img/boo.svg" alt="Registrati">
@@ -29,7 +29,7 @@
             </div>
         </div>
 
-        <div class="general_container p-3">
+        <div class="general_container p-3 text-center">
             <div class="row d-flex justify-content-center  ">
                 <div class="card_container col-sm-6 col-md-3 mb-3  p-5">
                     <img class="w-50" src="img/iscrition.svg" alt="Registrati">
@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class=" d-flex justify-content-center">
-                <button><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></button>
+                <button><a class="nav-link" href="{{ route('register') }}">{{ __('Registrati') }}</a></button>
             </div>
         </div>
     </div>

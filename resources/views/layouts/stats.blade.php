@@ -15,6 +15,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    
 
     <!-- Usando Vite -->
     @vite(['resources/js/mychart.js'])
@@ -36,6 +37,10 @@
 
         <main class="">
             @yield('content')
+            <br>
+            <div class="d-flex justify-content-center" id="torna_indietro">
+                <a href="{{ url('admin') }}" class="btn btn-primary">Torna indietro</a>
+            </div>
         </main>
     </div>
 </body>

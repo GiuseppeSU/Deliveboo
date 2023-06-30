@@ -1,7 +1,7 @@
 @extends('layouts.nav')
 
 @section('content')
-    <div class="container">
+    <div class="container" id="dashboard_cont">
         <h2 class="fs-4 text-secondary my-4">
             {{ __('Dashboard') }}
         </h2>
