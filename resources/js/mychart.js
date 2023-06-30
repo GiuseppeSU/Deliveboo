@@ -6,19 +6,30 @@ import.meta.glob([
     '../img/**'
 ])
 
+let year = document.getElementById('year');
+const containerDom = document.getElementById('containerCanvas')
+
+console.log(year)
+
+const year2022 = '$total_orders_2022';
+const year2023 = '$total_orders_2023';
+
+/*
+if(year.value = '2022') {
+    const canvasDom = `<canvas id="myCountChart" data-orders='@json(${{year2022}})'></canvas>`;
+    containerDom.innerHTML += canvasDom;
+
+} else if (year.value = '2023') {
+    const canvasDom = `<canvas id="myCountChart" data-orders='@json(${{year2023}})'></canvas>`;
+    containerDom.innerHTML += canvasDom;
+}*/
 
 let canvas = document.getElementById('myCountChart');
 let orders = JSON.parse(JSON.parse(canvas.dataset.orders));
+
+
 let monthly_orders = [];
 let monthly_total = [];
-
-let year = document.getElementById('year');
-
-
-if(year.value = '2022') {
-
-
-}
 
 for (let i = 1; i < 13; i++) {
 

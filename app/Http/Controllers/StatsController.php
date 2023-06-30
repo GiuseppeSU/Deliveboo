@@ -34,7 +34,7 @@ class StatsController extends Controller
             ->get()
             ->toJson();
 
-            
+        dd($total_orders_2022);
 
         return view('admin.stats.index', compact('total_orders_2022','total_orders_2023'));
     }
