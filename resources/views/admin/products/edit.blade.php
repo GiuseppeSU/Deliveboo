@@ -82,6 +82,10 @@
 
             </form>
         </div>
+        <br>
+        <div class="d-flex justify-content-center">
+            <a href="{{ route('admin.products.index') }}" class="btn btn-primary">Torna indietro</a>
+        </div>
 
         @include(
             'partials.forms.edit_form_element',

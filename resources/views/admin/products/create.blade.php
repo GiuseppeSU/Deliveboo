@@ -29,7 +29,7 @@
                 {{-- Image file --}}
                 @include(
                     'partials.forms.create_form_element',
-                
+
                     $data = ['type' => 'file', 'field' => 'image', 'label' => 'Immagine', 'accepted' => 'image/*']
                 )
 
@@ -63,6 +63,10 @@
                 </div>
 
             </form>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center">
+            <a href="{{ route('admin.products.index') }}" class="btn btn-primary">Torna indietro</a>
         </div>
 
 

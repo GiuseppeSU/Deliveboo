@@ -27,6 +27,9 @@
 
             <button type="submit" class="btn btn-primary"> Invia </button>
         </form>
+        <div class="d-flex justify-content-center">
+            <a href="{{ route('admin.orders.index') }}" class="button_my">Torna indietro</a>
+        </div>
     </div>
 
 @endsection

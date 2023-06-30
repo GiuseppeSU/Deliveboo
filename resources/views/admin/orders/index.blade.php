@@ -22,9 +22,9 @@
                                 <td>&euro; {{ $order->total }} </td>
                                 <td>{{ $order->created_at }}</td>
                                 <td>{{ $order->status }}</td>
-                                <td>
+                                <td class="actions">
                                     <a href="{{ route('admin.orders.edit', ['order' => $order->order_code]) }}"
-                                        class='btn btn-outline-warning p-1 mb-1'><i
+                                        class='btn btn-outline-warning p-1'><i
                                             class="mx-1 fa-solid fa-pen-to-square"></i></a>
                                     <a
                                         href="{{ route('admin.orders.show', $order) }}"class='btn btn-outline-primary p-1 px-2'><i
@@ -44,10 +44,10 @@
                         @endforeach
                     </tbody>
                 </table>
-
-
-
             </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <a href="{{ url('admin') }}" class="btn btn-primary">Torna indietro</a>
         </div>
 
     </div>

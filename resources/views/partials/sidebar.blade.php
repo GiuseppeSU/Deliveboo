@@ -4,7 +4,7 @@
             <svg class="bi pe-none me-2" width="16" height="16">
                 <use xlink:href="#home"></use>
             </svg>
-            <h3>Dashboard</h3>
+            <h3 class="text-center">Dashboard</h3>
         </a>
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
