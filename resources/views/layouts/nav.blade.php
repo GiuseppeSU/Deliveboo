@@ -53,4 +53,5 @@
     img {
         width: 500px
     }
+
 </style>

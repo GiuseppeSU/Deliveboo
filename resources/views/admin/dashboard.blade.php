@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container" id="dashboard_cont">
-        <h2 class="fs-4 text-secondary my-4">
+        <h2 class="fs-4 text-center my-4">
             {{ __('Dashboard') }}
         </h2>
         <div class="row justify-content-center">
@@ -10,8 +10,9 @@
                 @include('partials.sidebar')
             </div>
             <div class="col-lg-9 col-sm-6 col-md-6">
-                <div class="card">
-                    <div class="card-header">{{ __('User Dashboard') }}</div>
+
+                <div class="card rounded-4">
+                    <!--<div class="card-header">{{ __('User Dashboard') }}</div>-->
 
                     <div class="card-body">
                         @if (session('status'))
@@ -19,13 +20,19 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-
-                        {{ __('You are logged in!') }}
+                        <strong>
+                            {{ __('Benvenuto nella tua area personale') }}
+                        </strong>
                     </div>
                 </div>
+
                 <br>
-                <div class="card w-25">
-                    <h6 class="card-header text-center">Numero di piatti</h6>
+                <div class="card w-25 rounded-4">
+                    <h6 class="card-header text-center">
+                        <strong>
+                            Numero di piatti
+                        </strong>
+                    </h6>
                     <h1 class="text-center">
                         <a href="{{ route('admin.products.index') }}" class="nav-link link-body-emphasis">
                             {{ $products->count() }}

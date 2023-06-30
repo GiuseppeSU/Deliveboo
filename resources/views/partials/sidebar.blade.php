@@ -1,5 +1,5 @@
 <div id="container_sidebar">
-    <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary general_container w-100" style="width: 280px;">
+    <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary general_container w-100 rounded-4" style="width: 280px;">
         <a href="{{ route('admin.dashboard') }}" class="nav-link link-body-emphasis fw-bolder" aria-current="page">
             <svg class="bi pe-none me-2" width="16" height="16">
                 <use xlink:href="#home"></use>

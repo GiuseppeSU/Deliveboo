@@ -2,6 +2,9 @@
 @use '../partials/mixins';
 
 #dashboard_cont {
+    h2 {
+        color: $secondary-color;
+    }
     .card {
         border: 2px solid rgba($color: $secondary-color, $alpha: 1.0);
     }

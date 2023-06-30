@@ -2,8 +2,10 @@
 @use '../../partials/mixins';
 
 #container_dish {
+    h2 {
+        color: $secondary-color;
+    }
     .container_general {
-        border-radius: 40px;
         background-color: white;
         border: 2px solid rgba($color: $secondary-color, $alpha: 1.0);
 

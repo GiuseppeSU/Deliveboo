@@ -3,7 +3,7 @@
 {{-- @section('page-title', 'Edit Project') --}}
 
 @section('content')
-    <div id="container_order_edit" class="container">
+    <div id="container_order_edit" class="container rounded-4">
 
         @include('partials.forms.validation.errors_alert')
 
@@ -24,12 +24,14 @@
                     'options' => $status,
                 ]
             )
-
-            <button type="submit"> Invia </button>
+            <div class="text-center">
+                <button type="submit"> Invia </button>
+            </div>
         </form>
-        <div class="d-flex justify-content-center" id="torna_indietro">
-            <a href="{{ route('admin.orders.index') }}" class="button_my">Torna indietro</a>
-        </div>
-    </div>
 
+    </div>
+    <br>
+    <div class="d-flex justify-content-center" id="torna_indietro">
+        <a href="{{ route('admin.orders.index') }}" class="button_my">Torna indietro</a>
+    </div>
 @endsection

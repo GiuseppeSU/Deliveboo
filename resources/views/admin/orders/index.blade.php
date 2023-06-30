@@ -3,7 +3,7 @@
 @section('content')
     <div id="container_index">
         <div class="p-4">
-            <div class="container_general overflow-hidden col-12">
+            <div class="container_general overflow-hidden col-12 rounded-4">
                 <table class="text-center w-100 ">
                     <thead>
                         <tr class="mb-3">

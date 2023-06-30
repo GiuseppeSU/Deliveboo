@@ -1,6 +1,6 @@
 @extends('layouts.nav')
 @section('content')
-    <div class="container">
+    <div class="container" id="order_show_cont">
         <div class="row row-cols-1 row-cols-md-2">
             <ul class="list-group my-2">
                 <li class="list-group-item">

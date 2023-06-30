@@ -1,0 +1,16 @@
+@use '../../partials/variables' as *;
+@use '../../partials/mixins';
+
+#order_show_cont{
+
+    li {
+        border-left: 2px solid rgba($color: $secondary-color, $alpha: 1.0);
+        border-right: 2px solid rgba($color: $secondary-color, $alpha: 1.0);
+    }
+    li:first-child {
+        border-top: 2px solid rgba($color: $secondary-color, $alpha: 1.0);
+    }
+    li:last-child {
+        border-bottom: 2px solid rgba($color: $secondary-color, $alpha: 1.0);
+    }
+}

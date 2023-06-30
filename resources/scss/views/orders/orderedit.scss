@@ -2,10 +2,11 @@
 @use '../../partials/mixins';
 
 #container_order_edit {
-
+    background-color: white;
+    padding: 20px;
+    border: 2px solid rgba($color: $secondary-color, $alpha: 1.0);
     button {
         @include mixins.primary-btn;
-        // background-color: $secondary-color;
         color: $secondary-color;
         font-size: 20px;
         border: 1px solid $secondary-color;

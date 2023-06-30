@@ -4,7 +4,7 @@
 
 @section('content')
     <div id="new_container">
-        <div class="container container_general">
+        <div class="container container_general rounded-4">
 
             @include('partials.forms.validation.errors_alert')
 
