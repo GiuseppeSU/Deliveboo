@@ -46,7 +46,7 @@
                 </table>
             </div>
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center" id="torna_indietro">
             <a href="{{ url('admin') }}" class="btn btn-primary">Torna indietro</a>
         </div>
 

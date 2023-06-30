@@ -52,7 +52,7 @@
                 @endforeach
             </ul>
         </div>
-        <div class="text-center py-3">
+        <div class="text-center py-3" id="torna_indietro">
             <a href="{{ route('admin.orders.index') }}" class="btn btn-primary">Torna indietro</a>
         </div>
     </div>

@@ -1,5 +1,5 @@
 //color
-@use 'partials/variables';
+@use 'partials/variables' as *;
 //btn
 @use 'partials/mixins';
 @import 'views/admin/editform.scss';
@@ -12,6 +12,7 @@
 @import 'views/admin/edit.scss';
 @import 'views/admin/show.scss';
 @import 'views/orders/orderindex.scss';
+@import 'views/orders/orderedit.scss';
 @import '~bootstrap/scss/bootstrap';
 
 
@@ -25,4 +26,21 @@ body {
 
 .logo-header {
     max-width: 125px;
+}
+#torna_indietro {
+    a{
+        @include mixins.primary-btn;
+        // background-color: $secondary-color;
+        color: $secondary-color;
+        font-size: 20px;
+        border: 1px solid $secondary-color;
+        text-decoration: none;
+    }
+    a:hover {
+        @include mixins.btn-hover;
+        border: 1px solid white;
+    }
+    a:active{
+        @include mixins.btn-active;
+    }
 }

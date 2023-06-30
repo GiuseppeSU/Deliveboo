@@ -65,7 +65,7 @@
             </form>
         </div>
         <br>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center" id="torna_indietro">
             <a href="{{ route('admin.products.index') }}" class="btn btn-primary productBtn">Torna indietro</a>
         </div>
 
