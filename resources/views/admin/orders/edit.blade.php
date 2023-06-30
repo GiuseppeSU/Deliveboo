@@ -3,7 +3,7 @@
 {{-- @section('page-title', 'Edit Project') --}}
 
 @section('content')
-    <div class="container">
+    <div id="container_order_edit" class="container">
 
         @include('partials.forms.validation.errors_alert')
 
@@ -25,8 +25,11 @@
                 ]
             )
 
-            <button type="submit" class="btn btn-primary"> Invia </button>
+            <button type="submit"> Invia </button>
         </form>
+        <div class="d-flex justify-content-center" id="torna_indietro">
+            <a href="{{ route('admin.orders.index') }}" class="button_my">Torna indietro</a>
+        </div>
     </div>
 
 @endsection

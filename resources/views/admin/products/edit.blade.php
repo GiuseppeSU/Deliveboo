@@ -77,10 +77,14 @@
                     ]
                 )
                 <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-primary productBtn"> Invia </button>
+                    <button type="submit"> Invia </button>
                 </div>
 
             </form>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center" id="torna_indietro">
+            <a href="{{ route('admin.products.index') }}" class="btn btn-primary productBtn">Torna indietro</a>
         </div>
 
         @include(
