@@ -15,7 +15,7 @@ class StatsController extends Controller
             ->join('order_product', 'orders.id', 'order_product.order_id')
             ->join('products', 'product_id', 'products.id')
             ->where('restaurant_id', Auth::id())
-            ->select('orders.created_at')
+            ->select('orders.*')
             ->get()
             ->toJson();
 
