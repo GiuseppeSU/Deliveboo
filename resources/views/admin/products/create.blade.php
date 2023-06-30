@@ -66,7 +66,7 @@
         </div>
         <br>
         <div class="d-flex justify-content-center">
-            <a href="{{ route('admin.products.index') }}" class="btn btn-primary">Torna indietro</a>
+            <a href="{{ route('admin.products.index') }}" class="btn btn-primary productBtn">Torna indietro</a>
         </div>
 
 

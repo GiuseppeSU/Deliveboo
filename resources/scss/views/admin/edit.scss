@@ -25,3 +25,19 @@
         @include mixins.btn-active;
     }
 }
+#torna_indietro {
+    a{
+        @include mixins.primary-btn;
+        // background-color: $secondary-color;
+        color: $secondary-color;
+        font-size: 20px;
+        border: 1px solid $secondary-color;
+    }
+    a:hover {
+        @include mixins.btn-hover;
+        border: 1px solid white;
+    }
+    a:active{
+        @include mixins.btn-active;
+    }
+}
