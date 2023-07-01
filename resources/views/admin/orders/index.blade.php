@@ -1,9 +1,26 @@
 @extends('layouts.app')
 
+
+
+
+
+
+
+
 @section('content')
-    <div id="container_index">
-        <div class="p-4">
-            <div class="container_general overflow-hidden col-12">
+<div class="container" id="cont-wrap">
+    <h2 class="fs-4 text-center my-4">
+        {{ __('Ordini') }}
+    </h2>
+    <br>
+<div class="row justify-content-center ">
+    <div class="col-lg-4 col-md-12 col-sm-12 mb-5">
+        @include('partials.sidebar')
+    </div>
+    <div class="col-lg-8 col-md-12 col-sm-12">
+        <div id="container_index">
+        <div class="">
+            <div class="container_general overflow-hidden col-12 rounded-4">
                 <table class="text-center w-100 ">
                     <thead>
                         <tr class="mb-3">
@@ -46,6 +63,14 @@
                 </table>
             </div>
         </div>
+    </div>
+    <br>
+
+
+</div>
+
+
+
         <div class="d-flex justify-content-center" id="torna_indietro">
             <a href="{{ url('admin') }}" class="btn btn-primary">Torna indietro</a>
         </div>

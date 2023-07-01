@@ -29,6 +29,7 @@ class OrderController extends Controller
                 ->join('products', 'product_id', 'products.id')
                 ->where('restaurant_id', Auth::id())
                 ->select('orders.*')
+                ->orderBy('created_at', 'desc')
                 ->distinct()
                 ->get();
 

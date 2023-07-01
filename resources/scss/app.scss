@@ -14,6 +14,7 @@
 @import 'views/admin/show.scss';
 @import 'views/orders/orderindex.scss';
 @import 'views/orders/orderedit.scss';
+@import 'views/orders/ordershow.scss';
 @import '~bootstrap/scss/bootstrap';
 
 
@@ -21,9 +22,13 @@
 body {
     padding-bottom: 5rem;
     min-height: 100vh;
-
+    background-image: url('../img/onda.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-color: lightgray;
 }
+#body-stats
 
 .logo-header {
     max-width: 125px;

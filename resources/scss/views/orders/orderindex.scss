@@ -3,7 +3,6 @@
 
 #container_index {
     .container_general {
-        border-radius: 40px;
         background-color: white;
         padding: 20px;
         border: 2px solid rgba($color: $secondary-color, $alpha: 1.0);
@@ -17,6 +16,13 @@
             border-bottom: 1px solid rgba($color: $secondary-color, $alpha: 0.5);
             padding: 5px;
         }
+
+    }
+}
+#cont-wrap {
+    h2 {
+        color: $secondary-color;
+        border-bottom: 2px solid $secondary-color;
 
     }
 }

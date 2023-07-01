@@ -8,7 +8,6 @@
         border: 2px solid rgba($color: $secondary-color, $alpha: 1.0);
     }
 
-
     a:hover {
         background-color: rgba($color: $secondary-color, $alpha: 1.0);
         color: white;
@@ -23,4 +22,5 @@
     .active {
         background-color: rgba($color: $secondary-color, $alpha: 1.0);
     }
+
 }

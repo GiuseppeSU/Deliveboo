@@ -15,13 +15,14 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    
+
 
     <!-- Usando Vite -->
     @vite(['resources/js/mychart.js'])
+
 </head>
 
-<body>
+<body id="body-stats">
     <div id="app">
         @include('partials.header')
         <div class="container_nav">
@@ -51,6 +52,7 @@
     img {
         width: 500px
     }
+
 </style>
 
 

@@ -6,7 +6,7 @@
 
     .card_general {
         min-width: 300px;
-        border-radius: 40px;
+        border: 2px solid rgba($color: $secondary-color, $alpha: 1.0);
         background-color: white;
         padding: 10px;
     }
