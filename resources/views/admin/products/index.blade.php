@@ -78,4 +78,8 @@
             </div>
         </div>
     </div>
+    <br>
+    <div class="d-flex justify-content-center" id="torna_indietro">
+        <a href="{{ url('admin') }}" class="btn btn-primary">Torna indietro</a>
+    </div>
 @endsection
