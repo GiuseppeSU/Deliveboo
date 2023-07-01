@@ -14,6 +14,7 @@ class ClientMail extends Mailable
     use Queueable, SerializesModels;
     public $order;
     public $restaurant_name;
+    public $total = 0;
     /**
      * Create a new message instance.
      *
@@ -23,6 +24,9 @@ class ClientMail extends Mailable
     {
         $this->order = $_order;
         $this->restaurant_name = $_restaurant_name;
+        foreach ($this->order->products as $product) {
+            $this->total += $product->price * $product->pivot->quantity;
+        }
     }
 
     /**
