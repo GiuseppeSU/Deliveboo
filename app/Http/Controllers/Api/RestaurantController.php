@@ -22,6 +22,7 @@ class RestaurantController extends Controller
                 ->get();
 
             $filteredRestaurants = [];
+            
             foreach ($restaurants as $restaurant) {
                 // creo un array dei "types" della query
                 $restaurantTypes = [];

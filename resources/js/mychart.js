@@ -8,27 +8,36 @@ import.meta.glob([
 
 const year = document.getElementById('year');
 const canvas = document.getElementById('myCountChart');
+let orders = null;
 
+year.addEventListener('change', function() {
 
-year.addEventListener('change', (event) => {
-    let orders = null;
+    if(year.value == '2022') {
+        
+        removeData(configCount)
+        removeData(configTotal)
+        orders = JSON.parse(JSON.parse(canvas.dataset.orders2022));
+        addData(configCount, labels, dataCount)
+        addData(configTotal, labels, dataTotal)
+        
+    } else if (year.value == '2023') {
 
-    if(event.target.value = '2022') {
-        return orders = JSON.parse(JSON.parse(canvas.dataset.orders2022));
-    
-    } else if (event.target.value = '2023') {
-        return orders = JSON.parse(JSON.parse(canvas.dataset.orders2023));
+        removeData(configCount)
+        removeData(configTotal)
+        orders = JSON.parse(JSON.parse(canvas.dataset.orders2023));
+        addData(configCount, labels, dataCount)
+        addData(configTotal, labels, dataTotal)
     }
     console.log(orders)
     
 });
 
-let monthly_orders = [];
-let monthly_total = [];
+    let monthly_orders = [];
+    let monthly_total = [];
 
 for (let i = 1; i < 13; i++) {
 
-    let selectedMonthOrders = orders.filter(order => {
+    let selectedMonthOrders = element.filter(order => {
         let splitdDate = order.created_at.split('-');
         return splitdDate[1] == i;
         
@@ -44,6 +53,7 @@ for (let i = 1; i < 13; i++) {
     
 }
 
+
 const labels = [
     'Gennaio',
     'Febbraio',
@@ -56,7 +66,7 @@ const labels = [
     'Settembre',
     'Ottobre',
     'Novembre',
-    'Dicembre',
+    'Dicembre'
 ];
 
 const dataCount = {
@@ -82,6 +92,7 @@ new Chart(
     configCount
 );
 
+
 const dataTotal = {
     labels: labels,
     datasets: [
@@ -104,3 +115,23 @@ new Chart(
     document.getElementById('myTotalChart'),
     configTotal
 );
+
+function addData(chart, label, data) {
+    chart.data.labels.push(label);
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+    });
+    chart.update();
+}
+
+function removeData(chart) {
+    chart.data.labels.pop();
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.pop();
+    });
+    chart.update();
+}
+
+
+
+
