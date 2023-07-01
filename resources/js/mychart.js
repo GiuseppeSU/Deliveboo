@@ -10,49 +10,8 @@ const year = document.getElementById('year');
 const canvas = document.getElementById('myCountChart');
 let orders = null;
 
-year.addEventListener('change', function() {
-
-    if(year.value == '2022') {
-        
-        removeData(configCount)
-        removeData(configTotal)
-        orders = JSON.parse(JSON.parse(canvas.dataset.orders2022));
-        addData(configCount, labels, dataCount)
-        addData(configTotal, labels, dataTotal)
-        
-    } else if (year.value == '2023') {
-
-        removeData(configCount)
-        removeData(configTotal)
-        orders = JSON.parse(JSON.parse(canvas.dataset.orders2023));
-        addData(configCount, labels, dataCount)
-        addData(configTotal, labels, dataTotal)
-    }
-    console.log(orders)
-    
-});
-
-    let monthly_orders = [];
-    let monthly_total = [];
-
-for (let i = 1; i < 13; i++) {
-
-    let selectedMonthOrders = element.filter(order => {
-        let splitdDate = order.created_at.split('-');
-        return splitdDate[1] == i;
-        
-    });
-
-    let ordersTotal = 0;
-    selectedMonthOrders.forEach(order => {
-        ordersTotal += parseInt(order.total);
-    });
-
-    monthly_orders.push(selectedMonthOrders.length);
-    monthly_total.push(ordersTotal);
-    
-}
-
+let monthly_orders = [];
+let monthly_total = [];
 
 const labels = [
     'Gennaio',
@@ -69,53 +28,118 @@ const labels = [
     'Dicembre'
 ];
 
-const dataCount = {
-    labels: labels,
-    datasets: [
-        {
-            label: 'Numero di ordini nel 2022',
-            backgroundColor: 'white',
-            borderColor: 'black',
-            data: monthly_orders
-        },
-    ]
-};
-
-const configCount = {
-    type: 'bar',
-    data: dataCount,
-    options: {}
-};
-
-new Chart(
+const countChart = new Chart(
     document.getElementById('myCountChart'),
-    configCount
+    generateCount()
 );
 
-
-const dataTotal = {
-    labels: labels,
-    datasets: [
-        {
-            label: 'Totale guadagni nel 2022',
-            backgroundColor: 'white',
-            borderColor: 'black',
-            data: monthly_total
-        }
-    ]
-};
-
-const configTotal = {
-    type: 'line',
-    data: dataTotal,
-    options: {}
-};
-
-new Chart(
+const totalChart = new Chart(
     document.getElementById('myTotalChart'),
-    configTotal
+    generateTotal()
 );
 
+year.addEventListener('change', function() {
+
+    if(year.value == '2022') {
+
+        if(countChart) {
+            removeData(countChart)
+            removeData(totalChart)
+        }
+        getFilter();
+        orders = JSON.parse(JSON.parse(canvas.dataset.orders2022));
+        addData(countChart, labels, dataCount)
+        addData(totalChart, labels, dataTotal)
+        
+    } else if (year.value == '2023') {
+
+        if(countChart) {
+            removeData(countChart)
+            removeData(totalChart)
+        }
+        getFilter();
+        orders = JSON.parse(JSON.parse(canvas.dataset.orders2023));
+        addData(countChart, labels, dataCount)
+        addData(totalChart, labels, dataTotal)
+    }
+    console.log(orders)
+    
+});
+
+function getFilter() {
+    
+    for (let i = 1; i < 13; i++) {
+
+        let selectedMonthOrders = orders.filter(order => {
+            let splitdDate = order.created_at.split('-');
+            return splitdDate[1] == i;
+            
+        });
+    
+        let ordersTotal = 0;
+        selectedMonthOrders.forEach(order => {
+            ordersTotal += parseInt(order.total);
+        });
+    
+        monthly_orders.push(selectedMonthOrders.length);
+        monthly_total.push(ordersTotal);
+        
+    }
+
+}
+//funzioni di generazione Chart
+
+function generateCount() {
+
+    const configCount = null;
+
+    const dataCount = {
+        labels: labels,
+        datasets: [
+            {
+                label: 'Numero di ordini',
+                backgroundColor: 'white',
+                borderColor: 'black',
+                data: monthly_orders
+            },
+        ]
+    };
+    
+    configCount = {
+        type: 'bar',
+        data: dataCount,
+        options: {}
+    };
+
+    return configCount;
+}
+
+function generateTotal() {
+
+    const configTotal = null;
+
+    const dataTotal = {
+        labels: labels,
+        datasets: [
+            {
+                label: 'Totale guadagni',
+                backgroundColor: 'white',
+                borderColor: 'black',
+                data: monthly_total
+            }
+        ]
+    };
+    
+    configTotal = {
+        type: 'line',
+        data: dataTotal,
+        options: {}
+    };
+
+    return configTotal;
+}
+
+//Funzioni aggiornamento dati dei chart
 function addData(chart, label, data) {
     chart.data.labels.push(label);
     chart.data.datasets.forEach((dataset) => {
