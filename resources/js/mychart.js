@@ -8,7 +8,7 @@ import.meta.glob([
 
 const year = document.getElementById('year');
 const canvas = document.getElementById('myCountChart');
-let orders = null;
+let orders = JSON.parse(JSON.parse(canvas.dataset.orders2022));
 
 let monthly_orders = [];
 let monthly_total = [];
@@ -27,50 +27,57 @@ const labels = [
     'Novembre',
     'Dicembre'
 ];
+getFilter(orders);
+let configCount = {};
+let dataCount = {};
+generateCount()
+let configTotal = {};
+let dataTotal = {};
+generateTotal()
 
+//creazione prime statistiche
 const countChart = new Chart(
     document.getElementById('myCountChart'),
-    generateCount()
+    configCount,
+    dataCount,
 );
 
 const totalChart = new Chart(
     document.getElementById('myTotalChart'),
-    generateTotal()
+    configTotal,
+    dataTotal
 );
-
+//ascoltatore di eventi per la select
 year.addEventListener('change', function() {
 
     if(year.value == '2022') {
 
-        if(countChart) {
-            removeData(countChart)
-            removeData(totalChart)
-        }
-        getFilter();
         orders = JSON.parse(JSON.parse(canvas.dataset.orders2022));
-        addData(countChart, labels, dataCount)
-        addData(totalChart, labels, dataTotal)
+
         
     } else if (year.value == '2023') {
-
-        if(countChart) {
-            removeData(countChart)
-            removeData(totalChart)
-        }
-        getFilter();
+        
         orders = JSON.parse(JSON.parse(canvas.dataset.orders2023));
-        addData(countChart, labels, dataCount)
-        addData(totalChart, labels, dataTotal)
+
     }
     console.log(orders)
+
+    getFilter(orders);
+    countChart.data.datasets[0].data = monthly_orders;
+    totalChart.data.datasets[0].data = monthly_total;
+
+    countChart.update();
+    totalChart.update();
     
 });
 
-function getFilter() {
+function getFilter(element) {
+    monthly_orders = [];
+    monthly_total = [];
     
     for (let i = 1; i < 13; i++) {
 
-        let selectedMonthOrders = orders.filter(order => {
+        let selectedMonthOrders = element.filter(order => {
             let splitdDate = order.created_at.split('-');
             return splitdDate[1] == i;
             
@@ -91,34 +98,30 @@ function getFilter() {
 
 function generateCount() {
 
-    const configCount = null;
-
-    const dataCount = {
+    dataCount = {
         labels: labels,
         datasets: [
             {
-                label: 'Numero di ordini',
+                label:'Numero di Ordini',
                 backgroundColor: 'white',
                 borderColor: 'black',
                 data: monthly_orders
             },
         ]
-    };
+    }
     
     configCount = {
         type: 'bar',
         data: dataCount,
         options: {}
-    };
-
-    return configCount;
+    }
 }
+
+
 
 function generateTotal() {
 
-    const configTotal = null;
-
-    const dataTotal = {
+    dataTotal = {
         labels: labels,
         datasets: [
             {
@@ -135,8 +138,6 @@ function generateTotal() {
         data: dataTotal,
         options: {}
     };
-
-    return configTotal;
 }
 
 //Funzioni aggiornamento dati dei chart

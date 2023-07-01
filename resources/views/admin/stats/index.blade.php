@@ -3,6 +3,7 @@
 @section('content')
     <div class="container">
         <select name="year" id="year">
+            <option selected>Open this select menu</option>
             <option value="2022">Ordini 2022</option>
             <option value="2023">Ordini 2023</option>
         </select>
