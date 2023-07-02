@@ -30,7 +30,7 @@ class OrderSeeder extends Seeder
             foreach ($products_collection as $product) {
                 $products_array[] = $product->id;
             }
-            for ($n = 0; $n < 20; $n++) {
+            for ($n = 0; $n < 25; $n++) {
                 $newOrder = new Order;
                 $newOrder->order_code = $faker->regexify('[A-Z0-9]{32}');
                 $newOrder->name = $faker->name();
