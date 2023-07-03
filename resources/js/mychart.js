@@ -8,10 +8,16 @@ import.meta.glob([
 
 const year = document.getElementById('year');
 const canvas = document.getElementById('myCountChart');
+const ordersTot = document.getElementById('totalOrders');
+const sellTot = document.getElementById('totalSell');
+
 let orders = [];
 
 let monthly_orders = [];
 let monthly_total = [];
+
+let sumOrders = 0;
+let sumTotal = 0;
 
 const labels = [
     'Gennaio',
@@ -27,12 +33,24 @@ const labels = [
     'Novembre',
     'Dicembre'
 ];
+
 getFilter(orders);
 let configCount = {};
 let dataCount = {};
+sumOrders = getSum(monthly_orders);
+sumTotal = getSum(monthly_total);
+
+ordersTot.innerHtml += sumOrders;
+sellTot.innerHtml += sumTotal;
 generateCount()
 let configTotal = {};
 let dataTotal = {};
+
+sumOrders = getSum(monthly_orders);
+sumTotal = getSum(monthly_total);
+
+ordersTot.innerHtml = sumOrders;
+sellTot.innerHtml = sumTotal;
 generateTotal()
 
 //creazione prime statistiche
@@ -63,11 +81,30 @@ year.addEventListener('change', function() {
     countChart.data.datasets[0].data = monthly_orders;
     totalChart.data.datasets[0].data = monthly_total;
 
+
+    sumOrders = getSum(monthly_orders);
+    sumTotal = getSum(monthly_total);
+
+    ordersTot.innerHtml += sumOrders;
+    sellTot.innerHtml += sumTotal;
+
     countChart.update();
     totalChart.update();
     
 });
+//funzione di somma dei totali
 
+function getSum(statsElement) {
+
+    let total = 0 
+    for(let i = 0; i < statsElement.length; i++) {
+        total += statsElement[i]
+    }
+    console.log(total)
+    return total;
+}
+
+//funzione di filtraggio dei totali 
 function getFilter(element) {
     monthly_orders = [];
     monthly_total = [];
