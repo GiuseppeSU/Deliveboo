@@ -22,23 +22,23 @@ class RestaurantController extends Controller
                 ->get();
 
             $filteredRestaurants = [];
-            
+
             foreach ($restaurants as $restaurant) {
                 // creo un array dei "types" della query
                 $restaurantTypes = [];
-                foreach($restaurant->types as $type){
+                foreach ($restaurant->types as $type) {
                     $restaurantTypes[] = $type->slug;
                 }
                 //verifico se ogni "type" della query è presente nei "types" del ristorante ciclato
                 $matchingTypes = true;
-                foreach ($types as $type){
-                    if(!in_array($type,$restaurantTypes)){
+                foreach ($types as $type) {
+                    if (!in_array($type, $restaurantTypes)) {
                         //non corrisponde
                         $matchingTypes = false;
                     }
                 }
                 //esito finale
-                if($matchingTypes){
+                if ($matchingTypes) {
                     $filteredRestaurants[] = $restaurant;
                 }
             }
@@ -57,11 +57,13 @@ class RestaurantController extends Controller
     public function show($slug)
     {
         $restaurant = Restaurant::where('restaurants.slug', $slug)
-            ->with('products')
-            ->join('products','restaurants.id','restaurant_id')
-            ->where('products.visibility', 1)
-            ->select('restaurants.*')
-            ->distinct()
+            ->with(['products' => function ($query) {
+                $query->where('visibility', 1);
+            }])
+            // ->join('products', 'restaurants.id', 'restaurant_id')
+            // ->where('products.visibility', 1)
+            // ->select('restaurants.*')
+            // ->distinct()
             ->get();
 
         return response()->json([
