@@ -1,5 +1,6 @@
 import Chart from 'chart.js/auto';
 import './bootstrap';
+import * as bootstrap from 'bootstrap';
 import '~resources/scss/app.scss';
 import { forEach, sum } from 'lodash';
 import.meta.glob([
