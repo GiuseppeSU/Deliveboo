@@ -80,14 +80,14 @@ class RegisteredUserController extends Controller
 
         if ($request->hasFile('image')) {
             $img_path = Storage::put('public/img', $request->image);
-            $request['image'] = $img_path;
+            $request->image = $img_path;
         }
 
         $restaurant = Restaurant::create([
             'name' => $request->name,
             'vat' => $request->vat,
             'address' => $request->address,
-            'image' => $img_path,
+            'image' => $request->image,
             'slug' =>$request->name,
             'user_id'=> $user->id,
         ]);
