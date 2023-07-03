@@ -8,8 +8,6 @@ import.meta.glob([
 
 const year = document.getElementById('year');
 const canvas = document.getElementById('myCountChart');
-const ordersTot = document.getElementById('totalOrders');
-const sellTot = document.getElementById('totalSell');
 
 let orders = [];
 
@@ -37,20 +35,20 @@ const labels = [
 getFilter(orders);
 let configCount = {};
 let dataCount = {};
-sumOrders = getSum(monthly_orders);
+/*sumOrders = getSum(monthly_orders);
 sumTotal = getSum(monthly_total);
 
 ordersTot.innerHtml += sumOrders;
-sellTot.innerHtml += sumTotal;
+sellTot.innerHtml += sumTotal;*/
 generateCount()
 let configTotal = {};
 let dataTotal = {};
 
-sumOrders = getSum(monthly_orders);
+/*sumOrders = getSum(monthly_orders);
 sumTotal = getSum(monthly_total);
 
 ordersTot.innerHtml += sumOrders;
-sellTot.innerHtml += sumTotal;
+sellTot.innerHtml += sumTotal;*/
 generateTotal()
 
 //creazione prime statistiche
@@ -85,8 +83,11 @@ year.addEventListener('change', function() {
     sumOrders = getSum(monthly_orders);
     sumTotal = getSum(monthly_total);
 
-    ordersTot.innerHtml += sumOrders;
-    sellTot.innerHtml += sumTotal;
+    console.log(sumOrders)
+    console.log(sumTotal)
+
+    document.getElementById('totalOrders').innerHTML = sumOrders.toString();
+    document.getElementById('totalSell').innerHTML = sumTotal.toString();
 
     countChart.update();
     totalChart.update();
