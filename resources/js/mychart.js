@@ -8,7 +8,7 @@ import.meta.glob([
 
 const year = document.getElementById('year');
 const canvas = document.getElementById('myCountChart');
-let orders = JSON.parse(JSON.parse(canvas.dataset.orders2022));
+let orders = [];
 
 let monthly_orders = [];
 let monthly_total = [];
@@ -51,14 +51,11 @@ const totalChart = new Chart(
 year.addEventListener('change', function() {
 
     if(year.value == '2022') {
-
         orders = JSON.parse(JSON.parse(canvas.dataset.orders2022));
-
-        
     } else if (year.value == '2023') {
-        
         orders = JSON.parse(JSON.parse(canvas.dataset.orders2023));
-
+    } else if (year.value == '0') {
+        orders = [];
     }
     console.log(orders)
 
@@ -103,7 +100,7 @@ function generateCount() {
         datasets: [
             {
                 label:'Numero di Ordini',
-                backgroundColor: 'white',
+                backgroundColor: 'blue',
                 borderColor: 'black',
                 data: monthly_orders
             },

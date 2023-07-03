@@ -22,6 +22,7 @@ class StatsController extends Controller
             ->where('restaurant_id', Auth::id())
             ->select('orders.*')
             ->whereBetween('orders.created_at',[$firstStart, $firstEnd])
+            ->distinct()
             ->get()
             ->toJson();
 
@@ -31,6 +32,7 @@ class StatsController extends Controller
             ->where('restaurant_id', Auth::id())
             ->select('orders.*')
             ->whereBetween('orders.created_at',[$secondStart, $secondEnd])
+            ->distinct()
             ->get()
             ->toJson();
 
