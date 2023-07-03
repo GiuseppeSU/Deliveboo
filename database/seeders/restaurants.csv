@@ -1,14 +1,14 @@
 restaurant_id,name,address,vat,image,types
-1,Ristorante Italiano Bella Napoli,Via Roma 123,01234567890,foto_ristoranti/ristorante_italiano_bella_napoli.jpg,1
-2,Trattoria da Giuseppe,Viale Dante 456,09876543210,foto_ristoranti/trattoria_da_giuseppe.jpg,1-5
-3,La Pizzeria del Sole,Corso Italia 789,11223344556,foto_ristoranti/La_pizzeria_del_sole.jpg,1-5
-4,Taquería El Mariachi,Via Milano 321,12345678901,foto_ristoranti/tanquier_el_mariachi.jpg,2
-5,La Casa del Burrito,Via Venezia 654,23456789012,foto_ristoranti/la_casa_del_burrito.jpg,2
-6,Sushi Express,Viale Firenze 1,34567890123,foto_ristoranti/sushi_express.jpg,3
-7,Riso e Verdure,Via Napoli 456,45678901234,foto_ristoranti/riso_e_verdure.jpg,4
-8,Palazzo Mediterraneo,Via Roma 789,56789012345,foto_ristoranti/palazzo_mediterraneo.jpg,5
-9,Vegetariano Naturale,Viale Milano 321,67890123456,foto_ristoranti/vegetariano_naturale.jpg,6
-10,Burger House,Via Firenze 123,78901234567,foto_ristoranti/burger_house.jpg,7
-11,Curry House,Viale Venezia 456,89012345678,foto_ristoranti/curry_house.jpg,8
-12,Taverna Greca,Via Napoli 789,90123456789,foto_ristoranti/taverna_greca.jpg,9
-13,Pad Thai Street,Viale Firenze 321,01234567890,foto_ristoranti/pad_thai_street.jpg,10
+1,Ristorante Italiano Bella Napoli,Via Roma 123,01234567890,public/img/foto_ristoranti/ristorante_italiano_bella_napoli.jpg,1
+2,Trattoria da Giuseppe,Viale Dante 456,09876543210,public/img/foto_ristoranti/trattoria_da_giuseppe.jpg,1-5
+3,La Pizzeria del Sole,Corso Italia 789,11223344556,public/img/foto_ristoranti/La_pizzeria_del_sole.jpg,1-5
+4,Taquería El Mariachi,Via Milano 321,12345678901,public/img/foto_ristoranti/tanquier_el_mariachi.jpg,2
+5,La Casa del Burrito,Via Venezia 654,23456789012,public/img/foto_ristoranti/la_casa_del_burrito.jpg,2
+6,Sushi Express,Viale Firenze 1,34567890123,public/img/foto_ristoranti/sushi_express.jpg,3
+7,Riso e Verdure,Via Napoli 456,45678901234,public/img/foto_ristoranti/riso_e_verdure.jpg,4
+8,Palazzo Mediterraneo,Via Roma 789,56789012345,public/img/foto_ristoranti/palazzo_mediterraneo.jpg,5
+9,Vegetariano Naturale,Viale Milano 321,67890123456,public/img/foto_ristoranti/vegetariano_naturale.jpg,6
+10,Burger House,Via Firenze 123,78901234567,public/img/foto_ristoranti/burger_house.jpg,7
+11,Curry House,Viale Venezia 456,89012345678,public/img/foto_ristoranti/curry_house.jpg,8
+12,Taverna Greca,Via Napoli 789,90123456789,public/img/foto_ristoranti/taverna_greca.jpg,9
+13,Pad Thai Street,Viale Firenze 321,01234567890,public/img/foto_ristoranti/pad_thai_street.jpg,10
