@@ -49,8 +49,8 @@ let dataTotal = {};
 sumOrders = getSum(monthly_orders);
 sumTotal = getSum(monthly_total);
 
-ordersTot.innerHtml = sumOrders;
-sellTot.innerHtml = sumTotal;
+ordersTot.innerHtml += sumOrders;
+sellTot.innerHtml += sumTotal;
 generateTotal()
 
 //creazione prime statistiche
