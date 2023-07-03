@@ -4,7 +4,7 @@
         <div class="container container_general mb-5">
             <div class="d-flex justify-content-center mt-5">
                 <div class="card_general w-25 rounded-4">
-                    <img src={{ asset('storage/' . $product->image) }} class="card-img-top" alt="...">
+                    <img src={{ asset('storage/' . $product->image) }} class="card-img-top" onerror="this.src='https:\/\/source.unsplash.com/random/300x300/?{{explode('-',$product->slug)[0]}}'" alt="...">
                     <div class="card-body">
                         <h5 class="card-title text-center mb-3">{{ $product->name }}</h5>
                         <p class="card-text text-center">{{ $product->description }}</p>
