@@ -51,7 +51,7 @@
     <div class="mt-4">
         <p>{{ $order->name}} grazie per averci scelto!</p>
         <p>Per problemi relativi all'ordine non esiti a contattare l'assitenza</p>
-        <a href="http://localhost:5173">Il nostro sito:</a> 
+        <p>Email: <a href="#">assistenzaDeliveboo.com</a></p>
 
     </div>
 
